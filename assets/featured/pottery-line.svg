@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" fill="none">
+  <rect width="320" height="240" fill="#1a4a56"/>
+  <path d="M100 200 L100 100 Q160 60 220 100 L220 200 Z" fill="#2563eb" opacity="0.85"/>
+  <path d="M100 200 L220 200 L210 185 Q160 175 110 185 Z" fill="#ebe4d8" opacity="0.9"/>
+  <ellipse cx="160" cy="98" rx="58" ry="12" fill="#1e3a8a"/>
+  <text x="24" y="36" fill="#ebe4d8" font-family="Georgia,serif" font-size="22" font-style="italic">Blue pottery</text>
+</svg>

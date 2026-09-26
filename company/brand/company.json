@@ -1,0 +1,57 @@
+{
+  "name": "Bharat Connect",
+  "tagline": "Jaipur export desk for Western importers",
+  "flagshipHandicraft": [
+    {
+      "productId": "brass-decor",
+      "headline": "Brass & copper décor",
+      "asset": "assets/featured/brass-line.svg",
+      "pitch": "Hospitality, gift, and premium retail — nickel-free and lacquered interior options."
+    },
+    {
+      "productId": "blue-pottery",
+      "headline": "Blue pottery tableware",
+      "asset": "assets/featured/pottery-line.svg",
+      "pitch": "Jaipur icon craft — food-safe glazes and drop-test export packing for D2C."
+    }
+  ],
+  "location": {
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "country": "India",
+    "postal": "302001",
+    "addressLine": "MI Road, Jaipur",
+    "airport": "JAI (~20 min by appointment)"
+  },
+  "contact": {
+    "email": "trade@bharatconnect.in",
+    "phone": "+91 141 000 0000",
+    "hoursIST": "Mon–Sat · 9:30–18:30",
+    "responseSLA": "Within 1 business day"
+  },
+  "stats": [
+    { "value": "18+", "label": "Years collective trade experience" },
+    { "value": "40+", "label": "Artisan & factory partners" },
+    { "value": "12", "label": "Export markets served" },
+    { "value": "96%", "label": "On-time dispatch (12 mo.)" }
+  ],
+  "westernMarkets": [
+    { "code": "GB", "name": "United Kingdom", "overlap": "12:00–16:00 IST ↔ UK morning" },
+    { "code": "DE", "name": "Germany", "overlap": "13:30–17:30 IST ↔ EU morning" },
+    { "code": "NL", "name": "Netherlands", "overlap": "13:30–17:30 IST ↔ EU morning" },
+    { "code": "US", "name": "United States", "overlap": "18:30–22:30 IST ↔ US East morning" },
+    { "code": "CA", "name": "Canada", "overlap": "19:00–23:00 IST ↔ Eastern Canada morning" }
+  ],
+  "ports": {
+    "load": "Mundra (FOB default)",
+    "commonCIF": ["Felixstowe", "Rotterdam", "New York / New Jersey", "Los Angeles / Long Beach", "Vancouver"]
+  },
+  "trustSignals": [
+    "IEC & GST registered",
+    "USD / EUR proforma quotes",
+    "SGS / Bureau Veritas inspection welcome",
+    "Letter-of-credit workflows",
+    "Consolidated LCL for mixed handicraft containers"
+  ],
+  "registrationsNote": "Full certificate copies available on serious inquiry — not published on web."
+}
