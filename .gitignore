@@ -3,6 +3,6 @@
 .env.*
 *.pem
 *.key
-company/legal/scans/
+legal/scans/
 .DS_Store
 Thumbs.db

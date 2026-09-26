@@ -1,6 +1,6 @@
 # Bharat Connect — company knowledge plan
 
-This folder is the **single source of truth** for brand, catalogue, and export operations. The public website reads from here (`brand/company.json`, `product-data/catalogue.json`). When you change facts here, the site should reflect them after refresh.
+This repo is the **single source of truth** for brand, catalogue, and export operations. The public website reads from the root (`brand/company.json`, `product-data/catalogue.json`). When you change facts here, the site should reflect them after refresh.
 
 ## Live site (GitHub Pages)
 

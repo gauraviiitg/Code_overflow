@@ -14,9 +14,9 @@ const state = {
 export async function initCompany() {
   try {
     const [catalogueRes, brandRes, certRes] = await Promise.all([
-      fetch(companyUrl("company/product-data/catalogue.json")),
-      fetch(companyUrl("company/brand/company.json")),
-      fetch(companyUrl("company/legal/public-certifications.json")),
+      fetch(companyUrl("product-data/catalogue.json")),
+      fetch(companyUrl("brand/company.json")),
+      fetch(companyUrl("legal/public-certifications.json")),
     ]);
     if (!catalogueRes.ok || !brandRes.ok) throw new Error("company fetch failed");
     const catalogue = await catalogueRes.json();

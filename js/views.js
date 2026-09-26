@@ -245,7 +245,7 @@ export function buyersView() {
       <h1 class="section-title reveal">Built for Western buying teams — not tourist trade.</h1>
       <p class="section-lead reveal">
         If you import from India already, you know the gap is rarely the product — it’s documentation, sampling discipline, and timezone silence.
-        This page mirrors our internal onboarding playbook (see <code>company/export/</code> in the project).
+        This page mirrors our internal onboarding playbook (see <code>export/</code> in the project).
       </p>
     </section>
 
@@ -268,23 +268,23 @@ export function buyersView() {
     <section class="section wrap" style="padding-top: 0">
       <h2 class="section-title reveal" style="font-size: 1.75rem">Resources</h2>
       <div class="resource-grid">
-        <a class="resource-card reveal" href="company/export/western-importer-onboarding.md" target="_blank" rel="noopener">
+        <a class="resource-card reveal" href="export/western-importer-onboarding.md" target="_blank" rel="noopener">
           <span class="resource-type">Playbook</span>
           <strong>Western importer onboarding</strong>
           <span>Sample → PO → docs → after delivery</span>
         </a>
-        <a class="resource-card reveal" href="company/export/documentation-matrix.md" target="_blank" rel="noopener">
+        <a class="resource-card reveal" href="export/documentation-matrix.md" target="_blank" rel="noopener">
           <span class="resource-type">Matrix</span>
           <strong>Documentation by product type</strong>
           <span>HS chapters & extra certs buyers ask for</span>
         </a>
-        <a class="resource-card reveal" href="company/brand/voice-western-buyers.md" target="_blank" rel="noopener">
+        <a class="resource-card reveal" href="brand/voice-western-buyers.md" target="_blank" rel="noopener">
           <span class="resource-type">Internal</span>
           <strong>Voice & vocabulary</strong>
           <span>How we write to UK/EU/US buyers</span>
         </a>
       </div>
-      <p class="reveal resource-note">On go-live, export these as branded PDFs — content already lives in your <strong>company/</strong> folder.</p>
+      <p class="reveal resource-note">On go-live, export these as branded PDFs — content already lives at the repo root.</p>
     </section>
 
     <section class="section wrap cta-panel reveal">
@@ -375,7 +375,7 @@ export function aboutView() {
             Most of our volume ships to the UK, Germany, Benelux, and North America — importers who measure us on OTIF, defect rate, and document accuracy.
           </p>
           <p class="section-lead">
-            Company facts and catalogue data live in <strong>company/</strong> — update once, website follows.
+            Company facts and catalogue data live in <strong>brand/</strong> and <strong>product-data/</strong> — update once, website follows.
           </p>
         </div>
         <div class="reveal" style="transition-delay: 0.1s">
