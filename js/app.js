@@ -1,4 +1,4 @@
-import { initCompany } from "./company.js";
+import { initCompany, getBrand } from "./company.js";
 import {
   homeView,
   productsView,
@@ -95,9 +95,9 @@ function bindContactForm() {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form));
-    const inquiries = JSON.parse(localStorage.getItem("bharat_inquiries") || "[]");
+    const inquiries = JSON.parse(localStorage.getItem("jaat_inquiries") || "[]");
     inquiries.push({ ...data, at: new Date().toISOString() });
-    localStorage.setItem("bharat_inquiries", JSON.stringify(inquiries));
+    localStorage.setItem("jaat_inquiries", JSON.stringify(inquiries));
     form.reset();
     showToast("Inquiry received — we’ll be in touch within 1 business day.");
   });
@@ -122,10 +122,11 @@ function render() {
     outlet.innerHTML = homeView();
   }
 
+  const brandName = getBrand()?.name ?? "Jaat Global";
   document.title =
     path === "/"
-      ? "Bharat Connect | Export from Jaipur, India"
-      : `Bharat Connect — ${path.slice(1).charAt(0).toUpperCase()}${path.slice(2)}`;
+      ? `${brandName} | Export from Jaipur, India`
+      : `${brandName} — ${path.slice(1).charAt(0).toUpperCase()}${path.slice(2)}`;
 
   observeReveals();
   bindProductFilters();

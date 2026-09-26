@@ -245,7 +245,7 @@ export function buyersView() {
       <h1 class="section-title reveal">Built for Western buying teams — not tourist trade.</h1>
       <p class="section-lead reveal">
         If you import from India already, you know the gap is rarely the product — it’s documentation, sampling discipline, and timezone silence.
-        This page mirrors our internal onboarding playbook (see <code>export/</code> in the project).
+        This page mirrors our internal onboarding playbook (see <code>company docs/export/</code> on your machine).
       </p>
     </section>
 
@@ -268,23 +268,23 @@ export function buyersView() {
     <section class="section wrap" style="padding-top: 0">
       <h2 class="section-title reveal" style="font-size: 1.75rem">Resources</h2>
       <div class="resource-grid">
-        <a class="resource-card reveal" href="export/western-importer-onboarding.md" target="_blank" rel="noopener">
+        <div class="resource-card reveal">
           <span class="resource-type">Playbook</span>
           <strong>Western importer onboarding</strong>
           <span>Sample → PO → docs → after delivery</span>
-        </a>
-        <a class="resource-card reveal" href="export/documentation-matrix.md" target="_blank" rel="noopener">
+        </div>
+        <div class="resource-card reveal">
           <span class="resource-type">Matrix</span>
           <strong>Documentation by product type</strong>
           <span>HS chapters & extra certs buyers ask for</span>
-        </a>
-        <a class="resource-card reveal" href="brand/voice-western-buyers.md" target="_blank" rel="noopener">
+        </div>
+        <div class="resource-card reveal">
           <span class="resource-type">Internal</span>
           <strong>Voice & vocabulary</strong>
           <span>How we write to UK/EU/US buyers</span>
-        </a>
+        </div>
       </div>
-      <p class="reveal resource-note">On go-live, export these as branded PDFs — content already lives at the repo root.</p>
+      <p class="reveal resource-note">Markdown sources live in the workspace <strong>company docs</strong> folder — share as branded PDFs on request.</p>
     </section>
 
     <section class="section wrap cta-panel reveal">
@@ -361,7 +361,7 @@ function productCardHtml(p) {
 export function aboutView() {
   return `
     <section class="page-hero wrap">
-      <p class="section-label reveal">About Bharat Connect</p>
+      <p class="section-label reveal">About Jaat Global</p>
       <h1 class="section-title reveal">Jaipur on the ground. Western discipline on the paperwork.</h1>
     </section>
     <section class="section wrap" style="padding-top: 0">
@@ -375,7 +375,7 @@ export function aboutView() {
             Most of our volume ships to the UK, Germany, Benelux, and North America — importers who measure us on OTIF, defect rate, and document accuracy.
           </p>
           <p class="section-lead">
-            Company facts and catalogue data live in <strong>brand/</strong> and <strong>product-data/</strong> — update once, website follows.
+            Company facts and catalogue data are authored in <strong>company docs</strong>; JSON copies in this repo power the live site.
           </p>
         </div>
         <div class="reveal" style="transition-delay: 0.1s">
@@ -483,7 +483,7 @@ export function contactView(prefill = {}) {
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%">Send inquiry</button>
           <p style="font-size: 0.78rem; color: var(--ink-soft); margin: 1rem 0 0">
-            Demo: saves to browser storage. Wire to ${getBrand()?.contact?.email ?? "trade@bharatconnect.in"} when live.
+            Demo: saves to browser storage. Wire to ${getBrand()?.contact?.email ?? "trade@jaatglobal.com"} when live.
           </p>
         </form>
       </div>
