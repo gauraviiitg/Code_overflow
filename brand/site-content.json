@@ -1,0 +1,114 @@
+{
+  "home": {
+    "valueProp": "Jaipur merchant export desk for EU gift and home décor importers.",
+    "bullets": [
+      "v1: decorative blue pottery and brass gift décor from Jaipur makers",
+      "Default bulk term: FOB Mundra. We quote EXW, FCA, FAS, FOB, and CIF only",
+      "English documentation, written MOQ and lead time before production",
+      "EU decorative compliance path: GPSR and REACH with your importer partner",
+      "Prelaunch: building makers, QC, and export files. Not shipping yet"
+    ],
+    "trustStrip": [
+      { "label": "IEC and GST", "value": "Registration types on file" },
+      { "label": "Load port", "value": "FOB Mundra planned" },
+      { "label": "Markets", "value": "EU gift and décor first" },
+      { "label": "Status", "value": "Prelaunch desk" }
+    ],
+    "faqTitle": "Questions importers ask us",
+    "faq": [
+      {
+        "q": "Are you a factory or a trader?",
+        "a": "Merchant export desk. We curate Jaipur makers, align POs, packing, and export paperwork. You deal with one English speaking account."
+      },
+      {
+        "q": "Can I buy food safe blue pottery for retail?",
+        "a": "Not in v1. We sell decorative ceramics only, labelled not for food use. Food contact needs a separate programme and EU 84/500 testing."
+      },
+      {
+        "q": "What incoterm do you prefer?",
+        "a": "FOB Mundra for bulk LCL or FCL. Samples often EXW Jaipur. We do not quote DAP or DDP."
+      },
+      {
+        "q": "How do samples work?",
+        "a": "Strike offs or pre production samples with commercial invoice for customs. Revisions capped in writing before bulk PO."
+      },
+      {
+        "q": "Who handles EU GPSR?",
+        "a": "Your EU importer acts as responsible economic operator. We supply product and test files we build with makers for decorative v1."
+      },
+      {
+        "q": "Do you offer third party inspection?",
+        "a": "Yes when agreed on the PO. AQL table attached before production."
+      }
+    ]
+  },
+  "importers": {
+    "title": "For importers",
+    "lead": "How we intend to work with EU and UK gift buyers from first email to bill of lading.",
+    "steps": [
+      {
+        "title": "Qualification call",
+        "body": "Product specs, retail or hospitality use, destination country, incoterm, certification needs, payment preference."
+      },
+      {
+        "title": "Sample phase",
+        "body": "Courier samples with commercial invoice. Revision rounds capped in writing before bulk."
+      },
+      {
+        "title": "Production PO",
+        "body": "Written MOQ, unit price, lead time, packing, labelling. Milestone photos. Optional inspection."
+      },
+      {
+        "title": "Shipping documents",
+        "body": "Commercial invoice, packing list, bill of lading, certificate of origin when required. Handicraft decorative file for EU."
+      },
+      {
+        "title": "After delivery",
+        "body": "Defect claim window with photos and carton marks. Reorder forecast for capacity."
+      }
+    ],
+    "downloadLabel": "Download importer brief"
+  },
+  "export": {
+    "title": "Export and compliance",
+    "lead": "Commercial terms and document expectations for v1 handicraft. Food and DDP programmes out of scope unless quoted.",
+    "defaultIncoterm": "FOB Mundra",
+    "incotermNotes": [
+      { "term": "EXW Jaipur", "use": "Samples when your forwarder collects from maker" },
+      { "term": "FCA", "use": "Handover at named inland point or ICD" },
+      { "term": "FAS Mundra", "use": "Rare alongside ship, costs in writing" },
+      { "term": "FOB Mundra", "use": "Default bulk LCL or FCL" },
+      { "term": "CIF", "use": "Named port with freight and marine insurance in quote" }
+    ],
+    "documentsHandicraft": [
+      "Commercial invoice and packing list",
+      "Bill of lading",
+      "Certificate of origin when buyer or broker requires",
+      "Decorative pottery: not for food label and glaze test file when available",
+      "REACH and GPSR dossier path with EU importer partner",
+      "ISPM 15 pallet when wood used"
+    ],
+    "packingSummary": [
+      "Pottery: 5 ply cartons, dividers, drop test before PO lock",
+      "Brass: bubble wrap, dry cartons, silica in monsoon season",
+      "Mixed LCL: pottery and brass programmes documented on packing list"
+    ],
+    "complianceDecorative": "v1 decorative ceramics and metal décor: GPSR general product safety and REACH for glaze and metal articles. Not for food contact in v1. Nickel testing only if skin contact SKUs, which we exclude in v1."
+  },
+  "contact": {
+    "moqBands": [
+      "Under 50 pcs",
+      "50 to 200 pcs",
+      "200 to 500 pcs",
+      "500 pcs or more",
+      "Not sure yet"
+    ]
+  },
+  "meta": {
+    "collections": "Collections",
+    "importers": "For importers",
+    "export": "Export and compliance",
+    "about": "About",
+    "contact": "Contact"
+  }
+}

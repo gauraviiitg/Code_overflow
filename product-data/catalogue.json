@@ -40,6 +40,15 @@
       "description": "Vases, planters, wall plates, tiles, lamps. Jaipur craft story (Blue Pottery GI). Export corrugated and dividers; drop test packing spec shared before PO.",
       "image": "assets/stock/blue-pottery-alt.jpg",
       "imageAlt": "Decorative blue ceramic vases, illustrative stock photo",
+      "sampleMoq": "About 20 to 50 pieces for sample programme",
+      "detailBullets": [
+        "Vases, planters, wall plates, tiles, lamps",
+        "Jaipur Blue Pottery GI craft story",
+        "Decorative only, not for food in v1",
+        "Drop test export packing spec before PO"
+      ],
+      "complianceNote": "EU decorative path: GPSR and REACH glaze testing with importer partner. Not sold for food contact in v1.",
+      "packingNote": "5 ply export cartons, corrugated dividers, unit bubble wrap. Drop test mandatory.",
       "featured": true
     },
     {
@@ -55,6 +64,15 @@
       "description": "Hammered vases, bowls, trays, meenakari gift pieces. Curated with pottery in mixed LCL programmes; lacquered interiors where needed.",
       "image": "assets/stock/brass-decor.jpg",
       "imageAlt": "Brass bowls on table, illustrative stock photo",
+      "sampleMoq": "About 20 to 50 pieces for sample programme",
+      "detailBullets": [
+        "Hammered vases, bowls, trays, meenakari gift pieces",
+        "Lacquered interiors where needed",
+        "Nickel free options on request",
+        "No jewelry or skin contact lines in v1"
+      ],
+      "complianceNote": "Gift and hospitality décor. REACH metal articles path with EU importer. No EN 1811 skin contact SKUs in v1.",
+      "packingNote": "Rigid cartons, acid free tissue and bubble. Desiccant in monsoon builds.",
       "featured": true
     },
     {
