@@ -51,7 +51,7 @@ function flagshipHandicraftHtml() {
     <section class="section wrap flagship-section">
       <p class="section-label reveal">Flagship lines</p>
       <h2 class="section-title reveal">Two crafts, one desk — <em>equal</em> focus.</h2>
-      <p class="section-lead reveal">Brass &amp; copper and blue pottery share the same QC, documentation, and Western buyer team.</p>
+      <p class="section-lead reveal">Brass &amp; copper and blue pottery are the anchors we’re building QC, documentation, and buyer workflows around.</p>
       <div class="flagship-duo">
         ${lines
           .map(
@@ -72,16 +72,17 @@ function flagshipHandicraftHtml() {
           )
           .join("")}
       </div>
-      <p class="flagship-mix reveal">Many Western buyers run <strong>mixed handicraft containers</strong> — brass and pottery in one programme, one invoice pack.</p>
+      <p class="flagship-mix reveal">We’re designing for <strong>mixed handicraft containers</strong> — brass and pottery in one programme when buyers want it.</p>
     </section>`;
 }
 
 function brandStatsHtml() {
-  const stats = getBrand()?.stats ?? [
-    { value: "18+", label: "Years collective trade experience" },
-    { value: "40+", label: "Artisan & factory partners" },
-    { value: "12", label: "Export markets served" },
-    { value: "96%", label: "On-time dispatch (12 mo.)" },
+  const brand = getBrand();
+  const stats = brand?.focusAreas ?? brand?.stats ?? [
+    { value: "2", label: "Flagship crafts (brass & blue pottery)" },
+    { value: "4", label: "Product pillars on the roadmap" },
+    { value: "UK · EU · US", label: "Buyer regions we’re studying" },
+    { value: "FOB Mundra", label: "Planned default load port" },
   ];
   return stats
     .map(
@@ -102,15 +103,15 @@ export function homeView() {
     <section class="hero wrap">
       <div class="hero-grid hero-grid--visual">
         <div class="reveal">
-          <p class="hero-eyebrow">Export partner · Rajasthan · Western markets</p>
-          <h1>Jaipur <em>brass</em> and <em>blue pottery</em> — equally — for Western importers.</h1>
+          <p class="hero-eyebrow">Pre-launch · Jaipur · Western markets</p>
+          <h1>Building a Jaipur desk for <em>brass</em> and <em>blue pottery</em> — equally — for Western importers.</h1>
           <p class="section-lead">
-            Our core export desk runs two flagship handicraft lines side by side: metal décor and Jaipur blue pottery.
-            Same sampling rhythm, same document standards, same account manager — plus textiles, agro, and stone when you need a mixed container.
+            Jaat Global isn’t trading yet. We’re in research and setup: validating makers, compliance steps, and how we’ll run sampling and paperwork for the UK, EU, and North America.
+            This site shows where we’re headed — flagship metal décor and blue pottery first, plus textiles, agro, and stone on the roadmap.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#/contact">Request quote</a>
-            <a class="btn btn-ghost" href="#/buyers">How we work with importers</a>
+            <a class="btn btn-primary" href="#/contact">Introduce yourself</a>
+            <a class="btn btn-ghost" href="#/buyers">How we plan to work</a>
           </div>
         </div>
         <figure class="hero-figure reveal" style="transition-delay: 0.1s">
@@ -133,9 +134,9 @@ export function homeView() {
       <div class="hero-grid" style="align-items: start">
         <aside class="hero-panel reveal">
           ${jaaliSvg}
-          <p class="section-label" style="color: var(--gold); margin-bottom: 0.5rem">Western buyer desk</p>
+          <p class="section-label" style="color: var(--gold); margin-bottom: 0.5rem">Western buyer desk (planned)</p>
           <p style="margin: 0; font-size: 1.05rem; color: var(--cream)">
-            Overlap calls with UK/EU mornings and US East Coast — one account manager, English-first paperwork.
+            Timezone overlap with UK/EU mornings and US East Coast — one account manager, English-first paperwork at launch.
           </p>
           <div class="hero-stats">${brandStatsHtml()}</div>
           <p class="hero-note">
@@ -144,7 +145,7 @@ export function homeView() {
         </aside>
         <div class="reveal" style="transition-delay: 0.08s">
           <p class="section-label">Why importers stay</p>
-          <h2 class="section-title" style="font-size: clamp(1.75rem, 3vw, 2.35rem)">Proof over promises.</h2>
+          <h2 class="section-title" style="font-size: clamp(1.75rem, 3vw, 2.35rem)">What we’re building toward.</h2>
           <ul class="proof-list">
             <li><img src="assets/icons/document.svg" width="28" height="28" alt="" /> Proforma aligned to your broker’s HS wording before production</li>
             <li><img src="assets/icons/shield.svg" width="28" height="28" alt="" /> AQL agreed upfront — defects sorted in Jaipur, not in your DC</li>
@@ -180,13 +181,13 @@ export function homeView() {
     </section>
 
     <section class="section voices wrap">
-      <p class="section-label reveal">Buyer voice</p>
-      <h2 class="section-title reveal">What Western partners say they need — we built the desk around it.</h2>
+      <p class="section-label reveal">Research themes</p>
+      <h2 class="section-title reveal">What Western importers keep asking for — our checklist while we set up.</h2>
       <div class="voice-grid">
         ${[
-          ["UK homeware importer", "“We needed one PDF pack that matches what customs sees — not WhatsApp photos on arrival.”"],
-          ["US ingredients distributor", "“Tell us steam treatment and COA batch numbers on the proforma — saves our compliance team a week.”"],
-          ["EU garden buyer", "“Show crate photos before we book CIF — stone weight surprises kill margin.”"],
+          ["Documentation", "One PDF pack that matches what customs sees — not ad-hoc photos on arrival."],
+          ["Compliance", "Steam treatment, COA batch numbers, and HS wording on the proforma from day one."],
+          ["Logistics", "Crate and weight clarity before CIF bookings — especially on stone programmes."],
         ]
           .map(
             ([role, quote], i) => `
@@ -197,7 +198,7 @@ export function homeView() {
           )
           .join("")}
       </div>
-      <p class="voice-disclaimer reveal">Representative feedback from onboarding themes — replace with named testimonials when approved.</p>
+      <p class="voice-disclaimer reveal">Themes from market research — not client testimonials.</p>
     </section>
 
     <section class="section wrap" style="padding-top: 0">
@@ -226,10 +227,10 @@ export function homeView() {
       <div class="cta-panel-inner">
         <div>
           <p class="section-label" style="color: var(--gold)">Next step</p>
-          <h2 class="section-title" style="margin-bottom: 0.5rem">Send specs — get a written reply within one business day.</h2>
-          <p class="section-lead" style="margin: 0">Importers in the UK, EU, US, and Canada welcome.</p>
+          <h2 class="section-title" style="margin-bottom: 0.5rem">Early conversations welcome — we reply when we can during setup.</h2>
+          <p class="section-lead" style="margin: 0">Importers in the UK, EU, US, and Canada: say hello before we go live.</p>
         </div>
-        <a class="btn btn-primary" href="#/contact">Start inquiry</a>
+        <a class="btn btn-primary" href="#/contact">Get in touch</a>
       </div>
     </section>
   `;
@@ -245,7 +246,7 @@ export function buyersView() {
       <h1 class="section-title reveal">Built for Western buying teams — not tourist trade.</h1>
       <p class="section-lead reveal">
         If you import from India already, you know the gap is rarely the product — it’s documentation, sampling discipline, and timezone silence.
-        This page mirrors our internal onboarding playbook (see <code>company docs/export/</code> on your machine).
+        Below is the workflow we’re putting in place before first shipments.
       </p>
     </section>
 
@@ -266,25 +267,25 @@ export function buyersView() {
     </section>
 
     <section class="section wrap" style="padding-top: 0">
-      <h2 class="section-title reveal" style="font-size: 1.75rem">Resources</h2>
+      <h2 class="section-title reveal" style="font-size: 1.75rem">At launch, you can expect</h2>
       <div class="resource-grid">
         <div class="resource-card reveal">
-          <span class="resource-type">Playbook</span>
-          <strong>Western importer onboarding</strong>
-          <span>Sample → PO → docs → after delivery</span>
+          <span class="resource-type">Onboarding</span>
+          <strong>Sample → PO → docs → after delivery</strong>
+          <span>Written milestones — no surprise gaps at the port</span>
         </div>
         <div class="resource-card reveal">
-          <span class="resource-type">Matrix</span>
-          <strong>Documentation by product type</strong>
-          <span>HS chapters & extra certs buyers ask for</span>
+          <span class="resource-type">Documentation</span>
+          <strong>Product-type checklist</strong>
+          <span>HS chapters and extra certs by category</span>
         </div>
         <div class="resource-card reveal">
-          <span class="resource-type">Internal</span>
-          <strong>Voice & vocabulary</strong>
-          <span>How we write to UK/EU/US buyers</span>
+          <span class="resource-type">Communication</span>
+          <strong>English-first trade desk</strong>
+          <span>Plain language for UK, EU, and US buyers</span>
         </div>
       </div>
-      <p class="reveal resource-note">Markdown sources live in the workspace <strong>company docs</strong> folder — share as branded PDFs on request.</p>
+      <p class="reveal resource-note">Detailed PDF packs will be available once trading begins — ask us during early conversations if you want a preview outline.</p>
     </section>
 
     <section class="section wrap cta-panel reveal">
@@ -307,10 +308,10 @@ export function productsView(activeCategory = "all") {
   return `
     <section class="page-hero wrap">
       <p class="section-label reveal">Catalogue</p>
-      <h1 class="section-title reveal">Lines we ship to the West today.</h1>
+      <h1 class="section-title reveal">Draft catalogue — lines we’re preparing.</h1>
       <p class="section-lead reveal">
-        Flagship handicraft — brass and blue pottery — listed first. Each programme includes MOQ, lead time, and Western buyer notes.
-        Prices on inquiry — proforma in USD or EUR.
+        Flagship handicraft — brass and blue pottery — listed first. MOQ, lead time, and buyer notes are indicative while we validate with makers.
+        Pricing will be on inquiry at launch — USD or EUR proforma planned.
       </p>
       ${flagshipHandicraftHtml()}
       <div class="products-toolbar reveal" data-filters>
@@ -362,20 +363,20 @@ export function aboutView() {
   return `
     <section class="page-hero wrap">
       <p class="section-label reveal">About Jaat Global</p>
-      <h1 class="section-title reveal">Jaipur on the ground. Western discipline on the paperwork.</h1>
+      <h1 class="section-title reveal">Jaipur on the ground. Western discipline on the paperwork — when we launch.</h1>
     </section>
     <section class="section wrap" style="padding-top: 0">
       <div class="split-about">
         <div class="reveal">
           <blockquote class="about-quote">
-            Western buyers don’t lack suppliers — they lack suppliers who put the same version of the truth in the sample room, the factory, and the invoice.
+            Western buyers don’t lack suppliers — they lack suppliers who put the same version of the truth in the sample room, the factory, and the invoice. That’s the desk we’re building.
           </blockquote>
           <p class="section-lead" style="margin-top: 1.5rem">
-            We operate from Jaipur with corridors into Bagru, Sanganer, Jodhpur, and partner mills across North India.
-            Most of our volume ships to the UK, Germany, Benelux, and North America — importers who measure us on OTIF, defect rate, and document accuracy.
+            We’re based in Jaipur with research into Bagru, Sanganer, Jodhpur, and partner mills across North India.
+            Our first corridors are the UK, Germany, Benelux, and North America — importers who care about OTIF, defect rate, and document accuracy.
           </p>
           <p class="section-lead">
-            Company facts and catalogue data are authored in <strong>company docs</strong>; JSON copies in this repo power the live site.
+            The company is not live yet. This website is our public-facing draft; catalogue JSON here powers what you see on GitHub Pages.
           </p>
         </div>
         <div class="reveal" style="transition-delay: 0.1s">
@@ -416,9 +417,9 @@ export function contactView(prefill = {}) {
   return `
     <section class="page-hero wrap">
       <p class="section-label reveal">Contact</p>
-      <h1 class="section-title reveal">Tell us what you import — we reply in writing.</h1>
+      <h1 class="section-title reveal">Say hello while we’re in setup.</h1>
       <p class="section-lead reveal">
-        Western importers: include destination port, incoterm, and any certification (FDA prior notice, OEKO-TEX, food contact, etc.).
+        Western importers: share what you buy today and where you ship. Include destination port, incoterm, and any certification (FDA prior notice, OEKO-TEX, food contact, etc.) if you can.
       </p>
     </section>
     <section class="section wrap" style="padding-top: 0">
@@ -483,7 +484,7 @@ export function contactView(prefill = {}) {
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%">Send inquiry</button>
           <p style="font-size: 0.78rem; color: var(--ink-soft); margin: 1rem 0 0">
-            Demo: saves to browser storage. Wire to ${getBrand()?.contact?.email ?? "trade@jaatglobal.com"} when live.
+            Pre-launch: saves to browser storage only. We’ll connect this form to ${getBrand()?.contact?.email ?? "trade@jaatglobal.com"} when the trade desk is live.
           </p>
         </form>
       </div>

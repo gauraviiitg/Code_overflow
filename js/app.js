@@ -99,7 +99,7 @@ function bindContactForm() {
     inquiries.push({ ...data, at: new Date().toISOString() });
     localStorage.setItem("jaat_inquiries", JSON.stringify(inquiries));
     form.reset();
-    showToast("Inquiry received — we’ll be in touch within 1 business day.");
+    showToast("Thanks — saved locally. We’ll respond when the trade desk is live.");
   });
 }
 
@@ -125,7 +125,7 @@ function render() {
   const brandName = getBrand()?.name ?? "Jaat Global";
   document.title =
     path === "/"
-      ? `${brandName} | Export from Jaipur, India`
+      ? `${brandName} | Jaipur export — getting started`
       : `${brandName} — ${path.slice(1).charAt(0).toUpperCase()}${path.slice(2)}`;
 
   observeReveals();
