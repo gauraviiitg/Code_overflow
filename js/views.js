@@ -125,21 +125,24 @@ export function productsView() {
   return `
     <section class="page-hero wrap">
       <p class="section-label reveal">Products</p>
-      <h1 class="section-title reveal">What you can order today</h1>
+      <h1 class="section-title reveal">Our range</h1>
       <p class="section-lead reveal">
-        Decorative Jaipur blue pottery and brass gift pieces. Minimum quantities and lead times are on each product page.
+        Blue pottery and brass are open for quotes today. Other lines show what we plan to add next; each is marked coming soon.
       </p>
       <div class="product-grid" data-product-grid>
         ${renderProductGrid()}
       </div>
-      <p class="form-note reveal" style="margin-top: 1.5rem">
-        Textiles, food, and stone lines are not open yet. Email us if you want to be notified when they launch.
-      </p>
     </section>
   `;
 }
 
 function productComingSoonVisual(p) {
+  if (p.image) {
+    return `<span class="product-visual-photo product-visual-photo--soon">
+      <img src="${p.image}" alt="${escapeHtml(p.imageAlt ?? p.name)}" loading="lazy" decoding="async" />
+      <span class="product-coming-soon-label">Coming soon</span>
+    </span>`;
+  }
   return `<span class="product-visual-fallback product-visual-fallback--soon" data-pattern="${p.pattern}"><span class="product-coming-soon-label">Coming soon</span></span>`;
 }
 
@@ -209,12 +212,13 @@ export function productDetailView(productId) {
       <h1 class="section-title reveal">${escapeHtml(product.name)}</h1>
       <p class="section-lead reveal">${escapeHtml(product.description)}</p>
       <div class="product-detail-grid reveal">
-        <div class="product-detail-visual product-detail-visual--soon">
+        <div class="product-detail-visual${product.image ? "" : " product-detail-visual--soon"}">
           ${productComingSoonVisual(product)}
+          ${product.image ? `<p class="form-note">Illustrative category photo. Not available to order yet.</p>` : ""}
         </div>
         <div class="product-detail-spec">
           <p class="detail-note"><strong>Status.</strong> Coming soon. This line is not open for quotes yet.</p>
-          <p class="form-note">We are taking orders for blue pottery and brass décor. Ask us when this category opens.</p>
+          <p class="form-note">We are taking orders for blue pottery and brass. Tell us if you want notice when this line opens.</p>
           <a class="btn btn-primary" href="#/contact?product=blue-pottery">Request a quote</a>
           <a class="btn btn-ghost" href="#/products">Back to collections</a>
         </div>
@@ -458,10 +462,9 @@ function importMarketsOptions() {
 }
 
 export function renderProductGrid() {
-  return getProducts()
-    .filter((p) => p.launchScope === "v1")
-    .map((p) => productCardHtml(p))
-    .join("");
+  const live = getProducts().filter((p) => p.launchScope === "v1");
+  const soon = getProducts().filter((p) => p.launchScope === "roadmap");
+  return [...live, ...soon].map((p) => productCardHtml(p)).join("");
 }
 
 export const routeMeta = {

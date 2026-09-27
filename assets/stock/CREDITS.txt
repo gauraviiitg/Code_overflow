@@ -1,9 +1,15 @@
 STOCK PHOTOS (illustrative, not Jaat Global inventory)
 
-Only blue pottery and brass lines use photos on the public site. Replace with your own maker photos on live orders.
+Replace with your own maker photos on live orders.
 
-blue-pottery-alt.jpg    Wikimedia Commons: Blue Pottery Jaipur Collection.jpg (CC BY-SA)
-blue-pottery.jpg        Wikimedia Commons: Blue Pottery Designer Vase.jpg (CC BY-SA, spare)
-brass-decor.jpg         Wikimedia Commons: A traditional Indian brass bowl (CC BY-SA)
+blue-pottery-alt.jpg    Wikimedia: Blue Pottery Jaipur Collection (CC BY-SA)
+blue-pottery.jpg        Wikimedia: Blue Pottery Designer Vase (CC BY-SA)
+brass-decor.jpg         Wikimedia: traditional Indian brass bowl (CC BY-SA)
+textiles.jpg            Wikimedia: Bagru_Print.jpg (CC BY-SA)
+quilts.jpg              Wikimedia: Dear Jane quilt display (CC BY-SA)
+spices.jpg              Unsplash: photo-1596040033229
+rice.jpg                Wikimedia: Raw Basmati Rice.jpg (CC BY-SA)
+stone-marble.jpg        Wikimedia: Marble_flooring.jpg (CC BY-SA)
+sandstone.jpg           Wikimedia: Sandstone Garden at Winterbourne (CC BY-SA)
 
 Full URLs: company docs/assets/stock-sources.txt

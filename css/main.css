@@ -816,6 +816,38 @@ a:hover {
   background: linear-gradient(145deg, var(--sand) 0%, rgba(18, 22, 28, 0.04) 100%);
 }
 
+.product-visual-photo {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.product-visual-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-visual-photo--soon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 22, 28, 0.28);
+  pointer-events: none;
+}
+
+.product-visual-photo--soon .product-coming-soon-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(246, 242, 234, 0.92);
+  box-shadow: 0 2px 12px rgba(18, 22, 28, 0.15);
+}
+
 .product-coming-soon-label {
   position: relative;
   z-index: 1;

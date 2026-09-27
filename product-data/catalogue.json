@@ -81,7 +81,9 @@
       "hsHint": "",
       "launchScope": "roadmap",
       "westNote": "Coming soon.",
-      "description": "Jaipur block print patterns on linen for home textiles when this line opens."
+      "description": "Jaipur block print patterns on linen for home textiles when this line opens.",
+      "image": "assets/stock/textiles.jpg",
+      "imageAlt": "Bagru block print textile, illustrative stock photo"
     },
     {
       "id": "jaipur-quilts",
@@ -93,7 +95,9 @@
       "hsHint": "",
       "launchScope": "roadmap",
       "westNote": "Coming soon.",
-      "description": "Light cotton quilts and bedding packed for export when this line opens."
+      "description": "Light cotton quilts and bedding packed for export when this line opens.",
+      "image": "assets/stock/quilts.jpg",
+      "imageAlt": "Quilt on display, illustrative stock photo"
     },
     {
       "id": "turmeric-powder",
@@ -105,7 +109,9 @@
       "hsHint": "",
       "launchScope": "roadmap",
       "westNote": "Coming soon.",
-      "description": "Food grade spices with full documentation when this programme opens."
+      "description": "Food grade spices with full documentation when this programme opens.",
+      "image": "assets/stock/spices.jpg",
+      "imageAlt": "Indian spices, illustrative stock photo"
     },
     {
       "id": "basmati-rice",
@@ -117,7 +123,9 @@
       "hsHint": "",
       "launchScope": "roadmap",
       "westNote": "Coming soon.",
-      "description": "Bulk rice exports when this programme opens."
+      "description": "Bulk rice exports when this programme opens.",
+      "image": "assets/stock/rice.jpg",
+      "imageAlt": "Raw basmati rice, illustrative stock photo"
     },
     {
       "id": "marble-tables",
@@ -129,7 +137,9 @@
       "hsHint": "",
       "launchScope": "roadmap",
       "westNote": "Coming soon.",
-      "description": "Marble tabletops and inlay work when this line opens."
+      "description": "Marble tabletops and inlay work when this line opens.",
+      "image": "assets/stock/stone-marble.jpg",
+      "imageAlt": "White marble surface, illustrative stock photo"
     },
     {
       "id": "sandstone-planters",
@@ -141,7 +151,9 @@
       "hsHint": "",
       "launchScope": "roadmap",
       "westNote": "Coming soon.",
-      "description": "Sandstone planters and garden pieces when this line opens."
+      "description": "Sandstone planters and garden pieces when this line opens.",
+      "image": "assets/stock/sandstone.jpg",
+      "imageAlt": "Sandstone garden setting, illustrative stock photo"
     }
   ]
 }
