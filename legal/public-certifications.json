@@ -1,19 +1,19 @@
 {
-  "displayPolicy": "India export registration details are shared on proforma invoice and after we qualify your enquiry.",
+  "displayPolicy": "Registration numbers are shared on your proforma invoice when we send a quote.",
   "badges": [
     {
       "id": "iec",
       "label": "IEC",
-      "title": "India export registration",
+      "title": "Export registration",
       "status": "Active",
-      "publicNote": "Importer Exporter Code on file for outbound shipments"
+      "publicNote": "Required for outbound shipments from India"
     },
     {
       "id": "gst",
       "label": "GST",
-      "title": "Goods and Services Tax",
+      "title": "Tax registration",
       "status": "Active",
-      "publicNote": "GSTIN shown on commercial invoice"
+      "publicNote": "Shown on your commercial invoice"
     }
   ]
 }

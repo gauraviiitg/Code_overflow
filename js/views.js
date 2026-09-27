@@ -43,7 +43,7 @@ function flagshipHandicraftHtml({ showActions = true } = {}) {
                 <a class="btn btn-ghost" href="#/products/${encodeURIComponent(line.productId)}">View line</a>
                 ${
                   showActions
-                    ? `<a class="btn btn-primary" href="#/contact?product=${encodeURIComponent(line.productId)}">Get in touch</a>`
+                    ? `<a class="btn btn-primary" href="#/contact?product=${encodeURIComponent(line.productId)}">Request a quote</a>`
                     : ""
                 }
               </div>
@@ -55,19 +55,6 @@ function flagshipHandicraftHtml({ showActions = true } = {}) {
     </section>`;
 }
 
-function marketFocusHtml() {
-  const focus = getBrand()?.marketFocus;
-  if (!focus) return "";
-
-  const primary = (focus.primary ?? []).join(" and ");
-  return `
-    <section class="section wrap market-focus reveal">
-      <p class="section-label">Customers</p>
-      <h2 class="section-title" style="font-size: 1.75rem">${escapeHtml(focus.headline ?? "Gift and home buyers")}</h2>
-      <p class="section-lead">${escapeHtml(focus.notFirst ?? "")} Main markets today: ${escapeHtml(primary)}.</p>
-    </section>`;
-}
-
 function heroVisualHtml(brand) {
   const hero = brand?.heroImage;
   const src = hero?.src ?? "assets/stock/blue-pottery-alt.jpg";
@@ -75,7 +62,7 @@ function heroVisualHtml(brand) {
   return `
         <figure class="hero-figure reveal" style="transition-delay: 0.1s">
           <img class="hero-photo" src="${src}" width="560" height="420" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" />
-          <figcaption class="hero-caption">Sample product photo for layout. Your order uses maker photos and packing approved on the PO.</figcaption>
+          <figcaption class="hero-caption">Sample photo. Your order uses approved product and packing images.</figcaption>
         </figure>`;
 }
 
@@ -112,8 +99,6 @@ export function homeView() {
 
     ${flagshipHandicraftHtml()}
 
-    ${marketFocusHtml()}
-
     <section class="section wrap">
       <p class="section-label reveal">Process</p>
       <h2 class="section-title reveal">How ordering works</h2>
@@ -136,28 +121,20 @@ export function homeView() {
   `;
 }
 
-export function productsView(activeCategory = "handicraft") {
-  const categories = getCategories();
-
+export function productsView() {
   return `
     <section class="page-hero wrap">
       <p class="section-label reveal">Products</p>
-      <h1 class="section-title reveal">Products</h1>
+      <h1 class="section-title reveal">What you can order today</h1>
       <p class="section-lead reveal">
-        Order today: Jaipur blue pottery and brass gift décor. Other categories listed as coming soon.
+        Decorative Jaipur blue pottery and brass gift pieces. Minimum quantities and lead times are on each product page.
       </p>
-      <div class="products-toolbar reveal" data-filters>
-        ${categories
-          .map(
-            (c) => `
-          <button type="button" class="filter-chip ${c.id === activeCategory ? "is-active" : ""}"
-            data-filter="${c.id}">${c.label}</button>`
-          )
-          .join("")}
-      </div>
       <div class="product-grid" data-product-grid>
-        ${renderProductGrid(activeCategory)}
+        ${renderProductGrid()}
       </div>
+      <p class="form-note reveal" style="margin-top: 1.5rem">
+        Textiles, food, and stone lines are not open yet. Email us if you want to be notified when they launch.
+      </p>
     </section>
   `;
 }
@@ -299,7 +276,7 @@ export function importersView() {
       </div>
     </section>
     <section class="section wrap" style="padding-top: 0">
-      <a class="btn btn-primary" href="#/contact">Start a conversation</a>
+      <a class="btn btn-primary" href="#/contact">Request a quote</a>
     </section>
   `;
 }
@@ -319,9 +296,9 @@ export function exportView() {
     </section>
     <section class="section wrap" style="padding-top: 0">
       <h2 class="section-title reveal" style="font-size: 1.75rem">Shipping terms</h2>
-      <div class="overlap-table reveal">
+      <div class="shipping-table reveal">
         <table>
-          <thead><tr><th>Term</th><th>Typical use</th></tr></thead>
+          <thead><tr><th>Term on quote</th><th>What it means for you</th></tr></thead>
           <tbody>
             ${incRows.map((r) => `<tr><td>${escapeHtml(r.term)}</td><td>${escapeHtml(r.use)}</td></tr>`).join("")}
           </tbody>
@@ -349,26 +326,32 @@ export function aboutView() {
   return `
     <section class="page-hero wrap">
       <p class="section-label reveal">About</p>
-      <h1 class="section-title reveal">Jaipur sourcing, export ready paperwork.</h1>
+      <h1 class="section-title reveal">Jaipur export team for gift and home décor.</h1>
       <p class="section-lead reveal">
-        Jaat Global is an India based export company focused on decorative blue pottery and brass gift décor. We work with workshops in Jaipur, agree packing with you before production, and ship from Mundra port with standard shipping documents.
+        Jaat Global sources decorative blue pottery and brass from Jaipur workshops, agrees export packing with you, and ships with standard commercial documents. We work in English.
       </p>
-      <p class="section-lead reveal">Office: ${escapeHtml(place)}. Correspondence in English.</p>
+      <p class="section-lead reveal">Based in ${escapeHtml(place)}.</p>
     </section>
     ${certGridHtml()}
     <section class="section wrap" style="padding-top: 0">
+      <h2 class="section-title reveal" style="font-size: 1.75rem">How to reach us</h2>
+      <p class="section-lead reveal">
+        Email <a href="mailto:${escapeHtml(getBrand()?.contact?.email ?? "trade@jaatglobal.com")}">${escapeHtml(getBrand()?.contact?.email ?? "trade@jaatglobal.com")}</a>.
+        ${escapeHtml(getBrand()?.contact?.responseSLA ?? "We reply within two business days")}.
+        Our office runs on India time (Jaipur, GMT+5:30); email works well for buyers in Europe and the UK.
+      </p>
       <div class="timeline">
         <div class="timeline-item reveal">
           <strong>Quality</strong>
-          Pre shipment inspection when you require it. Production photos on request.
+          Third party inspection when you need it. Production photos during the run.
         </div>
         <div class="timeline-item reveal">
           <strong>Product use</strong>
-          Standard lines are decorative gift and home products. Food contact or child focused SKUs need a separate specification.
+          Standard range is gift and home décor. Food contact items need a separate quote.
         </div>
         <div class="timeline-item reveal">
-          <strong>Your contact</strong>
-          One account manager from sample approval through bill of lading.
+          <strong>One contact</strong>
+          Same team from sample approval through shipment.
         </div>
       </div>
     </section>
@@ -417,14 +400,14 @@ export function contactView(prefill = {}) {
           </div>
           <div class="form-row">
             <div class="field">
-              <label for="market">Primary market</label>
+              <label for="market">Your country or market</label>
               <select id="market" name="market">
                 <option value="">Select</option>
                 ${importMarketsOptions()}
               </select>
             </div>
             <div class="field">
-              <label for="incoterm">Incoterm preference</label>
+              <label for="incoterm">How you want goods shipped</label>
               <select id="incoterm" name="incoterm">
                 <option value="">Select</option>
                 ${terms.map((t) => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("")}
@@ -445,7 +428,7 @@ export function contactView(prefill = {}) {
               </select>
             </div>
             <div class="field">
-              <label for="moqBand">Target MOQ band</label>
+              <label for="moqBand">Rough order size</label>
               <select id="moqBand" name="moqBand">
                 <option value="">Select</option>
                 ${moqBands.map((b) => `<option value="${escapeHtml(b)}">${escapeHtml(b)}</option>`).join("")}
@@ -474,13 +457,11 @@ function importMarketsOptions() {
     .join("");
 }
 
-export function renderProductGrid(activeCategory) {
-  const products = getProducts();
-  const filtered =
-    activeCategory === "all"
-      ? products
-      : products.filter((p) => p.category === activeCategory);
-  return filtered.map((p) => productCardHtml(p)).join("");
+export function renderProductGrid() {
+  return getProducts()
+    .filter((p) => p.launchScope === "v1")
+    .map((p) => productCardHtml(p))
+    .join("");
 }
 
 export const routeMeta = {

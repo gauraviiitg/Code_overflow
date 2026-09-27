@@ -160,7 +160,7 @@ function render() {
   if (path === "/products/detail") {
     outlet.innerHTML = productDetailView(productId);
   } else if (path === "/products") {
-    outlet.innerHTML = productsView(productFilter);
+    outlet.innerHTML = productsView();
   } else if (path === "/importers") {
     outlet.innerHTML = importersView();
   } else if (path === "/export") {

@@ -1,103 +1,102 @@
 {
   "home": {
-    "valueProp": "We source decorative Jaipur blue pottery and brass gift pieces from vetted makers, pack for export, and ship with clear paperwork for your market.",
+    "valueProp": "Jaipur blue pottery and brass gift décor for shops, importers, and hospitality buyers. We quote in writing before production starts.",
     "bullets": [
-      "Two ready lines today: blue pottery and brass décor for gift and home",
-      "Typical bulk shipment: FOB Mundra, Gujarat. Other terms available on request",
-      "Written quote with MOQ, unit price, lead time, and packing before you confirm",
-      "English invoices and packing lists. One contact for samples through delivery",
-      "Decorative ceramics labelled not for food use unless we agree a separate programme"
+      "Two product lines you can order now: pottery and brass",
+      "Samples available before you commit to bulk",
+      "English invoices and one contact from quote to shipment",
+      "Decorative pottery labelled not for food unless you request otherwise"
     ],
     "trustStrip": [
-      { "label": "Based in", "value": "Jaipur, Rajasthan" },
-      { "label": "Ship from", "value": "Mundra port (FOB)" },
-      { "label": "MOQ", "value": "From about 300 pieces" },
-      { "label": "Samples", "value": "From about 20 pieces" }
+      { "label": "Office", "value": "Jaipur, India" },
+      { "label": "Bulk ships from", "value": "Mundra port" },
+      { "label": "Typical order", "value": "300 to 500+ pieces" },
+      { "label": "Reply time", "value": "Within 2 business days" }
     ],
     "faqTitle": "Common questions",
     "faq": [
       {
         "q": "Are you a factory?",
-        "a": "We are an export company working with Jaipur workshops. You get one English speaking contact, consolidated paperwork, and export packing specs we agree before production."
+        "a": "We are an export company that works with Jaipur workshops. You deal with one team for pricing, packing, and shipping papers."
       },
       {
         "q": "Is the pottery food safe?",
-        "a": "Our standard line is decorative only, with not for food use labelling. If you need food contact ceramics, tell us upfront so we can quote testing and a different specification."
+        "a": "Our standard range is for display and gift use, not for serving food. Tell us if you need food contact items and we will quote separately."
       },
       {
-        "q": "What is the usual shipping term?",
-        "a": "Most bulk orders are FOB Mundra. Samples are often collected EXW Jaipur. We can quote CIF to your port when you share destination and volume."
+        "q": "How does shipping work?",
+        "a": "Most bulk orders leave from Mundra port in Gujarat. We state the shipping term clearly on your quote. We can include sea freight to your port when you ask."
       },
       {
         "q": "How do samples work?",
-        "a": "We send courier samples with a commercial invoice for customs. You approve colour and finish in writing before the bulk order goes into production."
+        "a": "We send samples by courier with an invoice for customs. You sign off colours and finish before we run bulk."
       },
       {
-        "q": "Who handles EU product rules?",
-        "a": "Your company remains the importer of record in the EU. We provide product information and test reports where available so your compliance team can sign off."
+        "q": "Who handles EU or UK product rules?",
+        "a": "You import into your country. We give you product details and any test reports we have so your compliance team can approve the line."
       },
       {
         "q": "Can we inspect before shipment?",
-        "a": "Yes. Agree inspection on the purchase order. We share pre shipment photos during production either way."
+        "a": "Yes, if we agree it on the order. We send production photos during the run in any case."
       }
     ]
   },
   "importers": {
     "title": "How to order",
-    "lead": "A straight path from first enquiry to goods on the water.",
+    "lead": "From first email to goods on the water.",
     "steps": [
       {
-        "title": "Tell us what you need",
-        "body": "Product types, quantities, destination country, target retail price band, and any labelling rules in your market."
+        "title": "Send your brief",
+        "body": "What you want to buy, rough quantity, destination country, and how you plan to sell it."
       },
       {
-        "title": "Samples and approval",
-        "body": "We ship samples for your team to sign off. Changes are agreed in writing before bulk starts."
+        "title": "Approve samples",
+        "body": "We ship samples. You confirm the look and quality in writing."
       },
       {
-        "title": "Purchase order and production",
-        "body": "You receive a written quote: MOQ, price, lead time, carton plan, and payment milestones. Progress photos on request."
+        "title": "Confirm the order",
+        "body": "You receive price, quantity, lead time, packing plan, and payment steps in one quote."
       },
       {
-        "title": "Shipping documents",
-        "body": "Commercial invoice, packing list, and bill of lading. Certificate of origin when your broker needs it."
+        "title": "Receive shipping papers",
+        "body": "Invoice, packing list, and bill of lading for your freight forwarder or broker."
       },
       {
-        "title": "Delivery and repeat orders",
-        "body": "Report transit damage with photos within the agreed window. Share a forecast when you plan a reorder."
+        "title": "After delivery",
+        "body": "Tell us about transit damage with photos within the agreed time. Share reorder plans when you have them."
       }
     ],
-    "downloadLabel": "Printable summary (PDF)"
+    "downloadLabel": "Printable summary"
   },
   "export": {
     "title": "Shipping and documents",
-    "lead": "What to expect on commercial terms and paperwork for gift and décor orders.",
+    "lead": "What appears on your quote and what documents you receive with the shipment.",
     "defaultIncoterm": "FOB Mundra",
     "incotermNotes": [
-      { "term": "EXW Jaipur", "use": "You arrange pickup, often used for samples" },
-      { "term": "FCA", "use": "We deliver to a named carrier or inland point in India" },
-      { "term": "FOB Mundra", "use": "Our usual bulk term: goods on board at Mundra port" },
-      { "term": "CIF", "use": "We include freight and insurance to your named port in the quote" }
+      { "term": "EXW Jaipur", "use": "You collect goods in Jaipur, often for samples" },
+      { "term": "FOB Mundra", "use": "Goods loaded at port; you book sea freight (most common)" },
+      { "term": "CIF", "use": "We quote sea freight and insurance to your named port" }
     ],
     "documentsHandicraft": [
-      "Commercial invoice and packing list",
+      "Commercial invoice",
+      "Packing list",
       "Bill of lading",
-      "Certificate of origin when required by your broker",
-      "Product labels as agreed on the PO (including not for food on decorative pottery)"
+      "Certificate of origin if your broker needs it",
+      "Product labels as agreed on your order"
     ],
     "packingSummary": [
-      "Pottery: export cartons, dividers between pieces, drop test before we lock the packing spec",
-      "Brass: rigid cartons, wrap, and moisture protection in rainy season",
-      "Mixed orders: each SKU listed clearly on the packing list"
+      "Pottery: strong export cartons with dividers; we test drop packing before bulk",
+      "Brass: rigid cartons and wrap; extra moisture protection in rainy season",
+      "Mixed pottery and brass: every SKU listed on the packing list"
     ],
-    "complianceDecorative": "Decorative gift and home products only unless stated on your PO. Your team confirms market rules in the EU or UK. We share material and test information we have from makers when you need it for your files."
+    "complianceDecorative": "Gift and home décor unless your order says otherwise. You confirm rules for your market. We share material information from makers when you need it."
   },
   "contact": {
     "moqBands": [
-      "Under 50 pcs",
-      "50 to 200 pcs",
-      "200 to 500 pcs",
-      "500 pcs or more",
+      "Under 50 pieces",
+      "50 to 200 pieces",
+      "200 to 500 pieces",
+      "500 pieces or more",
       "Not sure yet"
     ]
   },

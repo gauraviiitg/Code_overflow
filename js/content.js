@@ -1,12 +1,12 @@
 const fallbackSite = {
   home: {
-    valueProp: "Jaipur merchant export desk for EU gift and home décor importers.",
-    bullets: ["v1 handicraft from Jaipur", "FOB Mundra default", "Prelaunch"],
+    valueProp: "Jaipur blue pottery and brass gift décor for importers and retailers.",
+    bullets: ["Pottery and brass available to order", "Written quote before production"],
     trustStrip: [],
     faq: [],
   },
-  importers: { title: "For importers", lead: "", steps: [] },
-  export: { title: "Export and compliance", lead: "", documentsHandicraft: [] },
+  importers: { title: "How to order", lead: "", steps: [] },
+  export: { title: "Shipping and documents", lead: "", documentsHandicraft: [] },
 };
 
 const fallbackCerts = { badges: [], displayPolicy: "" };
@@ -53,7 +53,7 @@ export function certGridHtml() {
   return `
     <section class="section wrap cert-section">
       <p class="section-label reveal">Company</p>
-      <h2 class="section-title reveal" style="font-size: 1.75rem">India export registration</h2>
+      <h2 class="section-title reveal" style="font-size: 1.75rem">Registered to export from India</h2>
       ${displayPolicy ? `<p class="section-lead reveal">${escapeHtml(displayPolicy)}</p>` : ""}
       <div class="cert-grid reveal">
         ${badges
@@ -116,8 +116,7 @@ export function specTableHtml(product, incoterms) {
     ["Minimum order", product.moq],
     ["Samples", product.sampleMoq ?? "On request"],
     ["Lead time", product.lead],
-    ["Shipping terms", "FOB Mundra usual. EXW, FCA, and CIF on request."],
-    ["Customs code", product.hsHint ? `HS ${product.hsHint} (confirm with your broker)` : ""],
+    ["Shipping", "Usually FOB Mundra. Other terms on request."],
   ].filter(([, v]) => v);
 
   return `

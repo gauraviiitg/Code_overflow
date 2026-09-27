@@ -1287,6 +1287,7 @@ a:hover {
   color: rgba(235, 228, 216, 0.85);
 }
 
+.shipping-table,
 .overlap-table {
   overflow-x: auto;
   margin-top: 1rem;

@@ -20,10 +20,9 @@
     "Other"
   ],
   "incoterms": [
-    "EXW Jaipur",
-    "FCA (named place)",
-    "FOB Mundra",
-    "CIF (named port)"
+    "EXW Jaipur (you arrange pickup)",
+    "FOB Mundra (usual for bulk)",
+    "CIF (we quote freight to your port)"
   ],
   "products": [
     {
