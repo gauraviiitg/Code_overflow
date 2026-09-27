@@ -1,99 +1,96 @@
 {
   "home": {
-    "valueProp": "Jaipur merchant export desk for EU gift and home décor importers.",
+    "valueProp": "We source decorative Jaipur blue pottery and brass gift pieces from vetted makers, pack for export, and ship with clear paperwork for your market.",
     "bullets": [
-      "v1: decorative blue pottery and brass gift décor from Jaipur makers",
-      "Default bulk term: FOB Mundra. We quote EXW, FCA, FAS, FOB, and CIF only",
-      "English documentation, written MOQ and lead time before production",
-      "EU decorative compliance path: GPSR and REACH with your importer partner",
-      "Prelaunch: building makers, QC, and export files. Not shipping yet"
+      "Two ready lines today: blue pottery and brass décor for gift and home",
+      "Typical bulk shipment: FOB Mundra, Gujarat. Other terms available on request",
+      "Written quote with MOQ, unit price, lead time, and packing before you confirm",
+      "English invoices and packing lists. One contact for samples through delivery",
+      "Decorative ceramics labelled not for food use unless we agree a separate programme"
     ],
     "trustStrip": [
-      { "label": "IEC and GST", "value": "Registration types on file" },
-      { "label": "Load port", "value": "FOB Mundra planned" },
-      { "label": "Markets", "value": "EU gift and décor first" },
-      { "label": "Status", "value": "Prelaunch desk" }
+      { "label": "Based in", "value": "Jaipur, Rajasthan" },
+      { "label": "Ship from", "value": "Mundra port (FOB)" },
+      { "label": "MOQ", "value": "From about 300 pieces" },
+      { "label": "Samples", "value": "From about 20 pieces" }
     ],
-    "faqTitle": "Questions importers ask us",
+    "faqTitle": "Common questions",
     "faq": [
       {
-        "q": "Are you a factory or a trader?",
-        "a": "Merchant export desk. We curate Jaipur makers, align POs, packing, and export paperwork. You deal with one English speaking account."
+        "q": "Are you a factory?",
+        "a": "We are an export company working with Jaipur workshops. You get one English speaking contact, consolidated paperwork, and export packing specs we agree before production."
       },
       {
-        "q": "Can I buy food safe blue pottery for retail?",
-        "a": "Not in v1. We sell decorative ceramics only, labelled not for food use. Food contact needs a separate programme and EU 84/500 testing."
+        "q": "Is the pottery food safe?",
+        "a": "Our standard line is decorative only, with not for food use labelling. If you need food contact ceramics, tell us upfront so we can quote testing and a different specification."
       },
       {
-        "q": "What incoterm do you prefer?",
-        "a": "FOB Mundra for bulk LCL or FCL. Samples often EXW Jaipur. We do not quote DAP or DDP."
+        "q": "What is the usual shipping term?",
+        "a": "Most bulk orders are FOB Mundra. Samples are often collected EXW Jaipur. We can quote CIF to your port when you share destination and volume."
       },
       {
         "q": "How do samples work?",
-        "a": "Strike offs or pre production samples with commercial invoice for customs. Revisions capped in writing before bulk PO."
+        "a": "We send courier samples with a commercial invoice for customs. You approve colour and finish in writing before the bulk order goes into production."
       },
       {
-        "q": "Who handles EU GPSR?",
-        "a": "Your EU importer acts as responsible economic operator. We supply product and test files we build with makers for decorative v1."
+        "q": "Who handles EU product rules?",
+        "a": "Your company remains the importer of record in the EU. We provide product information and test reports where available so your compliance team can sign off."
       },
       {
-        "q": "Do you offer third party inspection?",
-        "a": "Yes when agreed on the PO. AQL table attached before production."
+        "q": "Can we inspect before shipment?",
+        "a": "Yes. Agree inspection on the purchase order. We share pre shipment photos during production either way."
       }
     ]
   },
   "importers": {
-    "title": "For importers",
-    "lead": "How we intend to work with EU and UK gift buyers from first email to bill of lading.",
+    "title": "How to order",
+    "lead": "A straight path from first enquiry to goods on the water.",
     "steps": [
       {
-        "title": "Qualification call",
-        "body": "Product specs, retail or hospitality use, destination country, incoterm, certification needs, payment preference."
+        "title": "Tell us what you need",
+        "body": "Product types, quantities, destination country, target retail price band, and any labelling rules in your market."
       },
       {
-        "title": "Sample phase",
-        "body": "Courier samples with commercial invoice. Revision rounds capped in writing before bulk."
+        "title": "Samples and approval",
+        "body": "We ship samples for your team to sign off. Changes are agreed in writing before bulk starts."
       },
       {
-        "title": "Production PO",
-        "body": "Written MOQ, unit price, lead time, packing, labelling. Milestone photos. Optional inspection."
+        "title": "Purchase order and production",
+        "body": "You receive a written quote: MOQ, price, lead time, carton plan, and payment milestones. Progress photos on request."
       },
       {
         "title": "Shipping documents",
-        "body": "Commercial invoice, packing list, bill of lading, certificate of origin when required. Handicraft decorative file for EU."
+        "body": "Commercial invoice, packing list, and bill of lading. Certificate of origin when your broker needs it."
       },
       {
-        "title": "After delivery",
-        "body": "Defect claim window with photos and carton marks. Reorder forecast for capacity."
+        "title": "Delivery and repeat orders",
+        "body": "Report transit damage with photos within the agreed window. Share a forecast when you plan a reorder."
       }
     ],
-    "downloadLabel": "Download importer brief"
+    "downloadLabel": "Printable summary (PDF)"
   },
   "export": {
-    "title": "Export and compliance",
-    "lead": "Commercial terms and document expectations for v1 handicraft. Food and DDP programmes out of scope unless quoted.",
+    "title": "Shipping and documents",
+    "lead": "What to expect on commercial terms and paperwork for gift and décor orders.",
     "defaultIncoterm": "FOB Mundra",
     "incotermNotes": [
-      { "term": "EXW Jaipur", "use": "Samples when your forwarder collects from maker" },
-      { "term": "FCA", "use": "Handover at named inland point or ICD" },
-      { "term": "FAS Mundra", "use": "Rare alongside ship, costs in writing" },
-      { "term": "FOB Mundra", "use": "Default bulk LCL or FCL" },
-      { "term": "CIF", "use": "Named port with freight and marine insurance in quote" }
+      { "term": "EXW Jaipur", "use": "You arrange pickup, often used for samples" },
+      { "term": "FCA", "use": "We deliver to a named carrier or inland point in India" },
+      { "term": "FOB Mundra", "use": "Our usual bulk term: goods on board at Mundra port" },
+      { "term": "CIF", "use": "We include freight and insurance to your named port in the quote" }
     ],
     "documentsHandicraft": [
       "Commercial invoice and packing list",
       "Bill of lading",
-      "Certificate of origin when buyer or broker requires",
-      "Decorative pottery: not for food label and glaze test file when available",
-      "REACH and GPSR dossier path with EU importer partner",
-      "ISPM 15 pallet when wood used"
+      "Certificate of origin when required by your broker",
+      "Product labels as agreed on the PO (including not for food on decorative pottery)"
     ],
     "packingSummary": [
-      "Pottery: 5 ply cartons, dividers, drop test before PO lock",
-      "Brass: bubble wrap, dry cartons, silica in monsoon season",
-      "Mixed LCL: pottery and brass programmes documented on packing list"
+      "Pottery: export cartons, dividers between pieces, drop test before we lock the packing spec",
+      "Brass: rigid cartons, wrap, and moisture protection in rainy season",
+      "Mixed orders: each SKU listed clearly on the packing list"
     ],
-    "complianceDecorative": "v1 decorative ceramics and metal décor: GPSR general product safety and REACH for glaze and metal articles. Not for food contact in v1. Nickel testing only if skin contact SKUs, which we exclude in v1."
+    "complianceDecorative": "Decorative gift and home products only unless stated on your PO. Your team confirms market rules in the EU or UK. We share material and test information we have from makers when you need it for your files."
   },
   "contact": {
     "moqBands": [
@@ -105,9 +102,9 @@
     ]
   },
   "meta": {
-    "collections": "Collections",
-    "importers": "For importers",
-    "export": "Export and compliance",
+    "collections": "Products",
+    "importers": "How to order",
+    "export": "Shipping and documents",
     "about": "About",
     "contact": "Contact"
   }

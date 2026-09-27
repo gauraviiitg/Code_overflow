@@ -1,7 +1,7 @@
 {
   "name": "Jaat Global",
   "logoSubtitle": "International trade and logistics",
-  "tagline": "Jaipur export desk for EU gift and home décor (prelaunch)",
+  "tagline": "Jaipur blue pottery and brass gift décor for importers and retailers",
   "typography": {
     "official": true,
     "serif": "Instrument Serif",
@@ -16,26 +16,26 @@
     "favicon": "assets/favicon.svg"
   },
   "marketFocus": {
-    "headline": "EU gift and home décor importers",
-    "primary": ["Sweden", "Germany", "Denmark", "Netherlands"],
-    "secondary": ["United Arab Emirates", "Other EU"],
-    "notFirst": "US and UK mass retail are not our v1 wedge. We focus on craft led EU programmes first."
+    "headline": "Gift, home, and hospitality buyers",
+    "primary": ["European Union", "United Kingdom"],
+    "secondary": ["United Arab Emirates"],
+    "notFirst": "We work with importers and retailers who need repeatable SKUs, export packing, and clear documents."
   },
   "flagshipHandicraft": [
     {
       "productId": "blue-pottery",
-      "headline": "Jaipur blue pottery, decorative",
+      "headline": "Jaipur blue pottery",
       "asset": "assets/stock/blue-pottery-alt.jpg",
-      "pitch": "GI linked craft: vases, planters, wall pieces, tiles. v1 is decorative only (not for food). Export packing with drop test spec before PO."
+      "pitch": "Vases, planters, plates, and tiles in classic Jaipur glazes. Decorative use, export cartons, and drop tested packing."
     },
     {
       "productId": "brass-decor",
       "headline": "Brass and copper décor",
       "asset": "assets/stock/brass-decor.jpg",
-      "pitch": "Gift and hospitality add ons from Jaipur makers: lacquered interiors, nickel free where needed. No jewelry or skin contact lines in v1."
+      "pitch": "Bowls, trays, and gift pieces for retail and hospitality. Mix with pottery in one container programme."
     }
   ],
-  "flagshipSectionTitle": "Blue pottery leads. Brass completes the gift collection.",
+  "flagshipSectionTitle": "Start with pottery. Add brass in the same shipment.",
   "location": {
     "city": "Jaipur",
     "state": "Rajasthan",
@@ -46,22 +46,15 @@
   },
   "contact": {
     "email": "trade@jaatglobal.com",
-    "responseSLA": "When the trade desk is live"
+    "responseSLA": "We reply within two business days"
   },
-  "westernMarkets": [
-    { "code": "SE", "name": "Sweden", "overlap": "13:00 to 17:00 IST, aligns with Scandinavia morning" },
-    { "code": "DE", "name": "Germany", "overlap": "13:30 to 17:30 IST, aligns with EU morning" },
-    { "code": "DK", "name": "Denmark", "overlap": "13:00 to 17:00 IST, aligns with Scandinavia morning" },
-    { "code": "NL", "name": "Netherlands", "overlap": "13:30 to 17:30 IST, aligns with EU morning" },
-    { "code": "GB", "name": "United Kingdom", "overlap": "12:00 to 16:00 IST, aligns with UK morning" },
-    { "code": "US", "name": "United States", "overlap": "18:30 to 22:30 IST, US East (not v1 focus)" }
-  ],
+  "westernMarkets": [],
   "ports": {
-    "load": "Mundra (FOB planned)"
+    "load": "FOB Mundra, Gujarat"
   },
   "heroImage": {
     "src": "assets/stock/blue-pottery.jpg",
     "alt": "Jaipur blue pottery vase, illustrative stock photo"
   },
-  "incotermsPublicNote": "We quote EXW, FCA, FAS, FOB, and CIF only. We do not quote DAP or DDP."
+  "incotermsPublicNote": "We do not quote delivered duty paid terms. Ask if you need CIF to a named port."
 }

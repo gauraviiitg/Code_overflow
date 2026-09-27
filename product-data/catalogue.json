@@ -1,10 +1,10 @@
 {
   "categories": [
-    { "id": "all", "label": "All categories" },
-    { "id": "handicraft", "label": "Handicraft (launch focus)", "asset": "assets/categories/handicraft.svg" },
-    { "id": "textiles", "label": "Textiles and home", "asset": "assets/categories/textiles.svg" },
-    { "id": "spices", "label": "Spices and agro", "asset": "assets/categories/spices.svg" },
-    { "id": "stone", "label": "Marble and stone", "asset": "assets/categories/stone.svg" }
+    { "id": "all", "label": "All" },
+    { "id": "handicraft", "label": "Handicraft", "asset": "assets/categories/handicraft.svg" },
+    { "id": "textiles", "label": "Textiles", "asset": "assets/categories/textiles.svg" },
+    { "id": "spices", "label": "Food and agro", "asset": "assets/categories/spices.svg" },
+    { "id": "stone", "label": "Stone", "asset": "assets/categories/stone.svg" }
   ],
   "markets": [
     "Sweden",
@@ -22,33 +22,31 @@
   "incoterms": [
     "EXW Jaipur",
     "FCA (named place)",
-    "FAS Mundra",
     "FOB Mundra",
     "CIF (named port)"
   ],
   "products": [
     {
       "id": "blue-pottery",
-      "name": "Jaipur blue pottery, decorative",
+      "name": "Jaipur blue pottery",
       "category": "handicraft",
       "pattern": "P",
-      "moq": "MOQ 400 pcs (samples from about 20 to 50 pc)",
-      "lead": "7 to 9 weeks",
-      "hsHint": "Ch. 6912",
+      "moq": "From 400 pieces",
+      "lead": "7 to 9 weeks after PO",
+      "hsHint": "6912",
       "launchScope": "v1",
-      "westNote": "EU gift and décor; decorative only, labelled not for food use in v1.",
-      "description": "Vases, planters, wall plates, tiles, lamps. Jaipur craft story (Blue Pottery GI). Export corrugated and dividers; drop test packing spec shared before PO.",
+      "westNote": "For gift and home display. Not for food unless agreed separately.",
+      "description": "Hand finished vases, planters, wall plates, tiles, and lamps in traditional Jaipur glazes.",
       "image": "assets/stock/blue-pottery-alt.jpg",
       "imageAlt": "Jaipur blue pottery vases on museum display, illustrative stock photo",
-      "sampleMoq": "About 20 to 50 pieces for sample programme",
+      "sampleMoq": "About 20 to 50 pieces",
       "detailBullets": [
-        "Vases, planters, wall plates, tiles, lamps",
-        "Jaipur Blue Pottery GI craft story",
-        "Decorative only, not for food in v1",
-        "Drop test export packing spec before PO"
+        "Shapes and colours from our maker catalogue or your brief",
+        "Export cartons with dividers; packing tested before bulk",
+        "Labels in English as agreed on your PO"
       ],
-      "complianceNote": "EU decorative path: GPSR and REACH glaze testing with importer partner. Not sold for food contact in v1.",
-      "packingNote": "5 ply export cartons, corrugated dividers, unit bubble wrap. Drop test mandatory.",
+      "complianceNote": "Sold as decorative articles. Your team confirms EU or UK rules. We share glaze and material information from makers when available.",
+      "packingNote": "Five ply export cartons, bubble wrap, and dividers. Drop test before we lock the spec on your order.",
       "featured": true
     },
     {
@@ -56,96 +54,95 @@
       "name": "Brass and copper décor",
       "category": "handicraft",
       "pattern": "B",
-      "moq": "MOQ 300 pcs (samples from about 20 to 50 pc)",
-      "lead": "4 to 6 weeks",
-      "hsHint": "Ch. 7419",
+      "moq": "From 300 pieces",
+      "lead": "4 to 6 weeks after PO",
+      "hsHint": "7419",
       "launchScope": "v1",
-      "westNote": "EU gift and hospitality collections; nickel free on request; no jewelry in v1.",
-      "description": "Hammered vases, bowls, trays, meenakari gift pieces. Curated with pottery in mixed LCL programmes; lacquered interiors where needed.",
+      "westNote": "Gift and hospitality collections. Nickel free finish on request.",
+      "description": "Hammered bowls, trays, vases, and enamel accent pieces suited to retail and hotel gift shops.",
       "image": "assets/stock/brass-decor.jpg",
       "imageAlt": "Traditional Indian brass bowl, illustrative stock photo",
-      "sampleMoq": "About 20 to 50 pieces for sample programme",
+      "sampleMoq": "About 20 to 50 pieces",
       "detailBullets": [
-        "Hammered vases, bowls, trays, meenakari gift pieces",
-        "Lacquered interiors where needed",
-        "Nickel free options on request",
-        "No jewelry or skin contact lines in v1"
+        "Lacquered interior on food adjacent shapes when needed",
+        "Mixed container programmes with blue pottery",
+        "Retail ready wrap and carton labelling"
       ],
-      "complianceNote": "Gift and hospitality décor. REACH metal articles path with EU importer. No EN 1811 skin contact SKUs in v1.",
-      "packingNote": "Rigid cartons, acid free tissue and bubble. Desiccant in monsoon builds.",
+      "complianceNote": "Decorative and gift use. Share your market rules and we confirm finishes with the workshop.",
+      "packingNote": "Rigid cartons, tissue and bubble wrap. Extra desiccant during monsoon season.",
       "featured": true
     },
     {
       "id": "block-print-linen",
-      "name": "Block print linen collections",
+      "name": "Block print linen",
       "category": "textiles",
       "pattern": "I",
-      "moq": "MOQ 500 m",
+      "moq": "From 500 m",
       "lead": "6 to 8 weeks",
-      "hsHint": "Ch. 50 to 63",
+      "hsHint": "",
       "launchScope": "roadmap",
-      "westNote": "Coming soon. Not open for quotes in v1.",
-      "description": "Sanganeri and Bagru motifs on OEKO TEX linen. Custom colourways for EU retailers when this line opens."
+      "westNote": "Coming soon.",
+      "description": "Jaipur block print patterns on linen for home textiles when this line opens."
     },
     {
       "id": "jaipur-quilts",
-      "name": "Jaipur razai and layered bedding",
+      "name": "Jaipur bedding and quilts",
       "category": "textiles",
       "pattern": "Q",
-      "moq": "MOQ 200 pcs",
+      "moq": "From 200 pieces",
       "lead": "5 to 7 weeks",
-      "hsHint": "Ch. 9404",
+      "hsHint": "",
       "launchScope": "roadmap",
-      "westNote": "Coming soon. Not open for quotes in v1.",
-      "description": "Lightweight cotton fills and vacuum packed cartons when this line opens."
+      "westNote": "Coming soon.",
+      "description": "Light cotton quilts and bedding packed for export when this line opens."
     },
     {
       "id": "turmeric-powder",
-      "name": "Turmeric and spice blends",
+      "name": "Spices",
       "category": "spices",
       "pattern": "T",
-      "moq": "MOQ 1 MT",
+      "moq": "From 1 MT",
       "lead": "3 to 4 weeks",
-      "hsHint": "Ch. 0910",
+      "hsHint": "",
       "launchScope": "roadmap",
-      "westNote": "Coming soon. FSSAI and food regs before any PO.",
-      "description": "Steam treated lots with COA. Separate programme after handicraft v1."
+      "westNote": "Coming soon.",
+      "description": "Food grade spices with full documentation when this programme opens."
     },
     {
       "id": "basmati-rice",
-      "name": "Basmati and specialty rice",
+      "name": "Rice",
       "category": "spices",
       "pattern": "R",
-      "moq": "MOQ 20 MT",
+      "moq": "From 20 MT",
       "lead": "4 to 5 weeks",
-      "hsHint": "Ch. 1006",
+      "hsHint": "",
       "launchScope": "roadmap",
-      "westNote": "Coming soon. FCL agro, separate compliance track.",
-      "description": "Punjab and Rajasthan sourcing when this line opens."
+      "westNote": "Coming soon.",
+      "description": "Bulk rice exports when this programme opens."
     },
     {
       "id": "marble-tables",
-      "name": "Marble inlay and table tops",
+      "name": "Marble inlay",
       "category": "stone",
       "pattern": "M",
-      "moq": "MOQ 50 pcs",
+      "moq": "From 50 pieces",
       "lead": "8 to 10 weeks",
-      "hsHint": "Ch. 6802",
+      "hsHint": "",
       "launchScope": "roadmap",
-      "westNote": "Coming soon. EU garden retailers later.",
-      "description": "Makrana and composite bases with crating when this line opens."
+      "westNote": "Coming soon.",
+      "description": "Marble tabletops and inlay work when this line opens."
     },
     {
       "id": "sandstone-planters",
-      "name": "Sandstone planters and garden",
+      "name": "Sandstone garden",
       "category": "stone",
       "pattern": "S",
-      "moq": "MOQ 100 pcs",
+      "moq": "From 100 pieces",
       "lead": "6 to 8 weeks",
-      "hsHint": "Ch. 6802",
+      "hsHint": "",
       "launchScope": "roadmap",
-      "westNote": "Coming soon. Heavy freight after craft lines prove out.",
-      "description": "Hand chiselled ranges when this stone programme opens."
+      "westNote": "Coming soon.",
+      "description": "Sandstone planters and garden pieces when this line opens."
     }
   ]
 }

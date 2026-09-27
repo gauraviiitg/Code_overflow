@@ -26,7 +26,7 @@ function flagshipHandicraftHtml({ showActions = true } = {}) {
 
   return `
     <section class="section wrap flagship-section">
-      <p class="section-label reveal">Launch focus (v1)</p>
+      <p class="section-label reveal">Products</p>
       <h2 class="section-title reveal">${escapeHtml(sectionTitle)}</h2>
       <div class="flagship-duo">
         ${lines
@@ -59,12 +59,12 @@ function marketFocusHtml() {
   const focus = getBrand()?.marketFocus;
   if (!focus) return "";
 
-  const primary = (focus.primary ?? []).join(", ");
+  const primary = (focus.primary ?? []).join(" and ");
   return `
     <section class="section wrap market-focus reveal">
-      <p class="section-label">Who we are building for</p>
-      <h2 class="section-title" style="font-size: 1.75rem">${escapeHtml(focus.headline ?? "EU gift and home décor importers")}</h2>
-      <p class="section-lead">Primary outreach: ${escapeHtml(primary)}. ${escapeHtml(focus.notFirst ?? "")}</p>
+      <p class="section-label">Customers</p>
+      <h2 class="section-title" style="font-size: 1.75rem">${escapeHtml(focus.headline ?? "Gift and home buyers")}</h2>
+      <p class="section-lead">${escapeHtml(focus.notFirst ?? "")} Main markets today: ${escapeHtml(primary)}.</p>
     </section>`;
 }
 
@@ -72,11 +72,10 @@ function heroVisualHtml(brand) {
   const hero = brand?.heroImage;
   const src = hero?.src ?? "assets/stock/blue-pottery-alt.jpg";
   const alt = hero?.alt ?? "Jaipur blue pottery, illustrative stock photo";
-  const loadPort = brand?.ports?.load ?? "Mundra (FOB planned)";
   return `
         <figure class="hero-figure reveal" style="transition-delay: 0.1s">
           <img class="hero-photo" src="${src}" width="560" height="420" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" />
-          <figcaption class="hero-caption">Illustrative Jaipur blue pottery. Default load port: ${escapeHtml(loadPort)}</figcaption>
+          <figcaption class="hero-caption">Sample product photo for layout. Your order uses maker photos and packing approved on the PO.</figcaption>
         </figure>`;
 }
 
@@ -89,21 +88,22 @@ function homeBulletsHtml() {
 export function homeView() {
   const brand = getBrand();
   const home = getSiteContent()?.home ?? {};
-  const valueProp = home.valueProp ?? "Jaipur merchant export desk for EU gift and home décor importers.";
+  const valueProp =
+    home.valueProp ??
+    "Jaipur blue pottery and brass gift décor for importers and retailers.";
 
   return `
     <section class="hero wrap">
       <div class="hero-grid hero-grid--visual">
         <div class="reveal">
-          <p class="hero-eyebrow">Jaipur, EU gift and home décor</p>
-          <h1>Decorative <em>blue pottery</em> first, <em>brass</em> in the same collection.</h1>
+          <p class="hero-eyebrow">Jaat Global · Jaipur</p>
+          <h1>Blue pottery and brass décor, packed and shipped for <em>your market</em>.</h1>
           <p class="section-lead">${escapeHtml(valueProp)}</p>
           ${homeBulletsHtml()}
           ${trustStripHtml()}
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#/contact">Get in touch</a>
-            <a class="btn btn-ghost" href="#/products">Collections</a>
-            <a class="btn btn-ghost" href="downloads/importer-brief.html" target="_blank" rel="noopener">Importer brief</a>
+            <a class="btn btn-primary" href="#/contact">Request a quote</a>
+            <a class="btn btn-ghost" href="#/products">View products</a>
           </div>
         </div>
         ${heroVisualHtml(brand)}
@@ -115,10 +115,10 @@ export function homeView() {
     ${marketFocusHtml()}
 
     <section class="section wrap">
-      <p class="section-label reveal">Next step</p>
-      <h2 class="section-title reveal">See how we work with importers.</h2>
-      <p class="section-lead reveal">Five step flow from qualification to bill of lading. Written terms before production.</p>
-      <a class="btn btn-primary reveal" href="#/importers">For importers</a>
+      <p class="section-label reveal">Process</p>
+      <h2 class="section-title reveal">How ordering works</h2>
+      <p class="section-lead reveal">Samples, written quote, production, then shipping documents. No bulk production until you approve specs.</p>
+      <a class="btn btn-primary reveal" href="#/importers">See the steps</a>
     </section>
 
     ${faqHtml()}
@@ -126,11 +126,11 @@ export function homeView() {
     <section class="section wrap cta-panel reveal">
       <div class="cta-panel-inner">
         <div>
-          <p class="section-label" style="color: var(--gold)">Prelaunch</p>
-          <h2 class="section-title" style="margin-bottom: 0.5rem">Early conversations welcome.</h2>
-          <p class="section-lead" style="margin: 0">EU gift and décor buyers first: Sweden, Germany, Denmark, Netherlands.</p>
+          <p class="section-label" style="color: var(--gold)">Quote</p>
+          <h2 class="section-title" style="margin-bottom: 0.5rem">Tell us quantity and destination.</h2>
+          <p class="section-lead" style="margin: 0">${escapeHtml(getBrand()?.contact?.responseSLA ?? "We reply within two business days")}.</p>
         </div>
-        <a class="btn btn-primary" href="#/contact">Contact</a>
+        <a class="btn btn-primary" href="#/contact">Request a quote</a>
       </div>
     </section>
   `;
@@ -141,10 +141,10 @@ export function productsView(activeCategory = "handicraft") {
 
   return `
     <section class="page-hero wrap">
-      <p class="section-label reveal">Collections</p>
-      <h1 class="section-title reveal">Blue pottery and brass are live.</h1>
+      <p class="section-label reveal">Products</p>
+      <h1 class="section-title reveal">Products</h1>
       <p class="section-lead reveal">
-        Decorative blue pottery and brass gift décor are open for importer quotes. Textiles, agro, and stone are coming soon.
+        Order today: Jaipur blue pottery and brass gift décor. Other categories listed as coming soon.
       </p>
       <div class="products-toolbar reveal" data-filters>
         ${categories
@@ -175,9 +175,9 @@ function productCardHtml(p) {
     : p.image
       ? `<img src="${p.image}" alt="${escapeHtml(p.imageAlt ?? p.name)}" loading="lazy" decoding="async" />`
       : `<span class="product-visual-fallback" data-pattern="${p.pattern}"></span>`;
-  const scope = p.launchScope === "v1" ? "Launch v1" : comingSoon ? "Coming soon" : "";
+  const scope = comingSoon ? "Coming soon" : "";
   const scopeBadge = scope
-    ? `<span class="product-scope ${p.launchScope === "v1" ? "is-v1" : "is-soon"}">${scope}</span>`
+    ? `<span class="product-scope ${comingSoon ? "is-soon" : "is-v1"}">${scope}</span>`
     : "";
   const roadmapClass = comingSoon ? " product-card--roadmap" : "";
 
@@ -196,15 +196,15 @@ function productCardHtml(p) {
         ${
           comingSoon
             ? ""
-            : `<p class="product-moq" style="margin-bottom: 0.75rem">Lead: ${escapeHtml(p.lead)}${p.hsHint ? `, ${escapeHtml(p.hsHint)}` : ""}</p>`
+            : `<p class="product-moq" style="margin-bottom: 0.75rem">Lead time: ${escapeHtml(p.lead)}</p>`
         }
         <div class="product-actions">
           ${
             comingSoon
               ? `<a class="btn btn-ghost" href="#/products/${encodeURIComponent(p.id)}">Learn more</a>
-                 <a class="btn btn-primary" href="#/contact?product=blue-pottery">Quote launch lines</a>`
+                 <a class="btn btn-primary" href="#/contact?product=blue-pottery">Request a quote</a>`
               : `<a class="btn btn-ghost" href="#/products/${encodeURIComponent(p.id)}">Details</a>
-                 <a class="btn btn-primary" href="#/contact?product=${encodeURIComponent(p.id)}">Get in touch</a>`
+                 <a class="btn btn-primary" href="#/contact?product=${encodeURIComponent(p.id)}">Request a quote</a>`
           }
         </div>
       </div>
@@ -228,7 +228,7 @@ export function productDetailView(productId) {
   if (comingSoon) {
     return `
     <section class="page-hero wrap product-detail">
-      <p class="section-label reveal"><a href="#/products">Collections</a></p>
+      <p class="section-label reveal"><a href="#/products">Products</a></p>
       <h1 class="section-title reveal">${escapeHtml(product.name)}</h1>
       <p class="section-lead reveal">${escapeHtml(product.description)}</p>
       <div class="product-detail-grid reveal">
@@ -237,8 +237,8 @@ export function productDetailView(productId) {
         </div>
         <div class="product-detail-spec">
           <p class="detail-note"><strong>Status.</strong> Coming soon. This line is not open for quotes yet.</p>
-          <p class="form-note">We are focused on decorative blue pottery and brass gift décor for EU importers in v1.</p>
-          <a class="btn btn-primary" href="#/contact?product=blue-pottery">Quote launch lines</a>
+          <p class="form-note">We are taking orders for blue pottery and brass décor. Ask us when this category opens.</p>
+          <a class="btn btn-primary" href="#/contact?product=blue-pottery">Request a quote</a>
           <a class="btn btn-ghost" href="#/products">Back to collections</a>
         </div>
       </div>
@@ -250,13 +250,13 @@ export function productDetailView(productId) {
 
   return `
     <section class="page-hero wrap product-detail">
-      <p class="section-label reveal"><a href="#/products">Collections</a></p>
+      <p class="section-label reveal"><a href="#/products">Products</a></p>
       <h1 class="section-title reveal">${escapeHtml(product.name)}</h1>
       <p class="section-lead reveal">${escapeHtml(product.description)}</p>
       <div class="product-detail-grid reveal">
         <div class="product-detail-visual">
           ${imgSrc ? `<img src="${imgSrc}" alt="${escapeHtml(product.imageAlt ?? product.name)}" loading="lazy" />` : ""}
-          <p class="form-note">Illustrative stock photo until maker shoots are live.</p>
+          <p class="form-note">Sample photo for reference. Bulk orders use approved maker samples.</p>
         </div>
         <div class="product-detail-spec">
           ${specTableHtml(product, getIncoterms())}
@@ -280,8 +280,8 @@ export function importersView() {
 
   return `
     <section class="page-hero wrap">
-      <p class="section-label reveal">For importers</p>
-      <h1 class="section-title reveal">${escapeHtml(data.title ?? "For importers")}</h1>
+      <p class="section-label reveal">How to order</p>
+      <h1 class="section-title reveal">${escapeHtml(data.title ?? "How to order")}</h1>
       <p class="section-lead reveal">${escapeHtml(data.lead ?? "")}</p>
       <p class="reveal"><a class="btn btn-ghost" href="downloads/importer-brief.html" target="_blank" rel="noopener">${escapeHtml(data.downloadLabel ?? "Download importer brief")}</a></p>
     </section>
@@ -312,13 +312,13 @@ export function exportView() {
 
   return `
     <section class="page-hero wrap">
-      <p class="section-label reveal">Export</p>
-      <h1 class="section-title reveal">${escapeHtml(data.title ?? "Export and compliance")}</h1>
+      <p class="section-label reveal">Shipping</p>
+      <h1 class="section-title reveal">${escapeHtml(data.title ?? "Shipping and documents")}</h1>
       <p class="section-lead reveal">${escapeHtml(data.lead ?? "")}</p>
-      <p class="section-lead reveal">Default bulk term: <strong>${escapeHtml(data.defaultIncoterm ?? "FOB Mundra")}</strong></p>
+      <p class="section-lead reveal">Usual bulk term: <strong>${escapeHtml(data.defaultIncoterm ?? "FOB Mundra")}</strong></p>
     </section>
     <section class="section wrap" style="padding-top: 0">
-      <h2 class="section-title reveal" style="font-size: 1.75rem">Incoterms we quote</h2>
+      <h2 class="section-title reveal" style="font-size: 1.75rem">Shipping terms</h2>
       <div class="overlap-table reveal">
         <table>
           <thead><tr><th>Term</th><th>Typical use</th></tr></thead>
@@ -330,63 +330,45 @@ export function exportView() {
       <p class="form-note reveal">${escapeHtml(getBrand()?.incotermsPublicNote ?? "")}</p>
     </section>
     <section class="section wrap" style="padding-top: 0">
-      <h2 class="section-title reveal" style="font-size: 1.75rem">Documents (handicraft v1)</h2>
+      <h2 class="section-title reveal" style="font-size: 1.75rem">Documents you receive</h2>
       <ul class="doc-list reveal">${docs.map((d) => `<li>${escapeHtml(d)}</li>`).join("")}</ul>
     </section>
     <section class="section wrap" style="padding-top: 0">
-      <h2 class="section-title reveal" style="font-size: 1.75rem">Packing summary</h2>
+      <h2 class="section-title reveal" style="font-size: 1.75rem">How we pack</h2>
       <ul class="doc-list reveal">${packing.map((d) => `<li>${escapeHtml(d)}</li>`).join("")}</ul>
       <p class="detail-note reveal">${escapeHtml(data.complianceDecorative ?? "")}</p>
     </section>
-    ${certGridHtml()}
   `;
 }
 
-function overlapTableHtml() {
-  const markets = getBrand()?.westernMarkets ?? [];
-  if (!markets.length) return "";
-
-  return `
-    <div class="overlap-table reveal">
-      <table>
-        <thead>
-          <tr><th>Market</th><th>Planned call window (IST)</th></tr>
-        </thead>
-        <tbody>
-          ${markets.map((m) => `<tr><td>${escapeHtml(m.name)}</td><td>${escapeHtml(m.overlap)}</td></tr>`).join("")}
-        </tbody>
-      </table>
-    </div>`;
-}
-
 export function aboutView() {
+  const brand = getBrand();
+  const loc = brand?.location;
+  const place = loc ? `${loc.city}, ${loc.state}, ${loc.country}` : "Jaipur, Rajasthan, India";
+
   return `
     <section class="page-hero wrap">
       <p class="section-label reveal">About</p>
-      <h1 class="section-title reveal">Jaipur on the ground, paperwork first when we launch.</h1>
+      <h1 class="section-title reveal">Jaipur sourcing, export ready paperwork.</h1>
       <p class="section-lead reveal">
-        Merchant export desk: curated makers, export packing, and paperwork aligned for EU gift and home décor buyers. Not live yet. IEC, maker QC, and EU compliance files in progress.
+        Jaat Global is an India based export company focused on decorative blue pottery and brass gift décor. We work with workshops in Jaipur, agree packing with you before production, and ship from Mundra port with standard shipping documents.
       </p>
+      <p class="section-lead reveal">Office: ${escapeHtml(place)}. Correspondence in English.</p>
     </section>
     ${certGridHtml()}
-    <section class="section wrap" style="padding-top: 0">
-      <h2 class="section-title reveal" style="font-size: 1.75rem">Call overlap (planned)</h2>
-      <p class="section-lead reveal">Scandinavia and EU first. UK and US for reference, not v1 commercial focus.</p>
-      ${overlapTableHtml()}
-    </section>
     <section class="section wrap" style="padding-top: 0">
       <div class="timeline">
         <div class="timeline-item reveal">
           <strong>Quality</strong>
-          Pre shipment inspection and AQL agreed before production.
+          Pre shipment inspection when you require it. Production photos on request.
         </div>
         <div class="timeline-item reveal">
-          <strong>Compliance</strong>
-          Decorative v1: GPSR and REACH with EU importer partner. Not for food contact in v1.
+          <strong>Product use</strong>
+          Standard lines are decorative gift and home products. Food contact or child focused SKUs need a separate specification.
         </div>
         <div class="timeline-item reveal">
-          <strong>Communication</strong>
-          One account manager, English first documents, weekly PO updates.
+          <strong>Your contact</strong>
+          One account manager from sample approval through bill of lading.
         </div>
       </div>
     </section>
@@ -395,6 +377,7 @@ export function aboutView() {
 
 export function contactView(prefill = {}) {
   const { productId = "", message = "" } = prefill;
+  const brand = getBrand();
   const products = getProducts();
   const launchProducts = products.filter((p) => p.launchScope === "v1");
   const quoteProductId =
@@ -403,19 +386,17 @@ export function contactView(prefill = {}) {
   const defaultMessage =
     message ||
     (product ? `Interested in: ${product.name} (${product.moq}). ` : "");
-
-  const brand = getBrand();
   const moqBands = getSiteContent()?.contact?.moqBands ?? [];
   const terms = getIncoterms();
 
   return `
     <section class="page-hero wrap">
       <p class="section-label reveal">Contact</p>
-      <h1 class="section-title reveal">Say hello during setup.</h1>
+      <h1 class="section-title reveal">Request a quote</h1>
       <p class="section-lead reveal">
-        Confirm market, incoterm, product line, and MOQ band. We open your email client with a draft message. Replies when the trade desk is live.
+        Share product line, quantity band, destination country, and preferred shipping term. We open your email app with a draft you can send to ${escapeHtml(brand?.contact?.email ?? "trade@jaatglobal.com")}.
       </p>
-      <p class="reveal"><a href="downloads/importer-brief.html" target="_blank" rel="noopener">Importer brief (print or save as PDF)</a></p>
+      <p class="reveal"><a href="downloads/importer-brief.html" target="_blank" rel="noopener">Printable summary for your team</a></p>
     </section>
     <section class="section wrap" style="padding-top: 0">
       <div class="contact-layout contact-layout--simple">
@@ -475,10 +456,11 @@ export function contactView(prefill = {}) {
             <label for="message">Message</label>
             <textarea id="message" name="message" required placeholder="Destination port, timeline, certification needs">${escapeHtml(defaultMessage)}</textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%">Send via email draft</button>
+          <button type="submit" class="btn btn-primary" style="width: 100%">Open email draft</button>
           <p class="form-note">
-            Saves a copy in your browser. Email draft to
+            A copy is saved in this browser. Send the draft to
             <a href="mailto:${brand?.contact?.email ?? "trade@jaatglobal.com"}">${brand?.contact?.email ?? "trade@jaatglobal.com"}</a>
+            to start the quote.
           </p>
         </form>
       </div>
@@ -503,27 +485,27 @@ export function renderProductGrid(activeCategory) {
 
 export const routeMeta = {
   "/": {
-    title: "Jaat Global | EU gift importers, prelaunch",
-    description: "Jaipur export desk for decorative blue pottery and brass gift décor. EU buyers, FOB Mundra.",
+    title: "Jaat Global | Blue pottery and brass export",
+    description: "Jaipur blue pottery and brass gift décor for importers. FOB Mundra, English documents.",
   },
   "/products": {
-    title: "Jaat Global | Collections",
-    description: "Blue pottery and brass gift décor live now. Other collections coming soon.",
+    title: "Jaat Global | Products",
+    description: "Decorative blue pottery and brass gift lines with MOQ and lead times.",
   },
   "/importers": {
-    title: "Jaat Global | For importers",
-    description: "Five step flow from samples to shipping documents for EU gift buyers.",
+    title: "Jaat Global | How to order",
+    description: "Samples, purchase order, production, and shipping documents.",
   },
   "/export": {
-    title: "Jaat Global | Export and compliance",
-    description: "Incoterms EXW to CIF, documents, packing, GPSR and REACH path for decorative v1.",
+    title: "Jaat Global | Shipping and documents",
+    description: "FOB Mundra, invoices, packing lists, and export packing for gift orders.",
   },
   "/about": {
     title: "Jaat Global | About",
-    description: "Merchant export desk in Jaipur. Registrations and call windows.",
+    description: "Jaipur export company for decorative pottery and brass gift décor.",
   },
   "/contact": {
-    title: "Jaat Global | Contact",
-    description: "Reach the trade desk with market, incoterm, and product line.",
+    title: "Jaat Global | Request a quote",
+    description: "Contact Jaat Global with quantity, market, and product line.",
   },
 };

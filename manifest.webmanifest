@@ -1,11 +1,11 @@
 {
   "name": "Jaat Global",
   "short_name": "Jaat Global",
-  "description": "Jaipur export desk for decorative craft and EU gift importers (prelaunch).",
+  "description": "Jaipur blue pottery and brass gift décor export.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f6f2ea",
-  "theme_color": "#12161c",
+  "theme_color": "#082033",
   "lang": "en",
   "icons": [
     {

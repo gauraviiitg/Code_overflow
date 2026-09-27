@@ -52,8 +52,8 @@ export function certGridHtml() {
 
   return `
     <section class="section wrap cert-section">
-      <p class="section-label reveal">Registrations</p>
-      <h2 class="section-title reveal" style="font-size: 1.75rem">What we can share today</h2>
+      <p class="section-label reveal">Company</p>
+      <h2 class="section-title reveal" style="font-size: 1.75rem">India export registration</h2>
       ${displayPolicy ? `<p class="section-lead reveal">${escapeHtml(displayPolicy)}</p>` : ""}
       <div class="cert-grid reveal">
         ${badges
@@ -113,12 +113,11 @@ export function faqHtml() {
 
 export function specTableHtml(product, incoterms) {
   const rows = [
-    ["MOQ", product.moq],
-    ["Sample programme", product.sampleMoq ?? "On request"],
+    ["Minimum order", product.moq],
+    ["Samples", product.sampleMoq ?? "On request"],
     ["Lead time", product.lead],
-    ["HS chapter", product.hsHint ?? ""],
-    ["Scope", product.launchScope === "v1" ? "Launch v1" : "Coming soon"],
-    ["Incoterms offered", (incoterms ?? []).join(", ")],
+    ["Shipping terms", "FOB Mundra usual. EXW, FCA, and CIF on request."],
+    ["Customs code", product.hsHint ? `HS ${product.hsHint} (confirm with your broker)` : ""],
   ].filter(([, v]) => v);
 
   return `

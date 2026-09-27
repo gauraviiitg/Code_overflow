@@ -1,26 +1,19 @@
 {
-  "displayPolicy": "Show registration type only on web. Full numbers and scans shared after serious inquiry.",
+  "displayPolicy": "India export registration details are shared on proforma invoice and after we qualify your enquiry.",
   "badges": [
     {
       "id": "iec",
       "label": "IEC",
-      "title": "Importer Exporter Code",
-      "status": "Registered",
-      "publicNote": "Copy available under NDA"
+      "title": "India export registration",
+      "status": "Active",
+      "publicNote": "Importer Exporter Code on file for outbound shipments"
     },
     {
       "id": "gst",
       "label": "GST",
       "title": "Goods and Services Tax",
-      "status": "Registered",
-      "publicNote": "GSTIN shared on proforma"
-    },
-    {
-      "id": "fssai",
-      "label": "FSSAI",
-      "title": "Food safety (roadmap agro and spice only)",
-      "status": "In progress",
-      "publicNote": "Not required for v1 decorative handicraft. Confirm before any food PO"
+      "status": "Active",
+      "publicNote": "GSTIN shown on commercial invoice"
     }
   ]
 }
