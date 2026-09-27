@@ -1,26 +1,26 @@
 {
-  "displayPolicy": "Show registration type only on web — full numbers and scans shared after serious inquiry.",
+  "displayPolicy": "Show registration type only on web. Full numbers and scans shared after serious inquiry.",
   "badges": [
     {
       "id": "iec",
       "label": "IEC",
-      "title": "Importer–Exporter Code",
+      "title": "Importer Exporter Code",
       "status": "Registered",
       "publicNote": "Copy available under NDA"
     },
     {
       "id": "gst",
       "label": "GST",
-      "title": "Goods & Services Tax",
+      "title": "Goods and Services Tax",
       "status": "Registered",
       "publicNote": "GSTIN shared on proforma"
     },
     {
       "id": "fssai",
       "label": "FSSAI",
-      "title": "Food safety (roadmap agro/spice only)",
+      "title": "Food safety (roadmap agro and spice only)",
       "status": "In progress",
-      "publicNote": "Not required for v1 decorative handicraft — confirm before any food PO"
+      "publicNote": "Not required for v1 decorative handicraft. Confirm before any food PO"
     }
   ]
 }

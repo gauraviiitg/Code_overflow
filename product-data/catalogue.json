@@ -2,9 +2,9 @@
   "categories": [
     { "id": "all", "label": "All categories" },
     { "id": "handicraft", "label": "Handicraft (launch focus)", "asset": "assets/categories/handicraft.svg" },
-    { "id": "textiles", "label": "Textiles & home", "asset": "assets/categories/textiles.svg" },
-    { "id": "spices", "label": "Spices & agro", "asset": "assets/categories/spices.svg" },
-    { "id": "stone", "label": "Marble & stone", "asset": "assets/categories/stone.svg" }
+    { "id": "textiles", "label": "Textiles and home", "asset": "assets/categories/textiles.svg" },
+    { "id": "spices", "label": "Spices and agro", "asset": "assets/categories/spices.svg" },
+    { "id": "stone", "label": "Marble and stone", "asset": "assets/categories/stone.svg" }
   ],
   "markets": [
     "Sweden",
@@ -29,101 +29,101 @@
   "products": [
     {
       "id": "blue-pottery",
-      "name": "Jaipur blue pottery — decorative",
+      "name": "Jaipur blue pottery, decorative",
       "category": "handicraft",
       "pattern": "P",
-      "moq": "MOQ 400 pcs (samples from ~20–50 pc)",
-      "lead": "7–9 weeks",
+      "moq": "MOQ 400 pcs (samples from about 20 to 50 pc)",
+      "lead": "7 to 9 weeks",
       "hsHint": "Ch. 6912",
       "launchScope": "v1",
-      "westNote": "EU gift & décor; decorative only — labelled not for food use in v1.",
-      "description": "Vases, planters, wall plates, tiles, lamps. Jaipur craft story (Blue Pottery GI). Export corrugated + dividers; drop-test packing spec shared before PO.",
+      "westNote": "EU gift and décor; decorative only, labelled not for food use in v1.",
+      "description": "Vases, planters, wall plates, tiles, lamps. Jaipur craft story (Blue Pottery GI). Export corrugated and dividers; drop test packing spec shared before PO.",
       "featured": true
     },
     {
       "id": "brass-decor",
-      "name": "Brass & copper décor",
+      "name": "Brass and copper décor",
       "category": "handicraft",
       "pattern": "B",
-      "moq": "MOQ 300 pcs (samples from ~20–50 pc)",
-      "lead": "4–6 weeks",
+      "moq": "MOQ 300 pcs (samples from about 20 to 50 pc)",
+      "lead": "4 to 6 weeks",
       "hsHint": "Ch. 7419",
       "launchScope": "v1",
-      "westNote": "EU gift/hospitality collections; nickel-free on request; no jewelry in v1.",
-      "description": "Hammered vases, bowls, trays, meenakari gift pieces. Curated with pottery in mixed LCL programmes — lacquered interiors where needed.",
+      "westNote": "EU gift and hospitality collections; nickel free on request; no jewelry in v1.",
+      "description": "Hammered vases, bowls, trays, meenakari gift pieces. Curated with pottery in mixed LCL programmes; lacquered interiors where needed.",
       "featured": true
     },
     {
       "id": "block-print-linen",
-      "name": "Block-print linen collections",
+      "name": "Block print linen collections",
       "category": "textiles",
       "pattern": "I",
       "moq": "MOQ 500 m",
-      "lead": "6–8 weeks",
-      "hsHint": "Ch. 50–63",
+      "lead": "6 to 8 weeks",
+      "hsHint": "Ch. 50 to 63",
       "launchScope": "roadmap",
-      "westNote": "Not v1 — EU homeware brands when desk expands.",
-      "description": "Sanganeri and Bagru motifs on OEKO-TEX® linen. Custom colourways for EU retailers — roadmap only."
+      "westNote": "Not v1. EU homeware brands when desk expands.",
+      "description": "Sanganeri and Bagru motifs on OEKO TEX linen. Custom colourways for EU retailers; roadmap only."
     },
     {
       "id": "jaipur-quilts",
-      "name": "Jaipur razai & layered bedding",
+      "name": "Jaipur razai and layered bedding",
       "category": "textiles",
       "pattern": "Q",
       "moq": "MOQ 200 pcs",
-      "lead": "5–7 weeks",
+      "lead": "5 to 7 weeks",
       "hsHint": "Ch. 9404",
       "launchScope": "roadmap",
-      "westNote": "Roadmap — not first export wedge.",
-      "description": "Lightweight cotton fills and vacuum-packed cartons — for later programmes."
+      "westNote": "Roadmap. Not first export wedge.",
+      "description": "Lightweight cotton fills and vacuum packed cartons for later programmes."
     },
     {
       "id": "turmeric-powder",
-      "name": "Turmeric & spice blends",
+      "name": "Turmeric and spice blends",
       "category": "spices",
       "pattern": "T",
       "moq": "MOQ 1 MT",
-      "lead": "3–4 weeks",
+      "lead": "3 to 4 weeks",
       "hsHint": "Ch. 0910",
       "launchScope": "roadmap",
-      "westNote": "Roadmap — FSSAI and food regs before any PO.",
-      "description": "Steam-treated lots with COA — not in v1 handicraft scope."
+      "westNote": "Roadmap. FSSAI and food regs before any PO.",
+      "description": "Steam treated lots with COA. Not in v1 handicraft scope."
     },
     {
       "id": "basmati-rice",
-      "name": "Basmati & specialty rice",
+      "name": "Basmati and specialty rice",
       "category": "spices",
       "pattern": "R",
       "moq": "MOQ 20 MT",
-      "lead": "4–5 weeks",
+      "lead": "4 to 5 weeks",
       "hsHint": "Ch. 1006",
       "launchScope": "roadmap",
-      "westNote": "Roadmap — FCL agro, separate compliance track.",
-      "description": "Punjab & Rajasthan sourcing — not part of v1 Jaipur craft launch."
+      "westNote": "Roadmap. FCL agro, separate compliance track.",
+      "description": "Punjab and Rajasthan sourcing. Not part of v1 Jaipur craft launch."
     },
     {
       "id": "marble-tables",
-      "name": "Marble inlay & table tops",
+      "name": "Marble inlay and table tops",
       "category": "stone",
       "pattern": "M",
       "moq": "MOQ 50 pcs",
-      "lead": "8–10 weeks",
+      "lead": "8 to 10 weeks",
       "hsHint": "Ch. 6802",
       "launchScope": "roadmap",
-      "westNote": "Roadmap — EU garden retailers later.",
-      "description": "Makrana and composite bases with crating — not v1."
+      "westNote": "Roadmap. EU garden retailers later.",
+      "description": "Makrana and composite bases with crating. Not v1."
     },
     {
       "id": "sandstone-planters",
-      "name": "Sandstone planters & garden",
+      "name": "Sandstone planters and garden",
       "category": "stone",
       "pattern": "S",
       "moq": "MOQ 100 pcs",
-      "lead": "6–8 weeks",
+      "lead": "6 to 8 weeks",
       "hsHint": "Ch. 6802",
       "launchScope": "roadmap",
-      "westNote": "Roadmap — heavy freight; after craft lines prove out.",
-      "description": "Hand-chiselled ranges — future stone programme."
+      "westNote": "Roadmap. Heavy freight after craft lines prove out.",
+      "description": "Hand chiselled ranges. Future stone programme."
     }
   ]
 }

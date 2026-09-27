@@ -14,7 +14,7 @@ function flagshipHandicraftHtml({ showActions = true } = {}) {
   const brand = getBrand();
   const sectionTitle =
     brand?.flagshipSectionTitle ??
-    "Blue pottery leads — brass completes the gift collection.";
+    "Blue pottery leads. Brass completes the gift collection.";
 
   return `
     <section class="section wrap flagship-section">
@@ -44,11 +44,11 @@ function flagshipHandicraftHtml({ showActions = true } = {}) {
 
 function processStepsHtml() {
   const steps = [
-    ["Brief & specs", "EU destination, incoterms (EXW–CIF), decorative vs food — in writing."],
-    ["Sample & quote", "Strike-offs, drop-test packing plan, USD/EUR when we launch."],
-    ["Production", "PO lock, milestone photos, optional third-party inspection."],
+    ["Brief and specs", "EU destination, incoterms (EXW to CIF), decorative vs food in writing."],
+    ["Sample and quote", "Strike offs, drop test packing plan, USD/EUR when we launch."],
+    ["Production", "PO lock, milestone photos, optional third party inspection."],
     ["Documentation", "Invoice, packing list, COO, compliance folder for GPSR/REACH path."],
-    ["Dispatch", "FOB Mundra or CIF named port — buyer handles import unless CIF agreed."],
+    ["Dispatch", "FOB Mundra or CIF named port. Buyer handles import unless CIF agreed."],
   ];
   return `
     <div class="process-steps">
@@ -89,23 +89,23 @@ function marketFocusHtml() {
   return `
     <section class="section wrap market-focus reveal">
       <p class="section-label">Who we’re building for</p>
-      <h2 class="section-title" style="font-size: 1.75rem">${focus.headline ?? "EU gift & home décor importers"}</h2>
+      <h2 class="section-title" style="font-size: 1.75rem">${focus.headline ?? "EU gift and home décor importers"}</h2>
       <p class="section-lead">Primary outreach: ${primary}. ${focus.notFirst ?? ""}</p>
     </section>`;
 }
 
 export function homeView() {
   const brand = getBrand();
-  const loadPort = brand?.ports?.load ?? "Mundra (FOB — planned)";
+  const loadPort = brand?.ports?.load ?? "Mundra (FOB planned)";
 
   return `
     <section class="hero wrap">
       <div class="hero-grid hero-grid--visual">
         <div class="reveal">
-          <p class="hero-eyebrow">Jaipur · EU gift & home décor</p>
-          <h1>Decorative <em>blue pottery</em> first — <em>brass</em> in the same collection.</h1>
+          <p class="hero-eyebrow">Jaipur, EU gift and home décor</p>
+          <h1>Decorative <em>blue pottery</em> first, <em>brass</em> in the same collection.</h1>
           <p class="section-lead">
-            We’re not trading yet. This site shares our research-backed direction: Jaipur craft for EU importers (Sweden, Germany, Denmark, Netherlands), decorative ceramics only in v1, FOB Mundra when we go live. Textiles, agro, and stone stay on the roadmap.
+            We’re not trading yet. This site shares our research backed direction: Jaipur craft for EU importers (Sweden, Germany, Denmark, Netherlands), decorative ceramics only in v1, FOB Mundra when we go live. Textiles, agro, and stone stay on the roadmap.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#/contact">Get in touch</a>
@@ -132,9 +132,9 @@ export function homeView() {
     <section class="section wrap cta-panel reveal">
       <div class="cta-panel-inner">
         <div>
-          <p class="section-label" style="color: var(--gold)">Pre-launch</p>
+          <p class="section-label" style="color: var(--gold)">Prelaunch</p>
           <h2 class="section-title" style="margin-bottom: 0.5rem">Early conversations welcome.</h2>
-          <p class="section-lead" style="margin: 0">EU gift and décor buyers first — Sweden, Germany, Denmark, Netherlands. Early hellos welcome before we go live.</p>
+          <p class="section-lead" style="margin: 0">EU gift and décor buyers first: Sweden, Germany, Denmark, Netherlands. Early hellos welcome before we go live.</p>
         </div>
         <a class="btn btn-primary" href="#/contact">Contact</a>
       </div>
@@ -155,7 +155,7 @@ export function productsView(activeCategory = "all") {
       <p class="section-label reveal">Catalogue</p>
       <h1 class="section-title reveal">Lines we’re preparing.</h1>
       <p class="section-lead reveal">
-        v1 is handicraft only (decorative blue pottery + brass décor). Other lines are roadmap. Indicative MOQs while we confirm with Jaipur makers — pricing when the desk is live.
+        v1 is handicraft only (decorative blue pottery and brass décor). Other lines are roadmap. Indicative MOQs while we confirm with Jaipur makers. Pricing when the desk is live.
       </p>
       <div class="products-toolbar reveal" data-filters>
         ${categories
@@ -197,7 +197,7 @@ function productCardHtml(p) {
         <h3>${p.name}</h3>
         <p>${p.description}</p>
         ${p.westNote ? `<p class="product-note">${p.westNote}</p>` : ""}
-        <p class="product-moq" style="margin-bottom: 0.75rem">Lead: ${p.lead}${p.hsHint ? ` · ${p.hsHint}` : ""}</p>
+        <p class="product-moq" style="margin-bottom: 0.75rem">Lead: ${p.lead}${p.hsHint ? `, ${p.hsHint}` : ""}</p>
         <a class="btn btn-primary" href="#/contact?product=${encodeURIComponent(p.id)}">Get in touch</a>
       </div>
     </article>
@@ -208,29 +208,29 @@ export function aboutView() {
   return `
     <section class="page-hero wrap">
       <p class="section-label reveal">About</p>
-      <h1 class="section-title reveal">Jaipur on the ground — paperwork-first when we launch.</h1>
+      <h1 class="section-title reveal">Jaipur on the ground, paperwork first when we launch.</h1>
       <p class="section-lead reveal">
-        We’re building a merchant export desk in Jaipur: curated makers, export packing, and paperwork aligned for EU gift and home décor buyers. The company is not live yet — IEC, maker QC, and EU compliance files are still in progress.
+        We’re building a merchant export desk in Jaipur: curated makers, export packing, and paperwork aligned for EU gift and home décor buyers. The company is not live yet. IEC, maker QC, and EU compliance files are still in progress.
       </p>
     </section>
     <section class="section wrap" style="padding-top: 0">
       <h2 class="section-title reveal" style="font-size: 1.75rem">Call overlap (planned)</h2>
-      <p class="section-lead reveal">Call windows for Scandinavia and EU first; UK and US listed for reference — not our v1 commercial focus.</p>
+      <p class="section-lead reveal">Call windows for Scandinavia and EU first; UK and US listed for reference, not our v1 commercial focus.</p>
       ${overlapTableHtml()}
     </section>
     <section class="section wrap" style="padding-top: 0">
       <div class="timeline">
         <div class="timeline-item reveal">
           <strong>Quality</strong>
-          Pre-shipment inspection and AQL agreed before production.
+          Pre shipment inspection and AQL agreed before production.
         </div>
         <div class="timeline-item reveal">
           <strong>Compliance</strong>
-          Decorative v1: GPSR and REACH (glaze/metal) with EU importer partner — not for food contact. Food or DDP programmes out of scope until explicitly quoted.
+          Decorative v1: GPSR and REACH (glaze and metal) with EU importer partner, not for food contact. Food or DDP programmes out of scope until explicitly quoted.
         </div>
         <div class="timeline-item reveal">
           <strong>Communication</strong>
-          One account manager, English-first documents, weekly PO updates.
+          One account manager, English first documents, weekly PO updates.
         </div>
       </div>
     </section>
@@ -252,7 +252,7 @@ export function contactView(prefill = {}) {
       <p class="section-label reveal">Contact</p>
       <h1 class="section-title reveal">Say hello during setup.</h1>
       <p class="section-lead reveal">
-        Tell us what you import, EU destination, and preferred incoterm. We read every note — replies when the trade desk is live.
+        Tell us what you import, EU destination, and preferred incoterm. We read every note. Replies when the trade desk is live.
       </p>
       ${incotermsPanelHtml()}
     </section>
@@ -287,7 +287,7 @@ export function contactView(prefill = {}) {
           ${productId ? `<input type="hidden" name="product" value="${escapeHtml(productId)}" />` : ""}
           <button type="submit" class="btn btn-primary" style="width: 100%">Send</button>
           <p class="form-note">
-            Pre-launch: saved in your browser only. Live email:
+            Prelaunch: saved in your browser only. Live email:
             <a href="mailto:${brand?.contact?.email ?? "trade@jaatglobal.com"}">${brand?.contact?.email ?? "trade@jaatglobal.com"}</a>
           </p>
         </form>

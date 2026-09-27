@@ -36,6 +36,16 @@ function closeMobileNav() {
   document.body.classList.remove("nav-open");
 }
 
+document.addEventListener(
+  "click",
+  (e) => {
+    if (!document.body.classList.contains("nav-open")) return;
+    if (e.target.closest(".site-nav") || e.target.closest("[data-nav-toggle]")) return;
+    closeMobileNav();
+  },
+  { passive: true }
+);
+
 function showToast(message) {
   if (!toastEl) return;
   toastEl.textContent = message;
@@ -88,7 +98,7 @@ function bindContactForm() {
     inquiries.push({ ...data, at: new Date().toISOString() });
     localStorage.setItem("jaat_inquiries", JSON.stringify(inquiries));
     form.reset();
-    showToast("Thanks — saved locally. We’ll respond when the trade desk is live.");
+    showToast("Thanks. Saved locally. We’ll respond when the trade desk is live.");
   });
 }
 
@@ -112,8 +122,8 @@ function render() {
   const brandName = getBrand()?.name ?? "Jaat Global";
   document.title =
     path === "/"
-      ? `${brandName} | Jaipur craft for EU gift importers — pre-launch`
-      : `${brandName} — ${path.slice(1).charAt(0).toUpperCase()}${path.slice(2)}`;
+      ? `${brandName} | Jaipur craft for EU gift importers, prelaunch`
+      : `${brandName} | ${path.slice(1).charAt(0).toUpperCase()}${path.slice(2)}`;
 
   observeReveals();
   bindProductFilters();
@@ -138,7 +148,7 @@ window.addEventListener(
   "scroll",
   () => {
     const y = window.scrollY;
-    if (!header) return;
+    if (!header || document.body.classList.contains("nav-open")) return;
     header.style.transform = y > lastScroll && y > 80 ? "translateY(-100%)" : "translateY(0)";
     lastScroll = y;
   },

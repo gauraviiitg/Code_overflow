@@ -28,12 +28,12 @@
   <!-- Western ports -->
   <circle cx="420" cy="220" r="7" fill="#ebe4d8"/>
   <circle cx="488" cy="260" r="9" fill="#ebe4d8"/>
-  <text x="454" y="248" text-anchor="middle" fill="#ebe4d8" font-size="10" opacity="0.9">EU - SE / DE / NL</text>
-  <text x="488" y="292" text-anchor="middle" fill="#ebe4d8" font-size="9" opacity="0.65">US - later</text>
+  <text x="454" y="248" text-anchor="middle" fill="#ebe4d8" font-size="10" opacity="0.9">EU, SE, DE, NL</text>
+  <text x="488" y="292" text-anchor="middle" fill="#ebe4d8" font-size="9" opacity="0.65">US later</text>
   <!-- Ship icon -->
   <g transform="translate(248 168)">
     <path d="M0 20 L40 20 L32 8 L8 8 Z" fill="#1a4a56" stroke="#a8894a" stroke-width="1"/>
     <rect x="14" y="0" width="12" height="10" fill="#b04a32" opacity="0.9"/>
   </g>
-  <text x="280" y="36" text-anchor="middle" fill="#ebe4d8" font-family="Georgia,serif" font-size="17" font-style="italic" opacity="0.95">Jaipur - Mundra - EU gift importers</text>
+  <text x="280" y="36" text-anchor="middle" fill="#ebe4d8" font-family="Georgia,serif" font-size="17" font-style="italic" opacity="0.95">Jaipur, Mundra, EU gift importers</text>
 </svg>

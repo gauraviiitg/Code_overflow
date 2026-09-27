@@ -1,27 +1,38 @@
 {
   "name": "Jaat Global",
-  "tagline": "Jaipur export desk — EU gift & home décor (pre-launch)",
+  "tagline": "Jaipur export desk for EU gift and home décor (prelaunch)",
+  "typography": {
+    "official": true,
+    "serif": "Instrument Serif",
+    "sans": "Manrope",
+    "googleFontsHref": "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap",
+    "doc": "typography-and-identity.txt (internal copy in company docs/brand/)"
+  },
+  "logo": {
+    "mark": "assets/logo-mark.svg",
+    "favicon": "assets/favicon.svg"
+  },
   "marketFocus": {
-    "headline": "EU gift & home décor importers",
+    "headline": "EU gift and home décor importers",
     "primary": ["Sweden", "Germany", "Denmark", "Netherlands"],
     "secondary": ["United Arab Emirates", "Other EU"],
-    "notFirst": "US and UK mass retail are not our v1 wedge — we focus on craft-led EU programmes first."
+    "notFirst": "US and UK mass retail are not our v1 wedge. We focus on craft led EU programmes first."
   },
   "flagshipHandicraft": [
     {
       "productId": "blue-pottery",
-      "headline": "Jaipur blue pottery — decorative",
+      "headline": "Jaipur blue pottery, decorative",
       "asset": "assets/featured/pottery-line.svg",
-      "pitch": "GI-linked craft — vases, planters, wall pieces, tiles. v1 is decorative only (not for food). Export packing with drop-test spec before PO."
+      "pitch": "GI linked craft: vases, planters, wall pieces, tiles. v1 is decorative only (not for food). Export packing with drop test spec before PO."
     },
     {
       "productId": "brass-decor",
-      "headline": "Brass & copper décor",
+      "headline": "Brass and copper décor",
       "asset": "assets/featured/brass-line.svg",
-      "pitch": "Gift and hospitality add-ons from Jaipur makers — lacquered interiors, nickel-free where needed. No jewelry or skin-contact lines in v1."
+      "pitch": "Gift and hospitality add ons from Jaipur makers: lacquered interiors, nickel free where needed. No jewelry or skin contact lines in v1."
     }
   ],
-  "flagshipSectionTitle": "Blue pottery leads — brass completes the gift collection.",
+  "flagshipSectionTitle": "Blue pottery leads. Brass completes the gift collection.",
   "location": {
     "city": "Jaipur",
     "state": "Rajasthan",
@@ -35,15 +46,15 @@
     "responseSLA": "When the trade desk is live"
   },
   "westernMarkets": [
-    { "code": "SE", "name": "Sweden", "overlap": "13:00–17:00 IST ↔ Scandinavia morning" },
-    { "code": "DE", "name": "Germany", "overlap": "13:30–17:30 IST ↔ EU morning" },
-    { "code": "DK", "name": "Denmark", "overlap": "13:00–17:00 IST ↔ Scandinavia morning" },
-    { "code": "NL", "name": "Netherlands", "overlap": "13:30–17:30 IST ↔ EU morning" },
-    { "code": "GB", "name": "United Kingdom", "overlap": "12:00–16:00 IST ↔ UK morning" },
-    { "code": "US", "name": "United States", "overlap": "18:30–22:30 IST ↔ US East (not v1 focus)" }
+    { "code": "SE", "name": "Sweden", "overlap": "13:00 to 17:00 IST, aligns with Scandinavia morning" },
+    { "code": "DE", "name": "Germany", "overlap": "13:30 to 17:30 IST, aligns with EU morning" },
+    { "code": "DK", "name": "Denmark", "overlap": "13:00 to 17:00 IST, aligns with Scandinavia morning" },
+    { "code": "NL", "name": "Netherlands", "overlap": "13:30 to 17:30 IST, aligns with EU morning" },
+    { "code": "GB", "name": "United Kingdom", "overlap": "12:00 to 16:00 IST, aligns with UK morning" },
+    { "code": "US", "name": "United States", "overlap": "18:30 to 22:30 IST, US East (not v1 focus)" }
   ],
   "ports": {
-    "load": "Mundra (FOB — planned)"
+    "load": "Mundra (FOB planned)"
   },
-  "incotermsPublicNote": "We quote EXW, FCA, FAS, FOB, and CIF only — not DAP or DDP."
+  "incotermsPublicNote": "We quote EXW, FCA, FAS, FOB, and CIF only. We do not quote DAP or DDP."
 }
