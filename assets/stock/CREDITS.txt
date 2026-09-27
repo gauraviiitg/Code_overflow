@@ -1,0 +1,17 @@
+STOCK PHOTOS (illustrative, not Jaat Global inventory)
+
+Licensed for free use under Unsplash License and Pexels License.
+Replace with your own maker photos before claiming specific SKUs.
+
+blue-pottery-alt.jpg   Unsplash (ceramic vases)
+blue-pottery.jpg       Unsplash (blue ceramic texture)
+brass-decor.jpg        Pexels photo 4846484 (brass bowls)
+textiles.jpg           Unsplash (interior textiles)
+quilts.jpg             Unsplash (bedding)
+spices.jpg             Unsplash (spices)
+rice.jpg               Unsplash (rice)
+stone-marble.jpg       Unsplash (marble surface)
+sandstone.jpg          Unsplash (garden stone)
+hero-craft.jpg         Unsplash (ceramic craft texture)
+
+Full URLs and photographer names: see company docs/assets/stock-sources.txt

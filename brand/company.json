@@ -22,13 +22,13 @@
     {
       "productId": "blue-pottery",
       "headline": "Jaipur blue pottery, decorative",
-      "asset": "assets/featured/pottery-line.svg",
+      "asset": "assets/stock/blue-pottery-alt.jpg",
       "pitch": "GI linked craft: vases, planters, wall pieces, tiles. v1 is decorative only (not for food). Export packing with drop test spec before PO."
     },
     {
       "productId": "brass-decor",
       "headline": "Brass and copper décor",
-      "asset": "assets/featured/brass-line.svg",
+      "asset": "assets/stock/brass-decor.jpg",
       "pitch": "Gift and hospitality add ons from Jaipur makers: lacquered interiors, nickel free where needed. No jewelry or skin contact lines in v1."
     }
   ],
@@ -55,6 +55,10 @@
   ],
   "ports": {
     "load": "Mundra (FOB planned)"
+  },
+  "heroImage": {
+    "src": "assets/stock/blue-pottery.jpg",
+    "alt": "Blue ceramic craft texture, illustrative stock photo"
   },
   "incotermsPublicNote": "We quote EXW, FCA, FAS, FOB, and CIF only. We do not quote DAP or DDP."
 }

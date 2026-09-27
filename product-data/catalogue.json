@@ -38,6 +38,8 @@
       "launchScope": "v1",
       "westNote": "EU gift and décor; decorative only, labelled not for food use in v1.",
       "description": "Vases, planters, wall plates, tiles, lamps. Jaipur craft story (Blue Pottery GI). Export corrugated and dividers; drop test packing spec shared before PO.",
+      "image": "assets/stock/blue-pottery-alt.jpg",
+      "imageAlt": "Decorative blue ceramic vases, illustrative stock photo",
       "featured": true
     },
     {
@@ -51,6 +53,8 @@
       "launchScope": "v1",
       "westNote": "EU gift and hospitality collections; nickel free on request; no jewelry in v1.",
       "description": "Hammered vases, bowls, trays, meenakari gift pieces. Curated with pottery in mixed LCL programmes; lacquered interiors where needed.",
+      "image": "assets/stock/brass-decor.jpg",
+      "imageAlt": "Brass bowls on table, illustrative stock photo",
       "featured": true
     },
     {
@@ -63,7 +67,9 @@
       "hsHint": "Ch. 50 to 63",
       "launchScope": "roadmap",
       "westNote": "Not v1. EU homeware brands when desk expands.",
-      "description": "Sanganeri and Bagru motifs on OEKO TEX linen. Custom colourways for EU retailers; roadmap only."
+      "description": "Sanganeri and Bagru motifs on OEKO TEX linen. Custom colourways for EU retailers; roadmap only.",
+      "image": "assets/stock/textiles.jpg",
+      "imageAlt": "Home textiles, illustrative stock photo"
     },
     {
       "id": "jaipur-quilts",
@@ -75,7 +81,9 @@
       "hsHint": "Ch. 9404",
       "launchScope": "roadmap",
       "westNote": "Roadmap. Not first export wedge.",
-      "description": "Lightweight cotton fills and vacuum packed cartons for later programmes."
+      "description": "Lightweight cotton fills and vacuum packed cartons for later programmes.",
+      "image": "assets/stock/quilts.jpg",
+      "imageAlt": "Layered bedding, illustrative stock photo"
     },
     {
       "id": "turmeric-powder",
@@ -87,7 +95,9 @@
       "hsHint": "Ch. 0910",
       "launchScope": "roadmap",
       "westNote": "Roadmap. FSSAI and food regs before any PO.",
-      "description": "Steam treated lots with COA. Not in v1 handicraft scope."
+      "description": "Steam treated lots with COA. Not in v1 handicraft scope.",
+      "image": "assets/stock/spices.jpg",
+      "imageAlt": "Spices in bowls, illustrative stock photo"
     },
     {
       "id": "basmati-rice",
@@ -99,7 +109,9 @@
       "hsHint": "Ch. 1006",
       "launchScope": "roadmap",
       "westNote": "Roadmap. FCL agro, separate compliance track.",
-      "description": "Punjab and Rajasthan sourcing. Not part of v1 Jaipur craft launch."
+      "description": "Punjab and Rajasthan sourcing. Not part of v1 Jaipur craft launch.",
+      "image": "assets/stock/rice.jpg",
+      "imageAlt": "Basmati rice, illustrative stock photo"
     },
     {
       "id": "marble-tables",
@@ -111,7 +123,9 @@
       "hsHint": "Ch. 6802",
       "launchScope": "roadmap",
       "westNote": "Roadmap. EU garden retailers later.",
-      "description": "Makrana and composite bases with crating. Not v1."
+      "description": "Makrana and composite bases with crating. Not v1.",
+      "image": "assets/stock/stone-marble.jpg",
+      "imageAlt": "Marble surface, illustrative stock photo"
     },
     {
       "id": "sandstone-planters",
@@ -123,7 +137,9 @@
       "hsHint": "Ch. 6802",
       "launchScope": "roadmap",
       "westNote": "Roadmap. Heavy freight after craft lines prove out.",
-      "description": "Hand chiselled ranges. Future stone programme."
+      "description": "Hand chiselled ranges. Future stone programme.",
+      "image": "assets/stock/sandstone.jpg",
+      "imageAlt": "Garden stone and plants, illustrative stock photo"
     }
   ]
 }

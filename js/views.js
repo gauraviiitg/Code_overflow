@@ -25,7 +25,7 @@ function flagshipHandicraftHtml({ showActions = true } = {}) {
           .map(
             (line, i) => `
           <article class="flagship-card reveal" style="transition-delay: ${i * 0.08}s">
-            <img src="${line.asset}" width="320" height="240" alt="" loading="lazy" />
+            <img src="${line.asset}" width="320" height="240" alt="${escapeHtml(line.product?.imageAlt ?? line.headline)}" loading="lazy" />
             <div class="flagship-body">
               <h3>${line.headline}</h3>
               <p>${line.pitch}</p>
@@ -94,9 +94,25 @@ function marketFocusHtml() {
     </section>`;
 }
 
+function heroVisualHtml(brand) {
+  const hero = brand?.heroImage;
+  const loadPort = brand?.ports?.load ?? "Mundra (FOB planned)";
+  if (hero?.src) {
+    return `
+        <figure class="hero-figure reveal" style="transition-delay: 0.1s">
+          <img class="hero-photo" src="${hero.src}" width="560" height="420" alt="${escapeHtml(hero.alt ?? "Jaipur craft")}" loading="lazy" />
+          <figcaption class="hero-caption">Illustrative photo. Planned load port: ${loadPort}</figcaption>
+        </figure>`;
+  }
+  return `
+        <figure class="hero-figure reveal" style="transition-delay: 0.1s">
+          <img class="hero-map" src="assets/hero-corridor.svg" width="560" height="420" alt="Stylised route from Jaipur toward Western ports" />
+          <figcaption class="hero-caption">Planned load port: ${loadPort}</figcaption>
+        </figure>`;
+}
+
 export function homeView() {
   const brand = getBrand();
-  const loadPort = brand?.ports?.load ?? "Mundra (FOB planned)";
 
   return `
     <section class="hero wrap">
@@ -112,10 +128,7 @@ export function homeView() {
             <a class="btn btn-ghost" href="#/products">Draft catalogue</a>
           </div>
         </div>
-        <figure class="hero-figure reveal" style="transition-delay: 0.1s">
-          <img class="hero-map" src="assets/hero-corridor.svg" width="560" height="420" alt="Stylised route from Jaipur toward Western ports" />
-          <figcaption class="hero-caption">Planned load port: ${loadPort}</figcaption>
-        </figure>
+        ${heroVisualHtml(brand)}
       </div>
     </section>
 
@@ -176,9 +189,10 @@ export function productsView(activeCategory = "all") {
 function productCardHtml(p) {
   const categories = getCategories();
   const catLabel = categories.find((c) => c.id === p.category)?.label ?? p.category;
-  const asset = categoryAsset(p.category);
-  const visual = asset
-    ? `<img src="${asset}" alt="" loading="lazy" />`
+  const imgSrc = p.image ?? categoryAsset(p.category);
+  const imgAlt = escapeHtml(p.imageAlt ?? p.name);
+  const visual = imgSrc
+    ? `<img src="${imgSrc}" alt="${imgAlt}" loading="lazy" decoding="async" />`
     : `<span class="product-visual-fallback" data-pattern="${p.pattern}"></span>`;
   const scope = p.launchScope === "v1" ? "Launch v1" : p.launchScope === "roadmap" ? "Roadmap" : "";
   const scopeBadge = scope
