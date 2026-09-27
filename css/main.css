@@ -162,11 +162,12 @@ a:hover {
 }
 
 .logo-symbol {
-  width: 2.75rem;
   height: 2.75rem;
+  width: auto;
+  max-width: 3.25rem;
   flex-shrink: 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(8, 32, 51, 0.1);
+  object-fit: contain;
+  display: block;
 }
 
 .logo-brand {
@@ -204,7 +205,7 @@ a:hover {
 
 .logo-tag {
   font-family: var(--font-sans);
-  font-size: 0.62rem;
+  font-size: 0.68rem;
   text-transform: none;
   letter-spacing: 0.02em;
   color: var(--ink-soft);
@@ -213,12 +214,13 @@ a:hover {
   line-height: 1.25;
 }
 
-.footer-wordmark {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  margin: 0 0 0.25rem;
-  line-height: 1.05;
+.footer-lockup {
+  display: block;
+  width: 9.75rem;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 0.35rem;
+  filter: brightness(1.08) contrast(1.02);
 }
 
 .logo-jaat--footer {

@@ -10,10 +10,10 @@
     "doc": "typography-and-identity.txt (internal copy in company docs/brand/)"
   },
   "logo": {
-    "mark": "assets/logo-mark.svg",
+    "mark": "assets/logo-mark.png",
     "lockup": "assets/logo-lockup.png",
-    "wordmarkDark": "assets/logo-wordmark-dark.png",
-    "favicon": "assets/favicon.svg"
+    "markSquare512": "assets/logo-mark-512.png",
+    "favicon": "assets/favicon-32.png"
   },
   "marketFocus": {
     "headline": "Gift, home, and hospitality buyers",
