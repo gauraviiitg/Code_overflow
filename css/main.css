@@ -704,10 +704,50 @@ a:hover {
 
 .product-meta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.product-scope {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--sand-deep);
+}
+
+.product-scope.is-v1 {
+  color: var(--peacock);
+  background: rgba(26, 74, 86, 0.08);
+  border-color: rgba(26, 74, 86, 0.25);
+}
+
+.product-scope.is-roadmap {
+  color: var(--ink-soft);
+  background: var(--sand);
+}
+
+.product-note {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: -0.5rem 0 0.75rem !important;
+}
+
+.incoterms-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.incoterms-panel .form-note {
+  margin-top: 0.75rem;
 }
 
 .product-cat {

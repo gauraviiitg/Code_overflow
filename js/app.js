@@ -112,7 +112,7 @@ function render() {
   const brandName = getBrand()?.name ?? "Jaat Global";
   document.title =
     path === "/"
-      ? `${brandName} | Jaipur export — getting started`
+      ? `${brandName} | Jaipur craft for EU gift importers — pre-launch`
       : `${brandName} — ${path.slice(1).charAt(0).toUpperCase()}${path.slice(2)}`;
 
   observeReveals();

@@ -1,20 +1,27 @@
 {
   "name": "Jaat Global",
-  "tagline": "Jaipur export desk — in setup",
+  "tagline": "Jaipur export desk — EU gift & home décor (pre-launch)",
+  "marketFocus": {
+    "headline": "EU gift & home décor importers",
+    "primary": ["Sweden", "Germany", "Denmark", "Netherlands"],
+    "secondary": ["United Arab Emirates", "Other EU"],
+    "notFirst": "US and UK mass retail are not our v1 wedge — we focus on craft-led EU programmes first."
+  },
   "flagshipHandicraft": [
+    {
+      "productId": "blue-pottery",
+      "headline": "Jaipur blue pottery — decorative",
+      "asset": "assets/featured/pottery-line.svg",
+      "pitch": "GI-linked craft — vases, planters, wall pieces, tiles. v1 is decorative only (not for food). Export packing with drop-test spec before PO."
+    },
     {
       "productId": "brass-decor",
       "headline": "Brass & copper décor",
       "asset": "assets/featured/brass-line.svg",
-      "pitch": "Hospitality, gift, and premium retail — nickel-free and lacquered interior options."
-    },
-    {
-      "productId": "blue-pottery",
-      "headline": "Blue pottery tableware",
-      "asset": "assets/featured/pottery-line.svg",
-      "pitch": "Jaipur craft — food-safe glazes and export packing we’re validating with makers."
+      "pitch": "Gift and hospitality add-ons from Jaipur makers — lacquered interiors, nickel-free where needed. No jewelry or skin-contact lines in v1."
     }
   ],
+  "flagshipSectionTitle": "Blue pottery leads — brass completes the gift collection.",
   "location": {
     "city": "Jaipur",
     "state": "Rajasthan",
@@ -28,13 +35,15 @@
     "responseSLA": "When the trade desk is live"
   },
   "westernMarkets": [
-    { "code": "GB", "name": "United Kingdom", "overlap": "12:00–16:00 IST ↔ UK morning" },
+    { "code": "SE", "name": "Sweden", "overlap": "13:00–17:00 IST ↔ Scandinavia morning" },
     { "code": "DE", "name": "Germany", "overlap": "13:30–17:30 IST ↔ EU morning" },
+    { "code": "DK", "name": "Denmark", "overlap": "13:00–17:00 IST ↔ Scandinavia morning" },
     { "code": "NL", "name": "Netherlands", "overlap": "13:30–17:30 IST ↔ EU morning" },
-    { "code": "US", "name": "United States", "overlap": "18:30–22:30 IST ↔ US East morning" },
-    { "code": "CA", "name": "Canada", "overlap": "19:00–23:00 IST ↔ Eastern Canada morning" }
+    { "code": "GB", "name": "United Kingdom", "overlap": "12:00–16:00 IST ↔ UK morning" },
+    { "code": "US", "name": "United States", "overlap": "18:30–22:30 IST ↔ US East (not v1 focus)" }
   ],
   "ports": {
     "load": "Mundra (FOB — planned)"
-  }
+  },
+  "incotermsPublicNote": "We quote EXW, FCA, FAS, FOB, and CIF only — not DAP or DDP."
 }

@@ -18,9 +18,9 @@
     {
       "id": "fssai",
       "label": "FSSAI",
-      "title": "Food safety (agro/spice lines)",
+      "title": "Food safety (roadmap agro/spice only)",
       "status": "In progress",
-      "publicNote": "Confirm before food PO — update when live"
+      "publicNote": "Not required for v1 decorative handicraft — confirm before any food PO"
     }
   ]
 }

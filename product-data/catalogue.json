@@ -1,45 +1,56 @@
 {
   "categories": [
     { "id": "all", "label": "All categories" },
+    { "id": "handicraft", "label": "Handicraft (launch focus)", "asset": "assets/categories/handicraft.svg" },
     { "id": "textiles", "label": "Textiles & home", "asset": "assets/categories/textiles.svg" },
-    { "id": "handicraft", "label": "Handicraft", "asset": "assets/categories/handicraft.svg" },
     { "id": "spices", "label": "Spices & agro", "asset": "assets/categories/spices.svg" },
     { "id": "stone", "label": "Marble & stone", "asset": "assets/categories/stone.svg" }
   ],
   "markets": [
-    "United Kingdom",
+    "Sweden",
     "Germany",
+    "Denmark",
     "Netherlands",
+    "United Kingdom",
+    "United Arab Emirates",
     "United States",
     "Canada",
     "Australia",
-    "United Arab Emirates",
+    "Other EU",
     "Other"
   ],
-  "incoterms": ["EXW Jaipur", "FOB Mundra", "CIF (named port)", "DAP (door delivery)"],
+  "incoterms": [
+    "EXW Jaipur",
+    "FCA (named place)",
+    "FAS Mundra",
+    "FOB Mundra",
+    "CIF (named port)"
+  ],
   "products": [
+    {
+      "id": "blue-pottery",
+      "name": "Jaipur blue pottery — decorative",
+      "category": "handicraft",
+      "pattern": "P",
+      "moq": "MOQ 400 pcs (samples from ~20–50 pc)",
+      "lead": "7–9 weeks",
+      "hsHint": "Ch. 6912",
+      "launchScope": "v1",
+      "westNote": "EU gift & décor; decorative only — labelled not for food use in v1.",
+      "description": "Vases, planters, wall plates, tiles, lamps. Jaipur craft story (Blue Pottery GI). Export corrugated + dividers; drop-test packing spec shared before PO.",
+      "featured": true
+    },
     {
       "id": "brass-decor",
       "name": "Brass & copper décor",
       "category": "handicraft",
       "pattern": "B",
-      "moq": "MOQ 300 pcs",
+      "moq": "MOQ 300 pcs (samples from ~20–50 pc)",
       "lead": "4–6 weeks",
       "hsHint": "Ch. 7419",
-      "westNote": "Hospitality and gift channels in US/EU; nickel-free on request.",
-      "description": "Hammered finishes, lacquered interiors, and nickel-free options for hospitality and gift channels.",
-      "featured": true
-    },
-    {
-      "id": "blue-pottery",
-      "name": "Blue pottery tableware",
-      "category": "handicraft",
-      "pattern": "P",
-      "moq": "MOQ 400 pcs",
-      "lead": "7–9 weeks",
-      "hsHint": "Ch. 6912",
-      "westNote": "Drop-test packing spec shared before PO — critical for D2C shippers.",
-      "description": "Food-safe glazes on request. Mixed-container programs with protective dividers and drop-test packing.",
+      "launchScope": "v1",
+      "westNote": "EU gift/hospitality collections; nickel-free on request; no jewelry in v1.",
+      "description": "Hammered vases, bowls, trays, meenakari gift pieces. Curated with pottery in mixed LCL programmes — lacquered interiors where needed.",
       "featured": true
     },
     {
@@ -50,8 +61,9 @@
       "moq": "MOQ 500 m",
       "lead": "6–8 weeks",
       "hsHint": "Ch. 50–63",
-      "westNote": "Popular with UK/EU homeware brands; OEKO-TEX® story for retail.",
-      "description": "Sanganeri and Bagru motifs on OEKO-TEX® linen. Custom colourways and repeat sizing for EU/US retailers."
+      "launchScope": "roadmap",
+      "westNote": "Not v1 — EU homeware brands when desk expands.",
+      "description": "Sanganeri and Bagru motifs on OEKO-TEX® linen. Custom colourways for EU retailers — roadmap only."
     },
     {
       "id": "jaipur-quilts",
@@ -61,8 +73,9 @@
       "moq": "MOQ 200 pcs",
       "lead": "5–7 weeks",
       "hsHint": "Ch. 9404",
-      "westNote": "Vacuum cartons reduce CIF cost to US West Coast.",
-      "description": "Lightweight cotton fills, channel quilting, and vacuum-packed export cartons for container efficiency."
+      "launchScope": "roadmap",
+      "westNote": "Roadmap — not first export wedge.",
+      "description": "Lightweight cotton fills and vacuum-packed cartons — for later programmes."
     },
     {
       "id": "turmeric-powder",
@@ -72,8 +85,9 @@
       "moq": "MOQ 1 MT",
       "lead": "3–4 weeks",
       "hsHint": "Ch. 0910",
-      "westNote": "COA + steam treatment; US buyers ask about prior notice early.",
-      "description": "Steam-treated, lab-tested lots with COA. Private label in PET, tin, or pouch — FDA-style documentation support."
+      "launchScope": "roadmap",
+      "westNote": "Roadmap — FSSAI and food regs before any PO.",
+      "description": "Steam-treated lots with COA — not in v1 handicraft scope."
     },
     {
       "id": "basmati-rice",
@@ -83,8 +97,9 @@
       "moq": "MOQ 20 MT",
       "lead": "4–5 weeks",
       "hsHint": "Ch. 1006",
-      "westNote": "FCL to Felixstowe / Rotterdam; moisture certs on request.",
-      "description": "Punjab & Rajasthan sourcing with moisture-controlled silos. FCL programs to EU, UK, and Gulf ports."
+      "launchScope": "roadmap",
+      "westNote": "Roadmap — FCL agro, separate compliance track.",
+      "description": "Punjab & Rajasthan sourcing — not part of v1 Jaipur craft launch."
     },
     {
       "id": "marble-tables",
@@ -94,8 +109,9 @@
       "moq": "MOQ 50 pcs",
       "lead": "8–10 weeks",
       "hsHint": "Ch. 6802",
-      "westNote": "Crating photos for EU garden retailers; lead time includes drying time.",
-      "description": "Makrana and composite bases. Crated for sea freight with humidity indicators and corner protection."
+      "launchScope": "roadmap",
+      "westNote": "Roadmap — EU garden retailers later.",
+      "description": "Makrana and composite bases with crating — not v1."
     },
     {
       "id": "sandstone-planters",
@@ -105,8 +121,9 @@
       "moq": "MOQ 100 pcs",
       "lead": "6–8 weeks",
       "hsHint": "Ch. 6802",
-      "westNote": "40' HC stack diagrams provided before booking freight.",
-      "description": "Hand-chiselled and machine-cut ranges. Stacked pallet configs optimised for 40' HC loading."
+      "launchScope": "roadmap",
+      "westNote": "Roadmap — heavy freight; after craft lines prove out.",
+      "description": "Hand-chiselled ranges — future stone programme."
     }
   ]
 }

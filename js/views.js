@@ -4,17 +4,22 @@ import {
   getProducts,
   getMarkets,
   getFlagshipHandicraft,
+  getIncoterms,
   categoryAsset,
 } from "./company.js";
 
 function flagshipHandicraftHtml({ showActions = true } = {}) {
   const lines = getFlagshipHandicraft();
   if (!lines.length) return "";
+  const brand = getBrand();
+  const sectionTitle =
+    brand?.flagshipSectionTitle ??
+    "Blue pottery leads — brass completes the gift collection.";
 
   return `
     <section class="section wrap flagship-section">
-      <p class="section-label reveal">Flagship lines</p>
-      <h2 class="section-title reveal">Brass and blue pottery — equal focus.</h2>
+      <p class="section-label reveal">Launch focus (v1)</p>
+      <h2 class="section-title reveal">${sectionTitle}</h2>
       <div class="flagship-duo">
         ${lines
           .map(
@@ -39,11 +44,11 @@ function flagshipHandicraftHtml({ showActions = true } = {}) {
 
 function processStepsHtml() {
   const steps = [
-    ["Brief & specs", "Market, certifications, incoterms — in writing."],
-    ["Sample & quote", "Strike-offs and USD/EUR options when we launch."],
+    ["Brief & specs", "EU destination, incoterms (EXW–CIF), decorative vs food — in writing."],
+    ["Sample & quote", "Strike-offs, drop-test packing plan, USD/EUR when we launch."],
     ["Production", "PO lock, milestone photos, optional third-party inspection."],
-    ["Documentation", "Invoice, packing list, COO — broker-ready."],
-    ["Dispatch", "FOB Mundra or CIF — tracking same day."],
+    ["Documentation", "Invoice, packing list, COO, compliance folder for GPSR/REACH path."],
+    ["Dispatch", "FOB Mundra or CIF named port — buyer handles import unless CIF agreed."],
   ];
   return `
     <div class="process-steps">
@@ -76,6 +81,19 @@ function overlapTableHtml() {
     </div>`;
 }
 
+function marketFocusHtml() {
+  const focus = getBrand()?.marketFocus;
+  if (!focus) return "";
+
+  const primary = (focus.primary ?? []).join(", ");
+  return `
+    <section class="section wrap market-focus reveal">
+      <p class="section-label">Who we’re building for</p>
+      <h2 class="section-title" style="font-size: 1.75rem">${focus.headline ?? "EU gift & home décor importers"}</h2>
+      <p class="section-lead">Primary outreach: ${primary}. ${focus.notFirst ?? ""}</p>
+    </section>`;
+}
+
 export function homeView() {
   const brand = getBrand();
   const loadPort = brand?.ports?.load ?? "Mundra (FOB — planned)";
@@ -84,10 +102,10 @@ export function homeView() {
     <section class="hero wrap">
       <div class="hero-grid hero-grid--visual">
         <div class="reveal">
-          <p class="hero-eyebrow">Jaipur · Western importers</p>
-          <h1>Export desk for <em>brass</em> and <em>blue pottery</em> — built before we ship.</h1>
+          <p class="hero-eyebrow">Jaipur · EU gift & home décor</p>
+          <h1>Decorative <em>blue pottery</em> first — <em>brass</em> in the same collection.</h1>
           <p class="section-lead">
-            We’re not trading yet. This site shares our direction: two flagship crafts from Jaipur, plus textiles, agro, and stone as we validate makers and compliance.
+            We’re not trading yet. This site shares our research-backed direction: Jaipur craft for EU importers (Sweden, Germany, Denmark, Netherlands), decorative ceramics only in v1, FOB Mundra when we go live. Textiles, agro, and stone stay on the roadmap.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#/contact">Get in touch</a>
@@ -103,6 +121,8 @@ export function homeView() {
 
     ${flagshipHandicraftHtml()}
 
+    ${marketFocusHtml()}
+
     <section class="section wrap">
       <p class="section-label reveal">Planned workflow</p>
       <h2 class="section-title reveal">How we intend to work with importers.</h2>
@@ -114,7 +134,7 @@ export function homeView() {
         <div>
           <p class="section-label" style="color: var(--gold)">Pre-launch</p>
           <h2 class="section-title" style="margin-bottom: 0.5rem">Early conversations welcome.</h2>
-          <p class="section-lead" style="margin: 0">UK, EU, US, and Canada buyers — say hello before we go live.</p>
+          <p class="section-lead" style="margin: 0">EU gift and décor buyers first — Sweden, Germany, Denmark, Netherlands. Early hellos welcome before we go live.</p>
         </div>
         <a class="btn btn-primary" href="#/contact">Contact</a>
       </div>
@@ -135,7 +155,7 @@ export function productsView(activeCategory = "all") {
       <p class="section-label reveal">Catalogue</p>
       <h1 class="section-title reveal">Lines we’re preparing.</h1>
       <p class="section-lead reveal">
-        Indicative MOQs and lead times while we confirm with makers. Pricing when the desk is live.
+        v1 is handicraft only (decorative blue pottery + brass décor). Other lines are roadmap. Indicative MOQs while we confirm with Jaipur makers — pricing when the desk is live.
       </p>
       <div class="products-toolbar reveal" data-filters>
         ${categories
@@ -160,6 +180,10 @@ function productCardHtml(p) {
   const visual = asset
     ? `<img src="${asset}" alt="" loading="lazy" />`
     : `<span class="product-visual-fallback" data-pattern="${p.pattern}"></span>`;
+  const scope = p.launchScope === "v1" ? "Launch v1" : p.launchScope === "roadmap" ? "Roadmap" : "";
+  const scopeBadge = scope
+    ? `<span class="product-scope ${p.launchScope === "v1" ? "is-v1" : "is-roadmap"}">${scope}</span>`
+    : "";
 
   return `
     <article class="product-card reveal" data-product-id="${p.id}">
@@ -167,11 +191,13 @@ function productCardHtml(p) {
       <div class="product-body">
         <div class="product-meta">
           <span class="product-cat">${catLabel}</span>
+          ${scopeBadge}
           <span class="product-moq">${p.moq}</span>
         </div>
         <h3>${p.name}</h3>
         <p>${p.description}</p>
-        <p class="product-moq" style="margin-bottom: 0.75rem">Lead: ${p.lead}</p>
+        ${p.westNote ? `<p class="product-note">${p.westNote}</p>` : ""}
+        <p class="product-moq" style="margin-bottom: 0.75rem">Lead: ${p.lead}${p.hsHint ? ` · ${p.hsHint}` : ""}</p>
         <a class="btn btn-primary" href="#/contact?product=${encodeURIComponent(p.id)}">Get in touch</a>
       </div>
     </article>
@@ -184,13 +210,12 @@ export function aboutView() {
       <p class="section-label reveal">About</p>
       <h1 class="section-title reveal">Jaipur on the ground — paperwork-first when we launch.</h1>
       <p class="section-lead reveal">
-        We’re building a single desk that keeps samples, production, and invoices aligned for Western buyers.
-        The company is not live yet; registrations and partner mills are still coming together.
+        We’re building a merchant export desk in Jaipur: curated makers, export packing, and paperwork aligned for EU gift and home décor buyers. The company is not live yet — IEC, maker QC, and EU compliance files are still in progress.
       </p>
     </section>
     <section class="section wrap" style="padding-top: 0">
       <h2 class="section-title reveal" style="font-size: 1.75rem">Call overlap (planned)</h2>
-      <p class="section-lead reveal">Windows we’re designing around for UK, EU, and North America.</p>
+      <p class="section-lead reveal">Call windows for Scandinavia and EU first; UK and US listed for reference — not our v1 commercial focus.</p>
       ${overlapTableHtml()}
     </section>
     <section class="section wrap" style="padding-top: 0">
@@ -201,7 +226,7 @@ export function aboutView() {
         </div>
         <div class="timeline-item reveal">
           <strong>Compliance</strong>
-          HS support, food COAs, and retail labels by product type.
+          Decorative v1: GPSR and REACH (glaze/metal) with EU importer partner — not for food contact. Food or DDP programmes out of scope until explicitly quoted.
         </div>
         <div class="timeline-item reveal">
           <strong>Communication</strong>
@@ -227,8 +252,9 @@ export function contactView(prefill = {}) {
       <p class="section-label reveal">Contact</p>
       <h1 class="section-title reveal">Say hello during setup.</h1>
       <p class="section-lead reveal">
-        Tell us what you import and where you ship. We read every note — replies when the trade desk is live.
+        Tell us what you import, EU destination, and preferred incoterm. We read every note — replies when the trade desk is live.
       </p>
+      ${incotermsPanelHtml()}
     </section>
     <section class="section wrap" style="padding-top: 0">
       <div class="contact-layout contact-layout--simple">
@@ -268,6 +294,21 @@ export function contactView(prefill = {}) {
       </div>
     </section>
   `;
+}
+
+function incotermsPanelHtml() {
+  const terms = getIncoterms();
+  const note = getBrand()?.incotermsPublicNote;
+  if (!terms?.length && !note) return "";
+
+  return `
+    <div class="incoterms-panel reveal" style="margin-bottom: 2rem">
+      <p class="section-label">Incoterms (planned)</p>
+      <ul class="incoterms-list">
+        ${(terms ?? []).map((t) => `<li>${t}</li>`).join("")}
+      </ul>
+      ${note ? `<p class="form-note">${note}</p>` : ""}
+    </div>`;
 }
 
 function importMarketsOptions() {
