@@ -143,7 +143,8 @@ a:hover {
   max-width: 72rem;
   margin: 0 auto;
   padding: 0 1.25rem;
-  height: var(--header-h);
+  min-height: var(--header-h);
+  padding: 0.5rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -160,23 +161,45 @@ a:hover {
   min-width: 0;
 }
 
-.logo--lockup {
-  align-items: flex-start;
+.logo-symbol {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(8, 32, 51, 0.1);
 }
 
 .logo-brand {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.15rem;
   min-width: 0;
 }
 
-.logo-lockup {
-  display: block;
-  height: 2.65rem;
-  width: auto;
-  max-width: min(260px, 58vw);
-  border-radius: 6px;
+.logo-name-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  line-height: 1.05;
+}
+
+.logo-jaat {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand-navy);
+}
+
+.logo-global {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--brand-navy);
+  margin-left: 0.05rem;
 }
 
 .logo-tag {
@@ -188,16 +211,25 @@ a:hover {
   font-weight: 600;
   max-width: 16rem;
   line-height: 1.25;
-  padding-left: 0.15rem;
 }
 
-.footer-lockup {
-  display: block;
-  height: 2.5rem;
-  width: auto;
-  max-width: 220px;
-  margin-bottom: 0.35rem;
-  border-radius: 6px;
+.footer-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin: 0 0 0.25rem;
+  line-height: 1.05;
+}
+
+.logo-jaat--footer {
+  color: var(--cream);
+  font-size: 1.35rem;
+}
+
+.logo-global--footer {
+  color: rgba(246, 242, 234, 0.92);
+  font-size: 0.95rem;
+  letter-spacing: 0.32em;
 }
 
 .site-nav {
