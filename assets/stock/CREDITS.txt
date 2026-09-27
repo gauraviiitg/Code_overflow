@@ -4,6 +4,6 @@ Only launch v1 lines use photos on the public site. Replace with your own maker 
 
 blue-pottery-alt.jpg    Wikimedia Commons: Blue Pottery Jaipur Collection.jpg (CC BY-SA)
 blue-pottery.jpg        Wikimedia Commons: Blue Pottery Designer Vase.jpg (CC BY-SA, spare)
-brass-decor.jpg         Unsplash: photo-1652960018678 (Dileesh Kumar, brass vessels)
+brass-decor.jpg         Wikimedia Commons: A traditional Indian brass bowl (CC BY-SA)
 
 Full URLs: company docs/assets/stock-sources.txt

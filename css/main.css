@@ -11,13 +11,16 @@
   --peacock: #1a4a56;
   --peacock-light: #2a6574;
   --gold: #a8894a;
+  --brand-navy: #082033;
+  --brand-orange: #f58220;
+  --brand-teal: #1e5d6d;
   --white: #ffffff;
   --radius: 4px;
   --radius-lg: 12px;
   --shadow: 0 24px 60px rgba(18, 22, 28, 0.12);
   --font-serif: "Instrument Serif", Georgia, serif;
   --font-sans: "Manrope", system-ui, sans-serif;
-  --header-h: 4.5rem;
+  --header-h: 4.75rem;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -156,10 +159,11 @@ a:hover {
 }
 
 .logo-mark {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 8px;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 10px;
   flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(8, 32, 51, 0.12);
 }
 
 .logo-text {
@@ -171,16 +175,20 @@ a:hover {
 .logo-name {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 1.12rem;
-  letter-spacing: -0.02em;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+  color: var(--brand-navy);
 }
 
 .logo-tag {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  text-transform: none;
+  letter-spacing: 0.02em;
   color: var(--ink-soft);
   font-weight: 600;
+  max-width: 11rem;
+  line-height: 1.25;
 }
 
 .site-nav {
@@ -1019,6 +1027,15 @@ a:hover {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.footer-tagline {
+  margin: 0.15rem 0 0.65rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(246, 242, 234, 0.78);
+  letter-spacing: 0.02em;
 }
 
 .footer-logo {

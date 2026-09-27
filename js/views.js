@@ -70,18 +70,13 @@ function marketFocusHtml() {
 
 function heroVisualHtml(brand) {
   const hero = brand?.heroImage;
+  const src = hero?.src ?? "assets/stock/blue-pottery-alt.jpg";
+  const alt = hero?.alt ?? "Jaipur blue pottery, illustrative stock photo";
   const loadPort = brand?.ports?.load ?? "Mundra (FOB planned)";
-  if (hero?.src) {
-    return `
-        <figure class="hero-figure reveal" style="transition-delay: 0.1s">
-          <img class="hero-photo" src="${hero.src}" width="560" height="420" alt="${escapeHtml(hero.alt ?? "Jaipur craft")}" loading="lazy" />
-          <figcaption class="hero-caption">Illustrative photo. Planned load port: ${escapeHtml(loadPort)}</figcaption>
-        </figure>`;
-  }
   return `
         <figure class="hero-figure reveal" style="transition-delay: 0.1s">
-          <img class="hero-map" src="assets/hero-corridor.svg" width="560" height="420" alt="Stylised route from Jaipur toward Western ports" />
-          <figcaption class="hero-caption">Planned load port: ${escapeHtml(loadPort)}</figcaption>
+          <img class="hero-photo" src="${src}" width="560" height="420" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" />
+          <figcaption class="hero-caption">Illustrative Jaipur blue pottery. Default load port: ${escapeHtml(loadPort)}</figcaption>
         </figure>`;
 }
 
