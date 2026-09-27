@@ -15,6 +15,12 @@ import {
   faqHtml,
   specTableHtml,
 } from "./content.js";
+import { assetUrl } from "./paths.js";
+
+function mediaSrc(path) {
+  if (!path) return "";
+  return escapeHtml(assetUrl(path));
+}
 
 function flagshipHandicraftHtml({ showActions = true } = {}) {
   const lines = getFlagshipHandicraft();
@@ -34,7 +40,7 @@ function flagshipHandicraftHtml({ showActions = true } = {}) {
             (line, i) => `
           <article class="flagship-card reveal" style="transition-delay: ${i * 0.08}s">
             <a class="flagship-image-link" href="#/products/${encodeURIComponent(line.productId)}">
-              <img src="${line.asset}" width="320" height="240" alt="${escapeHtml(line.product?.imageAlt ?? line.headline)}" loading="lazy" />
+              <img src="${mediaSrc(line.asset)}" width="320" height="240" alt="${escapeHtml(line.product?.imageAlt ?? line.headline)}" loading="lazy" />
             </a>
             <div class="flagship-body">
               <h3>${escapeHtml(line.headline)}</h3>
@@ -61,7 +67,7 @@ function heroVisualHtml(brand) {
   const alt = hero?.alt ?? "Jaipur blue pottery, illustrative stock photo";
   return `
         <figure class="hero-figure reveal" style="transition-delay: 0.1s">
-          <img class="hero-photo" src="${src}" width="560" height="420" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" />
+          <img class="hero-photo" src="${mediaSrc(src)}" width="560" height="420" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" />
           <figcaption class="hero-caption">Sample photo. Your order uses approved product and packing images.</figcaption>
         </figure>`;
 }
@@ -136,12 +142,22 @@ export function productsView() {
   `;
 }
 
-function productComingSoonVisual(p) {
+function productComingSoonGridVisual(p) {
   if (p.image) {
     return `<span class="product-visual-photo product-visual-photo--soon">
-      <img src="${p.image}" alt="${escapeHtml(p.imageAlt ?? p.name)}" loading="lazy" decoding="async" />
+      <img src="${mediaSrc(p.image)}" alt="${escapeHtml(p.imageAlt ?? p.name)}" loading="lazy" decoding="async" />
       <span class="product-coming-soon-label">Coming soon</span>
     </span>`;
+  }
+  return `<span class="product-visual-fallback product-visual-fallback--soon" data-pattern="${p.pattern}"><span class="product-coming-soon-label">Coming soon</span></span>`;
+}
+
+function productComingSoonDetailVisual(p) {
+  if (p.image) {
+    return `<div class="product-detail-photo product-detail-photo--soon">
+      <img src="${mediaSrc(p.image)}" alt="${escapeHtml(p.imageAlt ?? p.name)}" loading="lazy" decoding="async" />
+      <span class="product-coming-soon-label">Coming soon</span>
+    </div>`;
   }
   return `<span class="product-visual-fallback product-visual-fallback--soon" data-pattern="${p.pattern}"><span class="product-coming-soon-label">Coming soon</span></span>`;
 }
@@ -151,9 +167,9 @@ function productCardHtml(p) {
   const catLabel = categories.find((c) => c.id === p.category)?.label ?? p.category;
   const comingSoon = p.launchScope === "roadmap";
   const visual = comingSoon
-    ? productComingSoonVisual(p)
+    ? productComingSoonGridVisual(p)
     : p.image
-      ? `<img src="${p.image}" alt="${escapeHtml(p.imageAlt ?? p.name)}" loading="lazy" decoding="async" />`
+      ? `<img src="${mediaSrc(p.image)}" alt="${escapeHtml(p.imageAlt ?? p.name)}" loading="lazy" decoding="async" />`
       : `<span class="product-visual-fallback" data-pattern="${p.pattern}"></span>`;
   const scope = comingSoon ? "Coming soon" : "";
   const scopeBadge = scope
@@ -213,7 +229,7 @@ export function productDetailView(productId) {
       <p class="section-lead reveal">${escapeHtml(product.description)}</p>
       <div class="product-detail-grid reveal">
         <div class="product-detail-visual${product.image ? "" : " product-detail-visual--soon"}">
-          ${productComingSoonVisual(product)}
+          ${productComingSoonDetailVisual(product)}
           ${product.image ? `<p class="form-note">Illustrative category photo. Not available to order yet.</p>` : ""}
         </div>
         <div class="product-detail-spec">
@@ -236,7 +252,7 @@ export function productDetailView(productId) {
       <p class="section-lead reveal">${escapeHtml(product.description)}</p>
       <div class="product-detail-grid reveal">
         <div class="product-detail-visual">
-          ${imgSrc ? `<img src="${imgSrc}" alt="${escapeHtml(product.imageAlt ?? product.name)}" loading="lazy" />` : ""}
+          ${imgSrc ? `<img src="${mediaSrc(imgSrc)}" alt="${escapeHtml(product.imageAlt ?? product.name)}" loading="lazy" />` : ""}
           <p class="form-note">Sample photo for reference. Bulk orders use approved maker samples.</p>
         </div>
         <div class="product-detail-spec">

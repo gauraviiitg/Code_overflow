@@ -4,3 +4,10 @@ export const siteRoot = new URL("../", import.meta.url);
 export function companyUrl(relativePath) {
   return new URL(relativePath.replace(/^\//, ""), siteRoot).href;
 }
+
+/** Absolute URL for images and static files (safe with hash routing). */
+export function assetUrl(relativePath) {
+  if (!relativePath) return "";
+  if (/^https?:\/\//i.test(relativePath)) return relativePath;
+  return new URL(relativePath.replace(/^\//, ""), siteRoot).href;
+}

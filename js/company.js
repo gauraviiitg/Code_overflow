@@ -11,23 +11,31 @@ const state = {
 };
 
 export async function initCompany() {
+  let catalogueLoaded = false;
   try {
-    const [catalogueRes, brandRes] = await Promise.all([
-      fetch(companyUrl("product-data/catalogue.json")),
-      fetch(companyUrl("brand/company.json")),
-    ]);
-    if (!catalogueRes.ok || !brandRes.ok) throw new Error("company fetch failed");
-    const catalogue = await catalogueRes.json();
-    const brand = await brandRes.json();
-    state.categories = catalogue.categories;
-    state.products = catalogue.products;
-    state.markets = catalogue.markets;
-    state.incoterms = catalogue.incoterms;
-    state.brand = brand;
-    state.loadedFromCompany = true;
+    const catalogueRes = await fetch(companyUrl("product-data/catalogue.json"));
+    if (catalogueRes.ok) {
+      const catalogue = await catalogueRes.json();
+      state.categories = catalogue.categories;
+      state.products = catalogue.products;
+      state.markets = catalogue.markets;
+      state.incoterms = catalogue.incoterms;
+      catalogueLoaded = true;
+    }
   } catch {
-    state.loadedFromCompany = false;
+    /* keep data.js fallbacks */
   }
+
+  try {
+    const brandRes = await fetch(companyUrl("brand/company.json"));
+    if (brandRes.ok) {
+      state.brand = await brandRes.json();
+    }
+  } catch {
+    /* hero and contact fallbacks in views */
+  }
+
+  state.loadedFromCompany = catalogueLoaded && state.brand != null;
 }
 
 export function getBrand() {

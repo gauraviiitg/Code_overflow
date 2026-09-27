@@ -7,9 +7,11 @@
         var p = location.pathname;
         if (/\.html$/i.test(p)) p = p.slice(0, p.lastIndexOf("/") + 1);
         else if (!p.endsWith("/")) p += "/";
+        var root = p;
         var b = document.createElement("base");
-        b.href = p;
+        b.href = root;
         document.head.appendChild(b);
+        window.__JAAT_SITE_ROOT = location.origin + (root.startsWith("/") ? root : "/" + root);
       })();
     </script>
     <meta
@@ -50,7 +52,15 @@
     <header class="site-header" data-header>
       <div class="header-inner">
         <a class="logo" href="#/" data-nav="/" aria-label="Jaat Global, International trade and logistics">
-          <img class="logo-symbol" src="assets/logo-mark.svg" width="44" height="44" alt="" decoding="async" />
+          <img
+            class="logo-symbol"
+            src="assets/logo-mark.svg"
+            width="44"
+            height="44"
+            alt=""
+            decoding="async"
+            data-static-asset="assets/logo-mark.svg"
+          />
           <span class="logo-brand">
             <span class="logo-name-stack" aria-hidden="true">
               <span class="logo-jaat">Jaat</span>
@@ -119,6 +129,16 @@
 
     <div class="toast" data-toast role="status" aria-live="polite"></div>
 
+    <script>
+      (function () {
+        var root = window.__JAAT_SITE_ROOT;
+        if (!root) return;
+        document.querySelectorAll("[data-static-asset]").forEach(function (img) {
+          var rel = img.getAttribute("data-static-asset");
+          if (rel) img.src = root + rel.replace(/^\//, "");
+        });
+      })();
+    </script>
     <script type="module" src="js/app.js"></script>
   </body>
 </html>
