@@ -117,7 +117,7 @@ export function specTableHtml(product, incoterms) {
     ["Sample programme", product.sampleMoq ?? "On request"],
     ["Lead time", product.lead],
     ["HS chapter", product.hsHint ?? ""],
-    ["Scope", product.launchScope === "v1" ? "Launch v1" : "Roadmap"],
+    ["Scope", product.launchScope === "v1" ? "Launch v1" : "Coming soon"],
     ["Incoterms offered", (incoterms ?? []).join(", ")],
   ].filter(([, v]) => v);
 

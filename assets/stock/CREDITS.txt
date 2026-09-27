@@ -1,17 +1,9 @@
 STOCK PHOTOS (illustrative, not Jaat Global inventory)
 
-Licensed for free use under Unsplash License and Pexels License.
-Replace with your own maker photos before claiming specific SKUs.
+Only launch v1 lines use photos on the public site. Replace with your own maker photos before live trade claims.
 
-blue-pottery-alt.jpg   Unsplash (ceramic vases)
-blue-pottery.jpg       Unsplash (blue ceramic texture)
-brass-decor.jpg        Pexels photo 4846484 (brass bowls)
-textiles.jpg           Unsplash (interior textiles)
-quilts.jpg             Unsplash (bedding)
-spices.jpg             Unsplash (spices)
-rice.jpg               Unsplash (rice)
-stone-marble.jpg       Unsplash (marble surface)
-sandstone.jpg          Unsplash (garden stone)
-hero-craft.jpg         Unsplash (ceramic craft texture)
+blue-pottery-alt.jpg    Wikimedia Commons: Blue Pottery Jaipur Collection.jpg (CC BY-SA)
+blue-pottery.jpg        Wikimedia Commons: Blue Pottery Designer Vase.jpg (CC BY-SA, spare)
+brass-decor.jpg         Unsplash: photo-1652960018678 (Dileesh Kumar, brass vessels)
 
-Full URLs and photographer names: see company docs/assets/stock-sources.txt
+Full URLs: company docs/assets/stock-sources.txt

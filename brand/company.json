@@ -57,8 +57,8 @@
     "load": "Mundra (FOB planned)"
   },
   "heroImage": {
-    "src": "assets/stock/blue-pottery.jpg",
-    "alt": "Blue ceramic craft texture, illustrative stock photo"
+    "src": "assets/stock/blue-pottery-alt.jpg",
+    "alt": "Jaipur blue pottery collection, illustrative stock photo"
   },
   "incotermsPublicNote": "We quote EXW, FCA, FAS, FOB, and CIF only. We do not quote DAP or DDP."
 }

@@ -147,9 +147,9 @@ export function productsView(activeCategory = "handicraft") {
   return `
     <section class="page-hero wrap">
       <p class="section-label reveal">Collections</p>
-      <h1 class="section-title reveal">Launch v1 and roadmap.</h1>
+      <h1 class="section-title reveal">Blue pottery and brass are live.</h1>
       <p class="section-lead reveal">
-        Handicraft launch focus: decorative blue pottery and brass gift décor. Roadmap lines shown for context only.
+        Decorative blue pottery and brass gift décor are open for importer quotes. Textiles, agro, and stone are coming soon.
       </p>
       <div class="products-toolbar reveal" data-filters>
         ${categories
@@ -167,19 +167,24 @@ export function productsView(activeCategory = "handicraft") {
   `;
 }
 
+function productComingSoonVisual(p) {
+  return `<span class="product-visual-fallback product-visual-fallback--soon" data-pattern="${p.pattern}"><span class="product-coming-soon-label">Coming soon</span></span>`;
+}
+
 function productCardHtml(p) {
   const categories = getCategories();
   const catLabel = categories.find((c) => c.id === p.category)?.label ?? p.category;
-  const imgSrc = p.image ?? categoryAsset(p.category);
-  const imgAlt = escapeHtml(p.imageAlt ?? p.name);
-  const visual = imgSrc
-    ? `<img src="${imgSrc}" alt="${imgAlt}" loading="lazy" decoding="async" />`
-    : `<span class="product-visual-fallback" data-pattern="${p.pattern}"></span>`;
-  const scope = p.launchScope === "v1" ? "Launch v1" : p.launchScope === "roadmap" ? "Roadmap" : "";
+  const comingSoon = p.launchScope === "roadmap";
+  const visual = comingSoon
+    ? productComingSoonVisual(p)
+    : p.image
+      ? `<img src="${p.image}" alt="${escapeHtml(p.imageAlt ?? p.name)}" loading="lazy" decoding="async" />`
+      : `<span class="product-visual-fallback" data-pattern="${p.pattern}"></span>`;
+  const scope = p.launchScope === "v1" ? "Launch v1" : comingSoon ? "Coming soon" : "";
   const scopeBadge = scope
-    ? `<span class="product-scope ${p.launchScope === "v1" ? "is-v1" : "is-roadmap"}">${scope}</span>`
+    ? `<span class="product-scope ${p.launchScope === "v1" ? "is-v1" : "is-soon"}">${scope}</span>`
     : "";
-  const roadmapClass = p.launchScope === "roadmap" ? " product-card--roadmap" : "";
+  const roadmapClass = comingSoon ? " product-card--roadmap" : "";
 
   return `
     <article class="product-card reveal${roadmapClass}" data-product-id="${p.id}">
@@ -188,15 +193,24 @@ function productCardHtml(p) {
         <div class="product-meta">
           <span class="product-cat">${escapeHtml(catLabel)}</span>
           ${scopeBadge}
-          <span class="product-moq">${escapeHtml(p.moq)}</span>
+          ${comingSoon ? "" : `<span class="product-moq">${escapeHtml(p.moq)}</span>`}
         </div>
         <h3><a href="#/products/${encodeURIComponent(p.id)}">${escapeHtml(p.name)}</a></h3>
         <p>${escapeHtml(p.description)}</p>
         ${p.westNote ? `<p class="product-note">${escapeHtml(p.westNote)}</p>` : ""}
-        <p class="product-moq" style="margin-bottom: 0.75rem">Lead: ${escapeHtml(p.lead)}${p.hsHint ? `, ${escapeHtml(p.hsHint)}` : ""}</p>
+        ${
+          comingSoon
+            ? ""
+            : `<p class="product-moq" style="margin-bottom: 0.75rem">Lead: ${escapeHtml(p.lead)}${p.hsHint ? `, ${escapeHtml(p.hsHint)}` : ""}</p>`
+        }
         <div class="product-actions">
-          <a class="btn btn-ghost" href="#/products/${encodeURIComponent(p.id)}">Details</a>
-          <a class="btn btn-primary" href="#/contact?product=${encodeURIComponent(p.id)}">Get in touch</a>
+          ${
+            comingSoon
+              ? `<a class="btn btn-ghost" href="#/products/${encodeURIComponent(p.id)}">Learn more</a>
+                 <a class="btn btn-primary" href="#/contact?product=blue-pottery">Quote launch lines</a>`
+              : `<a class="btn btn-ghost" href="#/products/${encodeURIComponent(p.id)}">Details</a>
+                 <a class="btn btn-primary" href="#/contact?product=${encodeURIComponent(p.id)}">Get in touch</a>`
+          }
         </div>
       </div>
     </article>
@@ -213,8 +227,31 @@ export function productDetailView(productId) {
       </section>`;
   }
 
-  const imgSrc = product.image ?? categoryAsset(product.category);
+  const comingSoon = product.launchScope === "roadmap";
   const bullets = product.detailBullets ?? [];
+
+  if (comingSoon) {
+    return `
+    <section class="page-hero wrap product-detail">
+      <p class="section-label reveal"><a href="#/products">Collections</a></p>
+      <h1 class="section-title reveal">${escapeHtml(product.name)}</h1>
+      <p class="section-lead reveal">${escapeHtml(product.description)}</p>
+      <div class="product-detail-grid reveal">
+        <div class="product-detail-visual product-detail-visual--soon">
+          ${productComingSoonVisual(product)}
+        </div>
+        <div class="product-detail-spec">
+          <p class="detail-note"><strong>Status.</strong> Coming soon. This line is not open for quotes yet.</p>
+          <p class="form-note">We are focused on decorative blue pottery and brass gift décor for EU importers in v1.</p>
+          <a class="btn btn-primary" href="#/contact?product=blue-pottery">Quote launch lines</a>
+          <a class="btn btn-ghost" href="#/products">Back to collections</a>
+        </div>
+      </div>
+    </section>
+  `;
+  }
+
+  const imgSrc = product.image ?? categoryAsset(product.category);
 
   return `
     <section class="page-hero wrap product-detail">
@@ -364,7 +401,10 @@ export function aboutView() {
 export function contactView(prefill = {}) {
   const { productId = "", message = "" } = prefill;
   const products = getProducts();
-  const product = products.find((p) => p.id === productId);
+  const launchProducts = products.filter((p) => p.launchScope === "v1");
+  const quoteProductId =
+    launchProducts.find((p) => p.id === productId)?.id ?? launchProducts[0]?.id ?? "";
+  const product = launchProducts.find((p) => p.id === quoteProductId);
   const defaultMessage =
     message ||
     (product ? `Interested in: ${product.name} (${product.moq}). ` : "");
@@ -420,7 +460,12 @@ export function contactView(prefill = {}) {
               <label for="productLine">Product line</label>
               <select id="productLine" name="productLine">
                 <option value="">Select</option>
-                ${products.map((p) => `<option value="${escapeHtml(p.id)}" ${p.id === productId ? "selected" : ""}>${escapeHtml(p.name)}</option>`).join("")}
+                ${launchProducts
+                  .map(
+                    (p) =>
+                      `<option value="${escapeHtml(p.id)}" ${p.id === quoteProductId ? "selected" : ""}>${escapeHtml(p.name)}</option>`
+                  )
+                  .join("")}
               </select>
             </div>
             <div class="field">
@@ -468,7 +513,7 @@ export const routeMeta = {
   },
   "/products": {
     title: "Jaat Global | Collections",
-    description: "Launch v1 handicraft and roadmap lines. MOQ and lead times for EU importers.",
+    description: "Blue pottery and brass gift décor live now. Other collections coming soon.",
   },
   "/importers": {
     title: "Jaat Global | For importers",

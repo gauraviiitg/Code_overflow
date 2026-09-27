@@ -39,7 +39,7 @@
       "westNote": "EU gift and décor; decorative only, labelled not for food use in v1.",
       "description": "Vases, planters, wall plates, tiles, lamps. Jaipur craft story (Blue Pottery GI). Export corrugated and dividers; drop test packing spec shared before PO.",
       "image": "assets/stock/blue-pottery-alt.jpg",
-      "imageAlt": "Decorative blue ceramic vases, illustrative stock photo",
+      "imageAlt": "Jaipur blue pottery vases on museum display, illustrative stock photo",
       "sampleMoq": "About 20 to 50 pieces for sample programme",
       "detailBullets": [
         "Vases, planters, wall plates, tiles, lamps",
@@ -63,7 +63,7 @@
       "westNote": "EU gift and hospitality collections; nickel free on request; no jewelry in v1.",
       "description": "Hammered vases, bowls, trays, meenakari gift pieces. Curated with pottery in mixed LCL programmes; lacquered interiors where needed.",
       "image": "assets/stock/brass-decor.jpg",
-      "imageAlt": "Brass bowls on table, illustrative stock photo",
+      "imageAlt": "Brass bowls and vessels, illustrative stock photo",
       "sampleMoq": "About 20 to 50 pieces for sample programme",
       "detailBullets": [
         "Hammered vases, bowls, trays, meenakari gift pieces",
@@ -84,10 +84,8 @@
       "lead": "6 to 8 weeks",
       "hsHint": "Ch. 50 to 63",
       "launchScope": "roadmap",
-      "westNote": "Not v1. EU homeware brands when desk expands.",
-      "description": "Sanganeri and Bagru motifs on OEKO TEX linen. Custom colourways for EU retailers; roadmap only.",
-      "image": "assets/stock/textiles.jpg",
-      "imageAlt": "Home textiles, illustrative stock photo"
+      "westNote": "Coming soon. Not open for quotes in v1.",
+      "description": "Sanganeri and Bagru motifs on OEKO TEX linen. Custom colourways for EU retailers when this line opens."
     },
     {
       "id": "jaipur-quilts",
@@ -98,10 +96,8 @@
       "lead": "5 to 7 weeks",
       "hsHint": "Ch. 9404",
       "launchScope": "roadmap",
-      "westNote": "Roadmap. Not first export wedge.",
-      "description": "Lightweight cotton fills and vacuum packed cartons for later programmes.",
-      "image": "assets/stock/quilts.jpg",
-      "imageAlt": "Layered bedding, illustrative stock photo"
+      "westNote": "Coming soon. Not open for quotes in v1.",
+      "description": "Lightweight cotton fills and vacuum packed cartons when this line opens."
     },
     {
       "id": "turmeric-powder",
@@ -112,10 +108,8 @@
       "lead": "3 to 4 weeks",
       "hsHint": "Ch. 0910",
       "launchScope": "roadmap",
-      "westNote": "Roadmap. FSSAI and food regs before any PO.",
-      "description": "Steam treated lots with COA. Not in v1 handicraft scope.",
-      "image": "assets/stock/spices.jpg",
-      "imageAlt": "Spices in bowls, illustrative stock photo"
+      "westNote": "Coming soon. FSSAI and food regs before any PO.",
+      "description": "Steam treated lots with COA. Separate programme after handicraft v1."
     },
     {
       "id": "basmati-rice",
@@ -126,10 +120,8 @@
       "lead": "4 to 5 weeks",
       "hsHint": "Ch. 1006",
       "launchScope": "roadmap",
-      "westNote": "Roadmap. FCL agro, separate compliance track.",
-      "description": "Punjab and Rajasthan sourcing. Not part of v1 Jaipur craft launch.",
-      "image": "assets/stock/rice.jpg",
-      "imageAlt": "Basmati rice, illustrative stock photo"
+      "westNote": "Coming soon. FCL agro, separate compliance track.",
+      "description": "Punjab and Rajasthan sourcing when this line opens."
     },
     {
       "id": "marble-tables",
@@ -140,10 +132,8 @@
       "lead": "8 to 10 weeks",
       "hsHint": "Ch. 6802",
       "launchScope": "roadmap",
-      "westNote": "Roadmap. EU garden retailers later.",
-      "description": "Makrana and composite bases with crating. Not v1.",
-      "image": "assets/stock/stone-marble.jpg",
-      "imageAlt": "Marble surface, illustrative stock photo"
+      "westNote": "Coming soon. EU garden retailers later.",
+      "description": "Makrana and composite bases with crating when this line opens."
     },
     {
       "id": "sandstone-planters",
@@ -154,10 +144,8 @@
       "lead": "6 to 8 weeks",
       "hsHint": "Ch. 6802",
       "launchScope": "roadmap",
-      "westNote": "Roadmap. Heavy freight after craft lines prove out.",
-      "description": "Hand chiselled ranges. Future stone programme.",
-      "image": "assets/stock/sandstone.jpg",
-      "imageAlt": "Garden stone and plants, illustrative stock photo"
+      "westNote": "Coming soon. Heavy freight after craft lines prove out.",
+      "description": "Hand chiselled ranges when this stone programme opens."
     }
   ]
 }
