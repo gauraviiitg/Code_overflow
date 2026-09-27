@@ -4,7 +4,6 @@ import {
   productsView,
   aboutView,
   contactView,
-  buyersView,
   renderProductGrid,
 } from "./views.js";
 
@@ -75,16 +74,6 @@ function bindProductFilters() {
     });
     grid.innerHTML = renderProductGrid(productFilter);
     observeReveals();
-    bindQuickInquire();
-  });
-}
-
-function bindQuickInquire() {
-  outlet.querySelectorAll("[data-inquire]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const id = btn.getAttribute("data-inquire");
-      window.location.hash = `#/contact?product=${encodeURIComponent(id)}`;
-    });
   });
 }
 
@@ -116,8 +105,6 @@ function render() {
     outlet.innerHTML = contactView({
       productId: params.get("product") || "",
     });
-  } else if (path === "/buyers") {
-    outlet.innerHTML = buyersView();
   } else {
     outlet.innerHTML = homeView();
   }
@@ -130,7 +117,6 @@ function render() {
 
   observeReveals();
   bindProductFilters();
-  bindQuickInquire();
   bindContactForm();
   window.scrollTo({ top: 0, behavior: path === "/" ? "auto" : "smooth" });
 }

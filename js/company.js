@@ -3,7 +3,6 @@ import { companyUrl } from "./paths.js";
 
 const state = {
   brand: null,
-  certifications: null,
   categories: fbCat,
   products: fbProd,
   markets: fbMarkets,
@@ -13,15 +12,13 @@ const state = {
 
 export async function initCompany() {
   try {
-    const [catalogueRes, brandRes, certRes] = await Promise.all([
+    const [catalogueRes, brandRes] = await Promise.all([
       fetch(companyUrl("product-data/catalogue.json")),
       fetch(companyUrl("brand/company.json")),
-      fetch(companyUrl("legal/public-certifications.json")),
     ]);
     if (!catalogueRes.ok || !brandRes.ok) throw new Error("company fetch failed");
     const catalogue = await catalogueRes.json();
     const brand = await brandRes.json();
-    if (certRes.ok) state.certifications = await certRes.json();
     state.categories = catalogue.categories;
     state.products = catalogue.products;
     state.markets = catalogue.markets;
@@ -35,10 +32,6 @@ export async function initCompany() {
 
 export function getBrand() {
   return state.brand;
-}
-
-export function getCertifications() {
-  return state.certifications;
 }
 
 export function getCategories() {

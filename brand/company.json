@@ -1,19 +1,18 @@
 {
   "name": "Jaat Global",
-  "tagline": "Jaipur export desk — in setup, built for Western importers",
-  "phase": "pre-launch",
+  "tagline": "Jaipur export desk — in setup",
   "flagshipHandicraft": [
     {
       "productId": "brass-decor",
       "headline": "Brass & copper décor",
       "asset": "assets/featured/brass-line.svg",
-      "pitch": "Target lines for hospitality, gift, and premium retail — nickel-free and lacquered interior options."
+      "pitch": "Hospitality, gift, and premium retail — nickel-free and lacquered interior options."
     },
     {
       "productId": "blue-pottery",
       "headline": "Blue pottery tableware",
       "asset": "assets/featured/pottery-line.svg",
-      "pitch": "Jaipur icon craft — food-safe glazes and export packing specs we’re validating with makers."
+      "pitch": "Jaipur craft — food-safe glazes and export packing we’re validating with makers."
     }
   ],
   "location": {
@@ -21,21 +20,13 @@
     "state": "Rajasthan",
     "country": "India",
     "postal": "302001",
-    "addressLine": "MI Road, Jaipur",
-    "airport": "JAI (~20 min by appointment)"
+    "addressLine": "Jaipur",
+    "airport": "JAI"
   },
   "contact": {
     "email": "trade@jaatglobal.com",
-    "phone": "+91 141 000 0000",
-    "hoursIST": "Mon–Sat · 9:30–18:30",
-    "responseSLA": "Within a few business days (pre-launch)"
+    "responseSLA": "When the trade desk is live"
   },
-  "focusAreas": [
-    { "value": "2", "label": "Flagship crafts (brass & blue pottery)" },
-    { "value": "4", "label": "Product pillars on the roadmap" },
-    { "value": "UK · EU · US", "label": "Primary buyer regions we’re studying" },
-    { "value": "FOB Mundra", "label": "Default load port we’re planning around" }
-  ],
   "westernMarkets": [
     { "code": "GB", "name": "United Kingdom", "overlap": "12:00–16:00 IST ↔ UK morning" },
     { "code": "DE", "name": "Germany", "overlap": "13:30–17:30 IST ↔ EU morning" },
@@ -44,14 +35,6 @@
     { "code": "CA", "name": "Canada", "overlap": "19:00–23:00 IST ↔ Eastern Canada morning" }
   ],
   "ports": {
-    "load": "Mundra (FOB default — planned)",
-    "commonCIF": ["Felixstowe", "Rotterdam", "New York / New Jersey", "Los Angeles / Long Beach", "Vancouver"]
-  },
-  "trustSignals": [
-    "Registrations & compliance in progress",
-    "USD / EUR quotes planned at launch",
-    "Third-party inspection welcome when live",
-    "Documentation-first mindset for Western buyers"
-  ],
-  "registrationsNote": "Certificate copies will be shared on serious inquiry once trading begins — not published on web during setup."
+    "load": "Mundra (FOB — planned)"
+  }
 }
