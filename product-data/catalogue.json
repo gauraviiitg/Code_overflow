@@ -21,12 +21,15 @@
   ],
   "incoterms": [
     "EXW Jaipur (you arrange pickup)",
+    "FCA named place",
+    "FAS Mundra",
     "FOB Mundra (usual for bulk)",
     "CIF (we quote freight to your port)"
   ],
   "products": [
     {
       "id": "blue-pottery",
+      "sku": "JG-BP-001",
       "name": "Jaipur blue pottery",
       "category": "handicraft",
       "pattern": "P",
@@ -34,6 +37,15 @@
       "lead": "7 to 9 weeks after PO",
       "hsHint": "6912",
       "launchScope": "v1",
+      "originCountry": "India",
+      "sourcingLocation": "Jaipur, Rajasthan",
+      "material": "Quartz based blue pottery body",
+      "finish": "Hand painted glazed finish",
+      "construction": "Handcrafted and hand finished",
+      "intendedUse": "Decorative use",
+      "sampleAvailable": true,
+      "customization": "Selected shapes, colours, and patterns on request",
+      "commercialDataStatus": "Planning estimate. Confirmed in the written quote.",
       "westNote": "For gift and home display. Not for food unless agreed separately.",
       "description": "Hand finished vases, planters, wall plates, tiles, and lamps in traditional Jaipur glazes.",
       "image": "assets/stock/blue-pottery-alt.jpg",
@@ -45,11 +57,12 @@
         "Labels in English as agreed on your PO"
       ],
       "complianceNote": "Sold as decorative articles. Your team confirms EU or UK rules. We share glaze and material information from makers when available.",
-      "packingNote": "Five ply export cartons, bubble wrap, and dividers. Drop test before we lock the spec on your order.",
+      "packingNote": "Protective wrapping, dividers, and export cartons are specified for the approved product and shipping method.",
       "featured": true
     },
     {
       "id": "brass-decor",
+      "sku": "JG-BR-001",
       "name": "Brass and copper décor",
       "category": "handicraft",
       "pattern": "B",
@@ -57,6 +70,15 @@
       "lead": "4 to 6 weeks after PO",
       "hsHint": "7419",
       "launchScope": "v1",
+      "originCountry": "India",
+      "sourcingLocation": "Jaipur and Rajasthan",
+      "material": "Brass or copper as specified",
+      "finish": "Finish confirmed for each product",
+      "construction": "Handcrafted or hand finished depending on the product",
+      "intendedUse": "Decorative and gift use",
+      "sampleAvailable": true,
+      "customization": "Selected finishes, sizes, and packaging on request",
+      "commercialDataStatus": "Planning estimate. Confirmed in the written quote.",
       "westNote": "Gift and hospitality collections. Nickel free finish on request.",
       "description": "Hammered bowls, trays, vases, and enamel accent pieces suited to retail and hotel gift shops.",
       "image": "assets/stock/brass-decor.jpg",
@@ -73,6 +95,7 @@
     },
     {
       "id": "block-print-linen",
+      "sku": "JG-TX-001",
       "name": "Block print linen",
       "category": "textiles",
       "pattern": "I",
@@ -87,6 +110,7 @@
     },
     {
       "id": "jaipur-quilts",
+      "sku": "JG-TX-002",
       "name": "Jaipur bedding and quilts",
       "category": "textiles",
       "pattern": "Q",
@@ -101,6 +125,7 @@
     },
     {
       "id": "turmeric-powder",
+      "sku": "JG-AG-001",
       "name": "Spices",
       "category": "spices",
       "pattern": "T",
@@ -115,6 +140,7 @@
     },
     {
       "id": "basmati-rice",
+      "sku": "JG-AG-002",
       "name": "Rice",
       "category": "spices",
       "pattern": "R",
@@ -129,6 +155,7 @@
     },
     {
       "id": "marble-tables",
+      "sku": "JG-ST-001",
       "name": "Marble inlay",
       "category": "stone",
       "pattern": "M",
@@ -143,6 +170,7 @@
     },
     {
       "id": "sandstone-planters",
+      "sku": "JG-ST-002",
       "name": "Sandstone garden",
       "category": "stone",
       "pattern": "S",
