@@ -1,7 +1,7 @@
 {
   "name": "Jaat Global",
   "logoSubtitle": "International trade and logistics",
-  "tagline": "Jaipur blue pottery and brass gift décor for importers and retailers",
+  "tagline": "Your sourcing partner in Jaipur",
   "typography": {
     "official": true,
     "serif": "Instrument Serif",
@@ -16,9 +16,9 @@
     "favicon": "assets/favicon-32.png"
   },
   "marketFocus": {
-    "headline": "Gift, home, and hospitality buyers",
-    "primary": ["European Union", "United Kingdom"],
-    "secondary": ["United Arab Emirates"],
+    "headline": "International importers of gift and home décor",
+    "primary": ["Sweden", "Germany", "Denmark", "Netherlands"],
+    "secondary": ["United Arab Emirates", "United Kingdom"],
     "notFirst": "We work with importers and retailers who need repeatable SKUs, export packing, and clear documents."
   },
   "flagshipHandicraft": [
@@ -26,7 +26,7 @@
       "productId": "blue-pottery",
       "headline": "Jaipur blue pottery",
       "asset": "assets/stock/blue-pottery-alt.jpg",
-      "pitch": "Vases, planters, plates, and tiles in classic Jaipur glazes. Decorative use, export cartons, and drop tested packing."
+      "pitch": "Vases, planters, plates, and tiles in classic Jaipur glazes. Decorative use with packing agreed for each order."
     },
     {
       "productId": "brass-decor",

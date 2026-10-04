@@ -1,19 +1,26 @@
 {
-  "displayPolicy": "Registration numbers are shared on your proforma invoice when we send a quote.",
+  "displayPolicy": "Registration details will be published after verification. Product and shipment requirements are reviewed for each order.",
   "badges": [
     {
       "id": "iec",
       "label": "IEC",
-      "title": "Export registration",
-      "status": "Active",
-      "publicNote": "Required for outbound shipments from India"
+      "title": "Importer Exporter Code",
+      "status": "Prelaunch",
+      "publicNote": "Registration status is being verified before launch"
     },
     {
       "id": "gst",
       "label": "GST",
-      "title": "Tax registration",
-      "status": "Active",
-      "publicNote": "Shown on your commercial invoice"
+      "title": "Goods and Services Tax",
+      "status": "Prelaunch",
+      "publicNote": "Registration status is being verified before launch"
+    },
+    {
+      "id": "fssai",
+      "label": "FSSAI",
+      "title": "Food safety (roadmap agro and spice only)",
+      "status": "Roadmap only",
+      "publicNote": "Not applicable to the initial decorative handicraft range"
     }
   ]
 }

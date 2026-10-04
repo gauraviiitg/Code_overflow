@@ -1,17 +1,33 @@
 {
   "home": {
-    "valueProp": "Jaipur blue pottery and brass gift décor for shops, importers, and hospitality buyers. We quote in writing before production starts.",
+    "eyebrow": "Jaat Global | Jaipur, India | Prelaunch",
+    "title": "Your sourcing partner in Jaipur.",
+    "valueProp": "Handcrafted Indian products for international importers. Source locally, communicate directly, and build your collection with clear commercial information.",
     "bullets": [
-      "Two product lines you can order now: pottery and brass",
-      "Samples available before you commit to bulk",
-      "English invoices and one contact from quote to shipment",
-      "Decorative pottery labelled not for food unless you request otherwise"
+      "Blue pottery and brass décor are the initial sourcing focus",
+      "Samples and written specifications before bulk production",
+      "One direct contact from sourcing brief to shipment planning",
+      "Decorative products with intended use stated clearly"
     ],
     "trustStrip": [
-      { "label": "Office", "value": "Jaipur, India" },
-      { "label": "Bulk ships from", "value": "Mundra port" },
-      { "label": "Typical order", "value": "300 to 500+ pieces" },
-      { "label": "Reply time", "value": "Within 2 business days" }
+      { "label": "Jaipur", "value": "Local sourcing focus" },
+      { "label": "Samples", "value": "Evaluate before scaling" },
+      { "label": "Custom", "value": "Build for your market" },
+      { "label": "Export", "value": "Shipment support" },
+      { "label": "Direct", "value": "One team and one contact" }
+    ],
+    "promises": [
+      { "title": "Direct", "body": "Talk with the team coordinating your requirement." },
+      { "title": "Flexible", "body": "Start from the catalogue or send a product reference." },
+      { "title": "Transparent", "body": "Receive written specifications, MOQ, timing, and quote basis." },
+      { "title": "Export ready", "body": "Agree packing, documents, and shipment responsibilities before the order." },
+      { "title": "Responsive", "body": "We aim to answer trade enquiries within two business days." }
+    ],
+    "buyerTypes": [
+      { "title": "Importer", "body": "Build a repeat sourcing relationship in Jaipur.", "href": "#/importers" },
+      { "title": "Retailer", "body": "Create a differentiated wholesale collection.", "href": "#/products" },
+      { "title": "Designer", "body": "Send references for custom sourcing.", "href": "#/sourcing" },
+      { "title": "Hospitality", "body": "Discuss décor and gifting requirements.", "href": "#/contact" }
     ],
     "faqTitle": "Common questions",
     "faq": [
@@ -29,7 +45,7 @@
       },
       {
         "q": "How do samples work?",
-        "a": "We send samples by courier with an invoice for customs. You sign off colours and finish before we run bulk."
+        "a": "Sample availability, courier method, cost, and customs documents are confirmed for the product and destination. Written approval can establish the production reference."
       },
       {
         "q": "Who handles EU or UK product rules?",
@@ -37,45 +53,158 @@
       },
       {
         "q": "Can we inspect before shipment?",
-        "a": "Yes, if we agree it on the order. We send production photos during the run in any case."
+        "a": "An inspection and production photo plan can be agreed in the order. The scope must be written before production."
+      },
+      {
+        "q": "Can I mix SKUs?",
+        "a": "Mixed SKU planning depends on the products, maker constraints, packing, and total order value. Share your target range for review."
+      },
+      {
+        "q": "Can you quote FOB or CIF?",
+        "a": "Yes, those quote bases can be discussed with a named port. EXW, FCA, and FAS may also be considered where suitable."
+      },
+      {
+        "q": "Can you arrange freight?",
+        "a": "Freight coordination can be discussed according to destination, volume, shipping method, and the agreed Incoterm."
+      },
+      {
+        "q": "What documents can you provide?",
+        "a": "Applicable documents may include a commercial invoice, packing list, bill of lading, certificate of origin where required, and agreed labels."
+      },
+      {
+        "q": "Can you provide an HS code?",
+        "a": "A planning tariff hint may be shared, but final classification should be verified for the exact product and destination."
+      },
+      {
+        "q": "Can you provide carton dimensions?",
+        "a": "Carton quantity, dimensions, and weight are provided only after product measurement and packing validation."
+      },
+      {
+        "q": "Can you develop a custom product?",
+        "a": "Selected products can be investigated through the Jaat Sourcing Desk. Feasibility, sample cost, MOQ, and timing are reviewed before commitment."
+      },
+      {
+        "q": "Can I send a reference product?",
+        "a": "Yes. Send a photo, drawing, catalogue page, moodboard, or specification with quantity, destination, and target timing."
+      },
+      {
+        "q": "Can I visit Jaipur?",
+        "a": "Visits can be discussed after launch and after the product brief and relevant maker arrangements are clear."
+      },
+      {
+        "q": "How do repeat orders work?",
+        "a": "Use the same SKU and approved specification. Availability, material, finish, quantity, and timing are reconfirmed for every order."
+      },
+      {
+        "q": "How is quality approved?",
+        "a": "The sample and written specification define the reference. Any checks or inspection level must be agreed in the order."
+      },
+      {
+        "q": "What happens if goods arrive damaged?",
+        "a": "The reporting window, evidence, insurance, and remedy must be agreed in the commercial terms before shipment."
+      },
+      {
+        "q": "How do you handle handmade variation?",
+        "a": "Natural variation is explained before approval. Commercially important dimensions, colours, finishes, and tolerances should be written into the specification."
       }
     ]
   },
   "importers": {
-    "title": "How to order",
-    "lead": "From first email to goods on the water.",
+    "title": "Your sourcing partner in Jaipur",
+    "lead": "Handcrafted Indian products, direct communication, and practical export support for international importers.",
     "steps": [
       {
         "title": "Send your brief",
-        "body": "What you want to buy, rough quantity, destination country, and how you plan to sell it."
+        "body": "Share products, approximate quantities, destination market, required timing, and any customization."
+      },
+      {
+        "title": "Review options and quotation",
+        "body": "We review sourcing possibilities, planning MOQ, timing, and the requested quote basis."
       },
       {
         "title": "Approve samples",
-        "body": "We ship samples. You confirm the look and quality in writing."
+        "body": "Where sampling is suitable, the approved sample becomes the production reference."
       },
       {
-        "title": "Confirm the order",
-        "body": "You receive price, quantity, lead time, packing plan, and payment steps in one quote."
+        "title": "Confirm specifications",
+        "body": "Material, finish, intended use, quantity, packing, and relevant requirements are agreed in writing."
       },
       {
-        "title": "Receive shipping papers",
-        "body": "Invoice, packing list, and bill of lading for your freight forwarder or broker."
+        "title": "Coordinate production and checks",
+        "body": "The order is sourced or produced and checked against the agreed reference and requirements."
       },
       {
-        "title": "After delivery",
-        "body": "Tell us about transit damage with photos within the agreed time. Share reorder plans when you have them."
+        "title": "Pack and prepare documents",
+        "body": "Packing and applicable commercial documents are prepared for the agreed shipment."
+      },
+      {
+        "title": "Ship and plan the next order",
+        "body": "Shipment responsibilities follow the agreed Incoterm. Stable SKU references support future enquiries."
       }
     ],
-    "downloadLabel": "Printable summary"
+    "downloadLabel": "Open importer onboarding pack",
+    "serviceMatrix": [
+      { "need": "Existing product range", "offer": "Initial blue pottery and brass lines" },
+      { "need": "Samples", "offer": "Discussed by product and destination" },
+      { "need": "Custom colours or sizes", "offer": "Selected products after feasibility review" },
+      { "need": "Product sourcing", "offer": "Reference led search through the Jaipur network" },
+      { "need": "Commercial specifications", "offer": "Documented as data is verified" },
+      { "need": "Export documents", "offer": "Applicable documents agreed for the shipment" },
+      { "need": "Freight coordination", "offer": "Based on destination, volume, and quote basis" },
+      { "need": "Repeat enquiries", "offer": "Managed with stable SKU references" }
+    ],
+    "riskSteps": [
+      "Sample",
+      "Specification",
+      "Written approval",
+      "Production or sourcing",
+      "Quality check",
+      "Packing",
+      "Shipment"
+    ]
+  },
+  "sourcing": {
+    "title": "Jaat Sourcing Desk",
+    "lead": "Your product idea. Our Jaipur network.",
+    "statement": "Our catalogue is a starting point, not our limit.",
+    "brief": "Send a product photo, catalogue page, moodboard, drawing, or specification by email. Include quantity, material, dimensions, target cost if known, destination, and required date.",
+    "collectionTitle": "Build your Jaipur collection",
+    "collectionBody": "Ask for a coordinated range around your market, target price, quantities, and preferred materials.",
+    "process": [
+      "Share the reference and commercial brief",
+      "Review sourcing or development feasibility",
+      "Receive options and planning estimates",
+      "Approve a sample and written specification",
+      "Confirm the commercial order"
+    ]
+  },
+  "quality": {
+    "title": "Quality before shipment",
+    "lead": "Checks are agreed for the product and order. We do not claim tests or inspections that have not been completed.",
+    "productChecks": ["Visible condition", "Finish", "Dimensions where specified", "Colour reference", "Quantity"],
+    "packingChecks": ["Protective packing", "Carton condition", "Labels", "Quantity per carton"],
+    "documentChecks": ["Commercial invoice", "Packing list", "Applicable shipping documents"],
+    "variationTitle": "Handmade does not have to mean unpredictable",
+    "variationBody": "Handcrafted products can show small differences in colour, pattern, texture, dimensions, and shape. Approved samples and written specifications help define the commercial production reference.",
+    "defects": ["Cracks", "Severe damage", "Broken components", "Unusable finish"],
+    "variations": ["Minor colour differences", "Minor pattern differences", "Natural texture", "Small shape variation within agreed tolerance"]
+  },
+  "packing": {
+    "title": "Designed for the journey",
+    "lead": "Fragile products need packing suited to material, shape, quantity, and shipping method.",
+    "sequence": ["Product", "Protective wrapping", "Inner protection", "Master carton", "Shipment"],
+    "note": "Final packing specifications are agreed after product and sample review. Drop testing will only be claimed after a test is completed and recorded."
   },
   "export": {
     "title": "Shipping and documents",
     "lead": "What appears on your quote and what documents you receive with the shipment.",
     "defaultIncoterm": "FOB Mundra",
     "incotermNotes": [
-      { "term": "EXW Jaipur", "use": "You collect goods in Jaipur, often for samples" },
-      { "term": "FOB Mundra", "use": "Goods loaded at port; you book sea freight (most common)" },
-      { "term": "CIF", "use": "We quote sea freight and insurance to your named port" }
+      { "term": "EXW Jaipur", "use": "Buyer arranges collection and onward logistics from the named place" },
+      { "term": "FCA named place", "use": "Responsibilities follow the named place and the agreed FCA term" },
+      { "term": "FAS Mundra", "use": "Responsibilities follow the named port and the agreed FAS term" },
+      { "term": "FOB Mundra", "use": "Seller handles agreed export side delivery and clearance to loading under the FOB term" },
+      { "term": "CIF named port", "use": "Seller arranges cost, insurance, and freight to the named port under the CIF term" }
     ],
     "documentsHandicraft": [
       "Commercial invoice",
@@ -85,11 +214,11 @@
       "Product labels as agreed on your order"
     ],
     "packingSummary": [
-      "Pottery: strong export cartons with dividers; we test drop packing before bulk",
-      "Brass: rigid cartons and wrap; extra moisture protection in rainy season",
+      "Pottery: protective wrapping, dividers, and export cartons specified after product review",
+      "Brass: protective wrap and cartons specified for the finish and shipping method",
       "Mixed pottery and brass: every SKU listed on the packing list"
     ],
-    "complianceDecorative": "Gift and home décor unless your order says otherwise. You confirm rules for your market. We share material information from makers when you need it."
+    "complianceDecorative": "The initial range is decorative gift and home décor. Requirements vary by product, intended use, and destination. The importer confirms market access requirements, and available product information is shared for review."
   },
   "contact": {
     "moqBands": [
@@ -98,6 +227,65 @@
       "200 to 500 pieces",
       "500 pieces or more",
       "Not sure yet"
+    ],
+    "shippingBases": ["EXW Jaipur", "FCA named place", "FAS Mundra", "FOB Mundra", "CIF named port", "Discuss with us"],
+    "sampleOptions": ["Yes", "No", "Not sure"],
+    "customOptions": ["None", "Colour or finish", "Size or shape", "Packaging or label", "Reference product", "Not sure"]
+  },
+  "resources": {
+    "importerChecklist": "Indian handicraft importer checklist",
+    "supplierProfile": "Jaat Global supplier profile",
+    "note": "Commercial prices, banking information, private supplier details, and registration scans are shared through the appropriate private process."
+  },
+  "future": {
+    "title": "Planned for the future",
+    "lead": "These capabilities are not available today. They will be added only after the required product data, real assets, operating evidence, and technical systems are ready.",
+    "groups": [
+      {
+        "title": "Verified product information",
+        "items": [
+          "Unit dimensions and weight measured for each SKU",
+          "Master carton quantity, dimensions, and gross weight",
+          "Verified tariff classification and product test information",
+          "Downloadable product specification sheets"
+        ]
+      },
+      {
+        "title": "Real proof",
+        "items": [
+          "Approved product photography",
+          "Team and Jaipur sourcing photography",
+          "Quality check and packing photography",
+          "Recorded packing tests, testimonials, and case studies"
+        ]
+      },
+      {
+        "title": "Buyer tools",
+        "items": [
+          "Product comparison",
+          "Suggested starter collections",
+          "Mixed SKU and container planning",
+          "Seasonal catalogues and buyer previews"
+        ]
+      },
+      {
+        "title": "Buyer account",
+        "items": [
+          "Saved products and RFQs",
+          "Quote and sample history",
+          "Order documents and tracking",
+          "SKU based reorder requests"
+        ]
+      },
+      {
+        "title": "Connected sales service",
+        "items": [
+          "Live form and secure file upload",
+          "Trade inbox and CRM connection",
+          "Automated RFQ acknowledgement and follow up",
+          "Qualified market insight based on real enquiry data"
+        ]
+      }
     ]
   },
   "meta": {

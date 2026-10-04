@@ -10,7 +10,11 @@ import {
   productDetailView,
   renderProductGrid,
   routeMeta,
-} from "./views.js";
+  sourcingView,
+  qualityView,
+  packagingView,
+  futureView,
+} from "./views/index.js";
 
 const outlet = document.querySelector("[data-outlet]");
 const header = document.querySelector("[data-header]");
@@ -18,7 +22,7 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const navPanel = document.querySelector("[data-nav-panel]");
 const toastEl = document.querySelector("[data-toast]");
 
-let productFilter = "handicraft";
+let productFilter = "all";
 
 function parseRoute() {
   const hash = window.location.hash.slice(1) || "/";
@@ -102,22 +106,69 @@ function bindProductFilters() {
     });
     grid.innerHTML = renderProductGrid(productFilter);
     observeReveals();
+    bindRfqActions();
   });
 }
 
 function buildMailtoBody(data) {
-  const lines = [
-    `Name: ${data.name}`,
-    `Company: ${data.company || ""}`,
-    `Email: ${data.email}`,
-    `Market: ${data.market || ""}`,
-    `Incoterm: ${data.incoterm || ""}`,
-    `Product line: ${data.productLine || data.product || ""}`,
-    `MOQ band: ${data.moqBand || ""}`,
-    "",
-    data.message,
-  ];
+  const labels = {
+    requestType: "Request type",
+    name: "Name",
+    company: "Company",
+    email: "Email",
+    phone: "WhatsApp or phone",
+    market: "Country or market",
+    destination: "Destination city or port",
+    productLine: "Product line",
+    quantity: "Approximate quantity",
+    deliveryDate: "Required delivery date",
+    incoterm: "Quote basis",
+    sample: "Sample required",
+    customization: "Customization",
+    targetPrice: "Target price",
+    intendedUse: "Intended use",
+    rfqItems: "RFQ items",
+    message: "Product brief",
+  };
+  const lines = Object.entries(labels).map(([key, label]) => `${label}: ${data[key] || ""}`);
   return lines.join("\n");
+}
+
+function readRfq() {
+  try {
+    return JSON.parse(localStorage.getItem("jaat_rfq") || "[]");
+  } catch {
+    return [];
+  }
+}
+
+function writeRfq(items) {
+  localStorage.setItem("jaat_rfq", JSON.stringify(items));
+  updateRfqCount();
+}
+
+function updateRfqCount() {
+  const count = readRfq().length;
+  document.querySelectorAll("[data-rfq-count]").forEach((el) => {
+    el.textContent = String(count);
+    el.hidden = count === 0;
+  });
+}
+
+function bindRfqActions() {
+  outlet.querySelectorAll("[data-add-rfq]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const product = getProducts().find((item) => item.id === button.dataset.addRfq);
+      if (!product) return;
+      const items = readRfq();
+      if (!items.some((item) => item.id === product.id)) {
+        items.push({ id: product.id, sku: product.sku ?? product.id, name: product.name, quantity: "" });
+        writeRfq(items);
+      }
+      button.textContent = "Added to RFQ";
+      showToast(`${product.sku ?? product.name} added to your RFQ.`);
+    });
+  });
 }
 
 function bindContactForm() {
@@ -132,7 +183,7 @@ function bindContactForm() {
     localStorage.setItem("jaat_inquiries", JSON.stringify(inquiries));
 
     const email = getBrand()?.contact?.email ?? "trade@jaatglobal.com";
-    const subject = encodeURIComponent(`Jaat Global inquiry: ${data.productLine || data.product || "general"}`);
+    const subject = encodeURIComponent(`Jaat Global ${data.requestType || "trade enquiry"}: ${data.company || data.name}`);
     const body = encodeURIComponent(buildMailtoBody(data));
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
 
@@ -169,13 +220,24 @@ function render() {
     outlet.innerHTML = productsView();
   } else if (path === "/importers") {
     outlet.innerHTML = importersView();
+  } else if (path === "/sourcing") {
+    outlet.innerHTML = sourcingView();
   } else if (path === "/export") {
     outlet.innerHTML = exportView();
+  } else if (path === "/quality") {
+    outlet.innerHTML = qualityView();
+  } else if (path === "/packaging") {
+    outlet.innerHTML = packagingView();
   } else if (path === "/about") {
     outlet.innerHTML = aboutView();
+  } else if (path === "/future") {
+    outlet.innerHTML = futureView();
   } else if (path === "/contact") {
     outlet.innerHTML = contactView({
       productId: params.get("product") || "",
+      type: params.get("type") || "",
+      sample: params.get("sample") || "",
+      rfq: readRfq(),
     });
   } else {
     outlet.innerHTML = homeView();
@@ -184,7 +246,9 @@ function render() {
   applyMeta(path, productId);
   observeReveals();
   bindProductFilters();
+  bindRfqActions();
   bindContactForm();
+  updateRfqCount();
   window.scrollTo({ top: 0, behavior: path === "/" ? "auto" : "smooth" });
 }
 
@@ -192,6 +256,13 @@ navToggle?.addEventListener("click", () => {
   const open = navPanel.classList.toggle("is-open");
   navToggle.setAttribute("aria-expanded", String(open));
   document.body.classList.toggle("nav-open", open);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && document.body.classList.contains("nav-open")) {
+    closeMobileNav();
+    navToggle?.focus();
+  }
 });
 
 document.querySelectorAll("[data-nav]").forEach((link) => {
