@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gauraviiitg.github.io/Code_overflow/sitemap.xml

@@ -1,6 +1,7 @@
 import { initCompany, getBrand, getProducts } from "./company.js";
 import { SITE_VERSION } from "./paths.js";
 import { initSiteContent } from "./content.js";
+import { applySeo, injectOrganizationJsonLd } from "./seo.js";
 import {
   homeView,
   productsView,
@@ -205,9 +206,12 @@ function applyMeta(path, productId) {
     };
   }
 
-  document.title = meta.title;
-  const descEl = document.querySelector('meta[name="description"]');
-  if (descEl && meta.description) descEl.setAttribute("content", meta.description);
+  applySeo({
+    title: meta.title,
+    description: meta.description,
+    path: path === "/products/detail" ? `/products/${productId}` : path,
+    brand: getBrand(),
+  });
 }
 
 function render() {
@@ -296,6 +300,7 @@ function applySiteVersion() {
 async function start() {
   applySiteVersion();
   await Promise.all([initCompany(), initSiteContent()]);
+  injectOrganizationJsonLd(getBrand());
   if (!window.location.hash) {
     window.location.hash = "#/";
   }

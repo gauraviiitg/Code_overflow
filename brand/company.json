@@ -62,5 +62,11 @@
     "src": "assets/stock/blue-pottery.jpg",
     "alt": "Jaipur blue pottery vase, illustrative stock photo"
   },
-  "incotermsPublicNote": "We do not quote delivered duty paid terms. Ask if you need CIF to a named port."
+  "incotermsPublicNote": "We do not quote delivered duty paid terms. Ask if you need CIF to a named port.",
+  "web": {
+    "publicUrl": "https://gauraviiitg.github.io/Code_overflow/",
+    "plannedPublicUrl": "https://jaatglobal.com/",
+    "ogImage": "assets/stock/blue-pottery.jpg",
+    "googleSiteVerification": ""
+  }
 }
