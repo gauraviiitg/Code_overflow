@@ -7,7 +7,7 @@ export { contactView } from "./contact.js";
 export const routeMeta = {
   "/": {
     title: "Jaat Global | Jaipur sourcing partner",
-    description: "Importer focused sourcing for decorative blue pottery and brass décor from Jaipur.",
+    description: "Blue pottery of Jaipur, Sanganeri hand block print, and Bagru hand block print for international importers.",
   },
   "/products": {
     title: "Jaat Global | Wholesale products",

@@ -20,8 +20,8 @@ export async function initSiteContent() {
   try {
     const { companyUrl } = await import("./paths.js");
     const [siteRes, certRes] = await Promise.all([
-      fetch(companyUrl("brand/site-content.json")),
-      fetch(companyUrl("legal/public-certifications.json")),
+      fetch(companyUrl("brand/site-content.json"), { cache: "no-store" }),
+      fetch(companyUrl("legal/public-certifications.json"), { cache: "no-store" }),
     ]);
     if (siteRes.ok) state.site = await siteRes.json();
     if (certRes.ok) state.certs = await certRes.json();

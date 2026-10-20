@@ -13,7 +13,7 @@ const state = {
 export async function initCompany() {
   let catalogueLoaded = false;
   try {
-    const catalogueRes = await fetch(companyUrl("product-data/catalogue.json"));
+    const catalogueRes = await fetch(companyUrl("product-data/catalogue.json"), { cache: "no-store" });
     if (catalogueRes.ok) {
       const catalogue = await catalogueRes.json();
       state.categories = catalogue.categories;
@@ -27,7 +27,7 @@ export async function initCompany() {
   }
 
   try {
-    const brandRes = await fetch(companyUrl("brand/company.json"));
+    const brandRes = await fetch(companyUrl("brand/company.json"), { cache: "no-store" });
     if (brandRes.ok) {
       state.brand = await brandRes.json();
     }

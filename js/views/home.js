@@ -20,9 +20,9 @@ function flagshipHtml() {
   return `<section class="section wrap">
     <p class="section-label reveal">Initial sourcing focus</p>
     <h2 class="section-title reveal">${escapeHtml(
-      brand?.flagshipSectionTitle ?? "Start with pottery. Add brass to the collection."
+      brand?.flagshipSectionTitle ?? "Three Jaipur crafts you can quote today."
     )}</h2>
-    <div class="flagship-duo">
+    <div class="flagship-duo flagship-trio">
       ${lines
         .map(
           (line) => `<article class="flagship-card reveal">
@@ -62,6 +62,13 @@ export function homeView() {
         <p class="hero-eyebrow">${escapeHtml(home.eyebrow ?? "Jaat Global | Jaipur, India | Prelaunch")}</p>
         <h1>${escapeHtml(home.title ?? "Your sourcing partner in Jaipur.")}</h1>
         <p class="section-lead">${escapeHtml(home.valueProp ?? "")}</p>
+        ${
+          home.bullets?.length
+            ? `<ul class="home-bullets reveal">${home.bullets
+                .map((item) => `<li>${escapeHtml(item)}</li>`)
+                .join("")}</ul>`
+            : ""
+        }
         <div class="hero-actions">
           <a class="btn btn-primary" href="#/contact">Request wholesale quote</a>
           <a class="btn btn-ghost" href="#/products">Explore products</a>

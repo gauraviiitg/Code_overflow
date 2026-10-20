@@ -72,7 +72,7 @@ export function productsView() {
   return `${pageHeroHtml(
     "Products",
     "Commercial product discovery",
-    "Explore the initial sourcing focus and roadmap categories. Planning MOQ and lead time are confirmed in every written quote."
+    "Three lines open now: blue pottery of Jaipur, Sanganeri hand block print, and Bagru hand block print. Other categories are roadmap only."
   )}
   <section class="section wrap" style="padding-top: 0">
     ${filterToolbarHtml()}
@@ -117,7 +117,7 @@ export function productDetailView(productId) {
   if (comingSoon) {
     return `${pageHeroHtml("Roadmap category", product.name, product.description)}
       <section class="section wrap" style="padding-top: 0">
-        <div class="detail-note">This category is not open for quotes. Explore the initial blue pottery and brass sourcing focus.</div>
+        <div class="detail-note">This category is not open for quotes yet. Explore blue pottery, Sanganeri, and Bagru block print on the catalogue.</div>
         <a class="btn btn-primary" href="#/products">View available lines</a>
       </section>`;
   }
