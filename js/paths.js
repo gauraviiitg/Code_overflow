@@ -2,7 +2,7 @@
 export const siteRoot = new URL("../", import.meta.url);
 
 /** Bump on every deploy. Keep in sync with index.html meta[name="jaat-site-version"]. */
-export const SITE_VERSION = "20261020-6";
+export const SITE_VERSION = "20261020-7";
 
 /** @deprecated Use SITE_VERSION */
 export const DATA_VERSION = SITE_VERSION;

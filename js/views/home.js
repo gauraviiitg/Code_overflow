@@ -59,7 +59,7 @@ export function homeView() {
   return `<section class="hero wrap">
     <div class="hero-grid hero-grid--visual">
       <div class="reveal">
-        <p class="hero-eyebrow">${escapeHtml(home.eyebrow ?? "Jaat Global | Jaipur, India | Prelaunch")}</p>
+        <p class="hero-eyebrow">${escapeHtml(home.eyebrow ?? "Jaat Global | Jaipur, India")}</p>
         <h1>${escapeHtml(home.title ?? "Your sourcing partner in Jaipur.")}</h1>
         <p class="section-lead">${escapeHtml(home.valueProp ?? "")}</p>
         ${
