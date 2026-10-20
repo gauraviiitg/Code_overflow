@@ -1,4 +1,5 @@
 import { initCompany, getBrand, getProducts } from "./company.js";
+import { SITE_VERSION } from "./paths.js";
 import { initSiteContent } from "./content.js";
 import {
   homeView,
@@ -283,7 +284,13 @@ window.addEventListener(
   { passive: true }
 );
 
+function applySiteVersion() {
+  const el = document.querySelector("[data-site-version]");
+  if (el) el.textContent = `Version ${SITE_VERSION}`;
+}
+
 async function start() {
+  applySiteVersion();
   await Promise.all([initCompany(), initSiteContent()]);
   if (!window.location.hash) {
     window.location.hash = "#/";

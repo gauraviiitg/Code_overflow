@@ -1158,6 +1158,17 @@ a:hover {
   text-align: center;
 }
 
+.footer-version {
+  max-width: 72rem;
+  margin: 0.75rem auto 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(235, 228, 216, 0.75);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
 /* Toast */
 
 .toast {

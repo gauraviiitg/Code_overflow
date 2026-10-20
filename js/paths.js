@@ -1,8 +1,11 @@
 /** Site root URL. Works on localhost and GitHub Pages project sites (e.g. /Code_overflow/). */
 export const siteRoot = new URL("../", import.meta.url);
 
-/** Bump when catalogue or site JSON changes so browsers refetch data. */
-export const DATA_VERSION = "20261020-3";
+/** Bump on every deploy; shown in the footer and used to bust JSON/module cache. */
+export const SITE_VERSION = "20261020-4";
+
+/** @deprecated Use SITE_VERSION */
+export const DATA_VERSION = SITE_VERSION;
 
 export function companyUrl(relativePath) {
   const url = new URL(relativePath.replace(/^\//, ""), siteRoot);
