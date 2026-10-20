@@ -2,12 +2,12 @@
   "home": {
     "eyebrow": "Jaat Global | Jaipur, India | Prelaunch",
     "title": "Your sourcing partner in Jaipur.",
-    "valueProp": "Handcrafted Indian products for international importers. Source locally, communicate directly, and build your collection with clear commercial information.",
+    "valueProp": "Blue pottery of Jaipur, Sanganeri hand block print, and Bagru hand block print for international importers. Source locally, communicate directly, and build your collection with clear commercial information.",
     "bullets": [
-      "Blue pottery and brass décor are the initial sourcing focus",
+      "Three live lines: blue pottery, Sanganeri, and Bagru block print",
       "Samples and written specifications before bulk production",
       "One direct contact from sourcing brief to shipment planning",
-      "Decorative products with intended use stated clearly"
+      "Pottery is decorative display ware unless your order specifies otherwise"
     ],
     "trustStrip": [
       { "label": "Jaipur", "value": "Local sourcing focus" },
@@ -33,7 +33,15 @@
     "faq": [
       {
         "q": "Are you a factory?",
-        "a": "We are an export company that works with Jaipur workshops. You deal with one team for pricing, packing, and shipping papers."
+        "a": "We are an export company that works with Jaipur workshops and printers. You deal with one team for pricing, packing, and shipping papers."
+      },
+      {
+        "q": "What makes Jaipur blue pottery different?",
+        "a": "It is a quartz stone powder body, not ordinary clay, finished with distinctive blue and turquoise glazes in floral or geometric designs."
+      },
+      {
+        "q": "Sanganeri vs Bagru block print?",
+        "a": "Sanganeri prints from Sanganer usually sit on white or light grounds with fine florals. Bagru prints from the Bagru region use vegetable dyes on darker backgrounds with bold geometric or floral motifs."
       },
       {
         "q": "Is the pottery food safe?",
@@ -45,7 +53,7 @@
       },
       {
         "q": "How do samples work?",
-        "a": "Sample availability, courier method, cost, and customs documents are confirmed for the product and destination. Written approval can establish the production reference."
+        "a": "Sample availability, courier method, cost, and customs documents are confirmed for the product and destination. You sign off colours, print, and finish before bulk production."
       },
       {
         "q": "Who handles EU or UK product rules?",
@@ -144,7 +152,7 @@
     ],
     "downloadLabel": "Open importer onboarding pack",
     "serviceMatrix": [
-      { "need": "Existing product range", "offer": "Initial blue pottery and brass lines" },
+      { "need": "Existing product range", "offer": "Blue pottery, Sanganeri, and Bagru block print" },
       { "need": "Samples", "offer": "Discussed by product and destination" },
       { "need": "Custom colours or sizes", "offer": "Selected products after feasibility review" },
       { "need": "Product sourcing", "offer": "Reference led search through the Jaipur network" },
@@ -211,14 +219,14 @@
       "Packing list",
       "Bill of lading",
       "Certificate of origin if your broker needs it",
-      "Product labels as agreed on your order"
+      "Product labels and fibre content as agreed on your order"
     ],
     "packingSummary": [
-      "Pottery: protective wrapping, dividers, and export cartons specified after product review",
-      "Brass: protective wrap and cartons specified for the finish and shipping method",
-      "Mixed pottery and brass: every SKU listed on the packing list"
+      "Blue pottery: protective wrapping, dividers, and export cartons specified after product review",
+      "Block print textiles: rolls or folds in export cartons with SKU labels; moisture protection in rainy season",
+      "Mixed pottery and textiles: every SKU listed on the packing list"
     ],
-    "complianceDecorative": "The initial range is decorative gift and home décor. Requirements vary by product, intended use, and destination. The importer confirms market access requirements, and available product information is shared for review."
+    "complianceDecorative": "Pottery is decorative gift and home décor unless your order says otherwise. Textiles need fibre content and care labels for your market. The importer confirms market access requirements, and available product information is shared for review."
   },
   "contact": {
     "moqBands": [
@@ -226,6 +234,8 @@
       "50 to 200 pieces",
       "200 to 500 pieces",
       "500 pieces or more",
+      "Fabric under 500 m",
+      "Fabric 500 m or more",
       "Not sure yet"
     ],
     "shippingBases": ["EXW Jaipur", "FCA named place", "FAS Mundra", "FOB Mundra", "CIF named port", "Discuss with us"],

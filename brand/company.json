@@ -24,18 +24,24 @@
   "flagshipHandicraft": [
     {
       "productId": "blue-pottery",
-      "headline": "Jaipur blue pottery",
+      "headline": "Blue pottery of Jaipur",
       "asset": "assets/stock/blue-pottery-alt.jpg",
-      "pitch": "Vases, planters, plates, and tiles in classic Jaipur glazes. Decorative use with packing agreed for each order."
+      "pitch": "Quartz-based glazed pottery in vivid blue and turquoise florals and geometry. Decorative export packing agreed for each order."
     },
     {
-      "productId": "brass-decor",
-      "headline": "Brass and copper décor",
-      "asset": "assets/stock/brass-decor.jpg",
-      "pitch": "Bowls, trays, and gift pieces for retail and hospitality. Mix with pottery in one container programme."
+      "productId": "sanganeri-hand-block-print",
+      "headline": "Sanganeri hand block print",
+      "asset": "assets/stock/textiles.jpg",
+      "pitch": "Fine floral woodblock prints on light grounds from Sanganer, near Jaipur. Repeat patterns for home and fashion programmes."
+    },
+    {
+      "productId": "bagru-hand-block-print",
+      "headline": "Bagru hand block print",
+      "asset": "assets/stock/textiles.jpg",
+      "pitch": "Vegetable-dye block prints on dark backgrounds from Bagru. Geometric and floral motifs for distinct collections."
     }
   ],
-  "flagshipSectionTitle": "Start with pottery. Add brass in the same shipment.",
+  "flagshipSectionTitle": "Three Jaipur crafts you can quote today.",
   "location": {
     "city": "Jaipur",
     "state": "Rajasthan",

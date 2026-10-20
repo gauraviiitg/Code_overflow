@@ -1,7 +1,7 @@
 const fallbackSite = {
   home: {
-    valueProp: "Jaipur blue pottery and brass gift décor for importers and retailers.",
-    bullets: ["Pottery and brass available to order", "Written quote before production"],
+    valueProp: "Jaipur blue pottery and hand block print textiles for importers and retailers.",
+    bullets: ["Blue pottery, Sanganeri, and Bagru open for order", "Written quote before production"],
     trustStrip: [],
     faq: [],
   },

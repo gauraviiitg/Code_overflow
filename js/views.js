@@ -28,7 +28,7 @@ function flagshipHandicraftHtml({ showActions = true } = {}) {
   const brand = getBrand();
   const sectionTitle =
     brand?.flagshipSectionTitle ??
-    "Blue pottery leads. Brass completes the gift collection.";
+    "Three Jaipur crafts you can quote today.";
 
   return `
     <section class="section wrap flagship-section">
@@ -83,14 +83,14 @@ export function homeView() {
   const home = getSiteContent()?.home ?? {};
   const valueProp =
     home.valueProp ??
-    "Jaipur blue pottery and brass gift décor for importers and retailers.";
+    "Jaipur blue pottery and hand block print textiles for importers and retailers.";
 
   return `
     <section class="hero wrap">
       <div class="hero-grid hero-grid--visual">
         <div class="reveal">
           <p class="hero-eyebrow">Jaat Global · Jaipur</p>
-          <h1>Blue pottery and brass décor, packed and shipped for <em>your market</em>.</h1>
+          <h1>Blue pottery and hand block print, packed and shipped for <em>your market</em>.</h1>
           <p class="section-lead">${escapeHtml(valueProp)}</p>
           ${homeBulletsHtml()}
           ${trustStripHtml()}
@@ -133,7 +133,7 @@ export function productsView() {
       <p class="section-label reveal">Products</p>
       <h1 class="section-title reveal">Our range</h1>
       <p class="section-lead reveal">
-        Blue pottery and brass are open for quotes today. Other lines show what we plan to add next; each is marked coming soon.
+        Blue pottery, Sanganeri, and Bagru block print are open for quotes today. Other lines are marked coming soon.
       </p>
       <div class="product-grid" data-product-grid>
         ${renderProductGrid()}
@@ -234,7 +234,7 @@ export function productDetailView(productId) {
         </div>
         <div class="product-detail-spec">
           <p class="detail-note"><strong>Status.</strong> Coming soon. This line is not open for quotes yet.</p>
-          <p class="form-note">We are taking orders for blue pottery and brass. Tell us if you want notice when this line opens.</p>
+          <p class="form-note">We are taking orders for blue pottery, Sanganeri, and Bagru block print. Tell us if you want notice when this line opens.</p>
           <a class="btn btn-primary" href="#/contact?product=blue-pottery">Request a quote</a>
           <a class="btn btn-ghost" href="#/products">Back to collections</a>
         </div>
@@ -348,7 +348,7 @@ export function aboutView() {
       <p class="section-label reveal">About</p>
       <h1 class="section-title reveal">Jaipur export team for gift and home décor.</h1>
       <p class="section-lead reveal">
-        Jaat Global sources decorative blue pottery and brass from Jaipur workshops, agrees export packing with you, and ships with standard commercial documents. We work in English.
+        Jaat Global sources Jaipur blue pottery and Sanganeri and Bagru hand block print from local workshops, agrees export packing with you, and ships with standard commercial documents. We work in English.
       </p>
       <p class="section-lead reveal">Based in ${escapeHtml(place)}.</p>
     </section>
@@ -485,12 +485,12 @@ export function renderProductGrid() {
 
 export const routeMeta = {
   "/": {
-    title: "Jaat Global | Blue pottery and brass export",
-    description: "Jaipur blue pottery and brass gift décor for importers. FOB Mundra, English documents.",
+    title: "Jaat Global | Blue pottery and block print export",
+    description: "Jaipur blue pottery, Sanganeri, and Bagru hand block print for importers. FOB Mundra, English documents.",
   },
   "/products": {
     title: "Jaat Global | Products",
-    description: "Decorative blue pottery and brass gift lines with MOQ and lead times.",
+    description: "Blue pottery of Jaipur, Sanganeri, and Bagru block print with MOQ and lead times.",
   },
   "/importers": {
     title: "Jaat Global | How to order",
@@ -502,7 +502,7 @@ export const routeMeta = {
   },
   "/about": {
     title: "Jaat Global | About",
-    description: "Jaipur export company for decorative pottery and brass gift décor.",
+    description: "Jaipur export company for blue pottery and hand block print textiles.",
   },
   "/contact": {
     title: "Jaat Global | Request a quote",
