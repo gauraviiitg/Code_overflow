@@ -25,6 +25,7 @@
       name="description"
       content="Jaat Global sources blue pottery of Jaipur, Sanganeri hand block print, and Bagru hand block print for international importers."
     />
+    <meta name="jaat-site-version" content="20261020-5" />
     <title>Jaat Global | Jaipur sourcing partner</title>
     <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="manifest" href="manifest.webmanifest" />
@@ -35,7 +36,7 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.css?v=20261020-5" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -138,7 +139,7 @@
         <a href="downloads/sourcing-brief.html">Sourcing brief</a>
       </nav>
       <p class="footer-meta">Illustrative stock photography is labelled. Product, packing, and commercial data are confirmed for each real enquiry.</p>
-      <p class="footer-version" data-site-version>Version …</p>
+      <p class="footer-version">Version <span id="jaat-site-version">20261020-5</span></p>
     </footer>
 
     <div class="toast" data-toast role="status" aria-live="polite"></div>
@@ -153,6 +154,27 @@
         });
       })();
     </script>
-    <script type="module" src="js/app.js?v=20261020-4"></script>
+    <script>
+      (function () {
+        var meta = document.querySelector('meta[name="jaat-site-version"]');
+        var version = (meta && meta.getAttribute("content")) || "unknown";
+        var label = document.getElementById("jaat-site-version");
+        if (label) label.textContent = version;
+        window.__JAAT_SITE_VERSION = version;
+      })();
+    </script>
+    <script type="module">
+      const showBootError = (detail) => {
+        const main = document.querySelector("[data-outlet]");
+        if (!main || main.dataset.bootFailed) return;
+        main.dataset.bootFailed = "1";
+        main.innerHTML = `<section class="wrap page-hero"><h1 class="section-title">Site script did not load</h1><p class="section-lead">Try a hard refresh (Ctrl+Shift+R). If you opened this file from disk, run a local server from the Code_overflow folder instead of double-clicking index.html.</p><p class="form-note">${detail || ""} Version ${window.__JAAT_SITE_VERSION || "?"}.</p></section>`;
+      };
+      try {
+        await import("./js/app.js?v=20261020-5");
+      } catch (error) {
+        showBootError(error && error.message ? error.message : "Module import failed.");
+      }
+    </script>
   </body>
 </html>

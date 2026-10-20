@@ -1,8 +1,8 @@
 /** Site root URL. Works on localhost and GitHub Pages project sites (e.g. /Code_overflow/). */
 export const siteRoot = new URL("../", import.meta.url);
 
-/** Bump on every deploy; shown in the footer and used to bust JSON/module cache. */
-export const SITE_VERSION = "20261020-4";
+/** Bump on every deploy. Keep in sync with index.html meta[name="jaat-site-version"]. */
+export const SITE_VERSION = "20261020-5";
 
 /** @deprecated Use SITE_VERSION */
 export const DATA_VERSION = SITE_VERSION;

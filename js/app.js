@@ -285,8 +285,12 @@ window.addEventListener(
 );
 
 function applySiteVersion() {
-  const el = document.querySelector("[data-site-version]");
-  if (el) el.textContent = `Version ${SITE_VERSION}`;
+  const fromWindow = window.__JAAT_SITE_VERSION;
+  const version = fromWindow || SITE_VERSION;
+  const label = document.getElementById("jaat-site-version");
+  if (label) label.textContent = version;
+  const meta = document.querySelector('meta[name="jaat-site-version"]');
+  if (meta && !fromWindow) meta.setAttribute("content", SITE_VERSION);
 }
 
 async function start() {
