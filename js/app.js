@@ -285,12 +285,12 @@ window.addEventListener(
 );
 
 function applySiteVersion() {
-  const fromWindow = window.__JAAT_SITE_VERSION;
-  const version = fromWindow || SITE_VERSION;
-  const label = document.getElementById("jaat-site-version");
-  if (label) label.textContent = version;
-  const meta = document.querySelector('meta[name="jaat-site-version"]');
-  if (meta && !fromWindow) meta.setAttribute("content", SITE_VERSION);
+  const version = window.__JAAT_SITE_VERSION || SITE_VERSION;
+  const bar = document.getElementById("jaat-site-version");
+  if (bar) bar.textContent = `Build ${version}`;
+  document.querySelectorAll(".footer-version").forEach((el) => {
+    el.textContent = `Version ${version}`;
+  });
 }
 
 async function start() {
